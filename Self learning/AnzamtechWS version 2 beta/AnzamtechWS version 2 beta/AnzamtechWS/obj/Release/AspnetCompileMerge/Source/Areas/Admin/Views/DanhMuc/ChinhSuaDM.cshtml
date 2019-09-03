@@ -1,0 +1,109 @@
+﻿@using AnzamtechWS.Areas.Admin.Models
+@model DanhMucModel
+@{
+    ViewBag.Title = "Danh Mục";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="block-header">
+    <ol class="breadcrumb breadcrumb-arrow">
+        <li><a href="/Admin/Home">Trang chủ</a></li>
+        <li><a href="/Admin/DanhMuc">Danh mục</a></li>
+        <li class="active"><span>Sửa danh mục</span></li>
+    </ol>
+</div>
+
+@Html.Raw(Model.GetHTMLMessage())
+
+<div class="form-content col-lg-12 col-md-12 col-sm-12 col-xs-12 pl-0 pr-0">
+    <div class="card">
+        <div class="header">
+            <h2>
+                Sửa danh mục
+            </h2>
+        </div>
+        <div class="body">
+            @using (Html.BeginForm(new { area = "Admin", controller = "DanhMuc", action = "ChinhSuaDM" }))
+            {
+                @Html.HiddenFor(u => u.MaDM)
+
+                <h2 class="card-inside-title">Tên danh mục</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @Html.TextBoxFor(u => u.TenDanhMuc, Model.TenDanhMuc, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Tag</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @Html.TextBoxFor(u => u.Tag, Model.Tag, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Page Controller</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @Html.TextBoxFor(u => u.PageController, Model.PageController, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-primary m-t-15 waves-effect">Hoàn tất</button>
+                    </div>
+                </div>
+
+            }
+            <h2 class="card-inside-title">Kết quả tìm kiếm</h2>
+            <div class="row clearfix table-responsive">
+                <div class="col-sm-12">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th width="40">ID</th>
+                                <th>Tên danh mục con</th>
+                                <th>Mô tả</th>
+                                <th width="40">&nbsp;</th>
+                                <th width="40">&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+
+                           
+                                @{var ListDM = Model.DanhMucCons.ToList<DanhMucCon>(); }
+                                @if (ListDM != null)
+                                {
+                                    foreach (var item in ListDM)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @item.MaDMC
+                                            </td>
+                                            <td>
+                                                @item.TenDMC
+                                            </td>
+                                            <td>
+                                                @item.Tag
+                                            </td>
+                                            <td>
+                                                <a href="/Admin/DanhMuc/ChinhSuaDMC?MaDMC=@item.MaDMC" class="btn btn-info d-flex align align-self-center"><i class="material-icons">mode_edit</i></a>
+                                            </td>
+                                            <td>
+                                                <a href="/Admin/DanhMuc/XoaDMC?MaDMC=@item.MaDMC" class="btn btn-info d-flex align align-self-center"><i class="material-icons">delete</i></a>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

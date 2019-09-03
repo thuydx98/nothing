@@ -1,0 +1,1085 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A0F7CB3D-1AED-490E-811A-FB2A060D52B3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MekongSite</RootNamespace>
+    <AssemblyName>MekongSite</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\About\10.jpg" />
+    <Content Include="Content\About\11.jpg" />
+    <Content Include="Content\About\12.jpg" />
+    <Content Include="Content\About\13.jpg" />
+    <Content Include="Content\About\21.jpg" />
+    <Content Include="Content\About\image-1-370x197.jpg" />
+    <Content Include="Content\About\image-10-370x214.jpg" />
+    <Content Include="Content\About\image-2-370x210.jpg" />
+    <Content Include="Content\About\image-3-370x208.jpg" />
+    <Content Include="Content\About\image-4-370x246.jpg" />
+    <Content Include="Content\About\image-5-370x212.jpg" />
+    <Content Include="Content\About\image-6-1-370x201.jpg" />
+    <Content Include="Content\About\image-7-370x238.jpg" />
+    <Content Include="Content\About\image-9-370x215.jpg" />
+    <Content Include="Content\About\laohoa.png" />
+    <Content Include="Content\About\namda.png" />
+    <Content Include="Content\About\nv.jpg" />
+    <Content Include="Content\Admin\css\animate.css" />
+    <Content Include="Content\Admin\css\bootstrap.min.css" />
+    <Content Include="Content\Admin\css\cs-skin-elastic.css" />
+    <Content Include="Content\Admin\css\flag-icon.min.css" />
+    <Content Include="Content\Admin\css\font-awesome.min.css" />
+    <Content Include="Content\Admin\css\fonts_xt.css" />
+    <Content Include="Content\Admin\css\modal.css" />
+    <Content Include="Content\Admin\css\normalize.css" />
+    <Content Include="Content\Admin\css\style.css" />
+    <Content Include="Content\Admin\css\themify-icons.css" />
+    <Content Include="Content\Admin\css\pagination.css" />
+    <Content Include="Content\Admin\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\Admin\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\Admin\fonts\themify.svg" />
+    <Content Include="Content\Admin\js\main.js" />
+    <Content Include="Content\Admin\js\paginationViewPost.js" />
+    <Content Include="Content\Admin\js\plugins.js" />
+    <Content Include="Content\Admin\js\popper.min.js" />
+    <Content Include="Content\Admin\js\pagination.js" />
+    <Content Include="Content\Admin\js\vendor\jquery-1.11.3.min.js" />
+    <Content Include="Content\Admin\js\vendor\jquery-2.1.4.min.js" />
+    <Content Include="Content\Admin\scss\style.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\mess.css" />
+    <Content Include="Content\css\reset.css" />
+    <Content Include="Content\css\slider.css" />
+    <Content Include="Content\css\Redefine.css" />
+    <Content Include="Content\css\viet.css" />
+    <Content Include="Content\css\vortex.css" />
+    <Content Include="Content\fonts\codropsicons\codropsicons.svg" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\fonts\icomoon\icomoon.svg" />
+    <Content Include="Content\fonts\themify.svg" />
+    <Content Include="Content\images\0.jpg" />
+    <Content Include="Content\images\01.JPG" />
+    <Content Include="Content\images\02.JPG" />
+    <Content Include="Content\images\03.JPG" />
+    <Content Include="Content\images\04.JPG" />
+    <Content Include="Content\images\05.JPG" />
+    <Content Include="Content\images\06.jpg" />
+    <Content Include="Content\images\07.JPG" />
+    <Content Include="Content\images\08.jpg" />
+    <Content Include="Content\images\09.jpg" />
+    <Content Include="Content\images\11.png" />
+    <Content Include="Content\images\13920143_296180557413695_8291010700619120519_o.jpg" />
+    <Content Include="Content\images\admin.jpg" />
+    <Content Include="Content\images\banner-bg.png" />
+    <Content Include="Content\images\banner-inno.jpg" />
+    <Content Include="Content\images\bg-1.jpg" />
+    <Content Include="Content\images\bg-2.png" />
+    <Content Include="Content\images\bg-3.png" />
+    <Content Include="Content\images\bg-5.jpg" />
+    <Content Include="Content\images\bg-6.png" />
+    <Content Include="Content\images\bg-voucher.jpg" />
+    <Content Include="Content\images\body.jpg" />
+    <Content Include="Content\images\border-1.jpg" />
+    <Content Include="Content\images\duoncmypham.JPG" />
+    <Content Include="Content\images\flags\4x3\us.svg" />
+    <Content Include="Content\images\foot.jpg" />
+    <Content Include="Content\images\hoithao.jpg" />
+    <Content Include="Content\images\hoithao1.jpg" />
+    <Content Include="Content\images\ico.ico" />
+    <Content Include="Content\images\inno.jpg" />
+    <Content Include="Content\images\ino.jpg" />
+    <Content Include="Content\images\line-hor.gif" />
+    <Content Include="Content\images\line.png" />
+    <Content Include="Content\images\marker.gif" />
+    <Content Include="Content\images\massage.jpg" />
+    <Content Include="Content\images\menu-btn.png" />
+    <Content Include="Content\images\minno-model.jpg" />
+    <Content Include="Content\images\minno-randa.jpg" />
+    <Content Include="Content\images\minno-seoro.jpg" />
+    <Content Include="Content\images\nangcomat.png" />
+    <Content Include="Content\images\nav-bg.jpg" />
+    <Content Include="Content\images\nav-bg.png" />
+    <Content Include="Content\images\nav-sub-pages.jpg" />
+    <Content Include="Content\images\nav.jpg" />
+    <Content Include="Content\images\next.png" />
+    <Content Include="Content\images\page1-img1.jpg" />
+    <Content Include="Content\images\page1-img2.jpg" />
+    <Content Include="Content\images\page1-img3.jpg" />
+    <Content Include="Content\images\page1-img4.jpg" />
+    <Content Include="Content\images\page2-img1.jpg" />
+    <Content Include="Content\images\page2-img2.jpg" />
+    <Content Include="Content\images\page2-img3.jpg" />
+    <Content Include="Content\images\page4-img1.jpg" />
+    <Content Include="Content\images\page4-img2.jpg" />
+    <Content Include="Content\images\page4-img3.jpg" />
+    <Content Include="Content\images\page5-img1.jpg" />
+    <Content Include="Content\images\prev.png" />
+    <Content Include="Content\images\slider-1.jpg" />
+    <Content Include="Content\images\slider-2.jpg" />
+    <Content Include="Content\images\slider-3.jpg" />
+    <Content Include="Content\images\svfoot.jpg" />
+    <Content Include="Content\images\svfoot1.jpg" />
+    <Content Include="Content\images\transp.png" />
+    <Content Include="Content\images\Vortex\1.jpg" />
+    <Content Include="Content\images\Vortex\2.png" />
+    <Content Include="Content\images\Vortex\3.png" />
+    <Content Include="Content\images\Vortex\4.png" />
+    <Content Include="Content\images\Vortex\Collagen.png" />
+    <Content Include="Content\images\Vortex\DuongDa.png" />
+    <Content Include="Content\images\Vortex\inno.jpg" />
+    <Content Include="Content\images\Vortex\inno.png" />
+    <Content Include="Content\images\Vortex\innojector.png" />
+    <Content Include="Content\images\Vortex\Meso.png" />
+    <Content Include="Content\images\Vortex\NangCo.png" />
+    <Content Include="Content\images\Vortex\tri-ran-da-lau-nam.jpg" />
+    <Content Include="Content\images\Vortex\Triseo1.png" />
+    <Content Include="Content\images\Vortex\Triseo2.png" />
+    <Content Include="Content\images\Vortex\XoaNhan1.png" />
+    <Content Include="Content\images\Vortex\XoaNhan2.png" />
+    <Content Include="Content\images\Vortex\XoaNhan3.png" />
+    <Content Include="Content\images\Vortex\XoaNhan4.png" />
+    <Content Include="Content\js\comment-reply.min5010.js" />
+    <Content Include="Content\js\jquery-1.7.min.js" />
+    <Content Include="Content\js\jquery\jquery-migrate.min330a.js" />
+    <Content Include="Content\js\jquery\jqueryb8ff.js" />
+    <Content Include="Content\js\jquery\ui\core.mine899.js" />
+    <Content Include="Content\js\jquery\ui\datepicker.mine899.js" />
+    <Content Include="Content\js\jquery\ui\mouse.mine899.js" />
+    <Content Include="Content\js\jquery\ui\slider.mine899.js" />
+    <Content Include="Content\js\jquery\ui\widget.mine899.js" />
+    <Content Include="Content\js\mediaelement\mediaelement-and-player.min45a0.js" />
+    <Content Include="Content\js\mediaelement\mediaelement-migrate.min5010.js" />
+    <Content Include="Content\js\mediaelement\mediaelementplayer-legacy.min45a0.css" />
+    <Content Include="Content\js\mediaelement\mejs-controls.svg" />
+    <Content Include="Content\js\mediaelement\wp-mediaelement.min5010.css" />
+    <Content Include="Content\js\mediaelement\wp-mediaelement.min5010.js" />
+    <Content Include="Content\js\tms-0.4.1.js" />
+    <Content Include="Content\js\wp-embed.min5010.js" />
+    <Content Include="Content\js\zxcvbn-async.min5152.js" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="Content\Picture\hoithao\10.JPG" />
+    <Content Include="Content\Picture\hoithao\11.JPG" />
+    <Content Include="Content\Picture\hoithao\12.JPG" />
+    <Content Include="Content\Picture\hoithao\13.JPG" />
+    <Content Include="Content\Picture\hoithao\14.JPG" />
+    <Content Include="Content\Picture\hoithao\15.JPG" />
+    <Content Include="Content\Picture\hoithao\16.JPG" />
+    <Content Include="Content\Picture\hoithao\17.JPG" />
+    <Content Include="Content\Picture\hoithao\18.JPG" />
+    <Content Include="Content\Picture\hoithao\19.JPG" />
+    <Content Include="Content\Picture\hoithao\20.JPG" />
+    <Content Include="Content\Picture\hoithao\21.JPG" />
+    <Content Include="Content\Picture\hoithao\22.JPG" />
+    <Content Include="Content\Picture\hoithao\23.JPG" />
+    <Content Include="Content\Picture\hoithao\24.JPG" />
+    <Content Include="Content\Picture\hoithao\25.JPG" />
+    <Content Include="Content\Picture\hoithao\26.JPG" />
+    <Content Include="Content\Picture\hoithao\27.JPG" />
+    <Content Include="Content\Picture\hoithao\28.jpg" />
+    <Content Include="Content\Picture\hoithao\29.jpg" />
+    <Content Include="Content\Picture\hoithao\30.JPG" />
+    <Content Include="Content\Picture\hoithao\4.JPG" />
+    <Content Include="Content\Picture\hoithao\5.JPG" />
+    <Content Include="Content\Picture\hoithao\6.JPG" />
+    <Content Include="Content\Picture\hoithao\7.JPG" />
+    <Content Include="Content\Picture\hoithao\8.JPG" />
+    <Content Include="Content\Picture\hoithao\9.JPG" />
+    <Content Include="Content\Picture\khach\10.jpg" />
+    <Content Include="Content\Picture\khach\11.jpg" />
+    <Content Include="Content\Picture\khach\12.jpg" />
+    <Content Include="Content\Picture\khach\13.jpg" />
+    <Content Include="Content\Picture\khach\14.jpg" />
+    <Content Include="Content\Picture\khach\15.jpg" />
+    <Content Include="Content\Picture\khach\16.jpg" />
+    <Content Include="Content\Picture\khach\17.jpg" />
+    <Content Include="Content\Picture\khach\18.jpg" />
+    <Content Include="Content\Picture\khach\19.jpg" />
+    <Content Include="Content\Picture\khach\20.jpg" />
+    <Content Include="Content\Picture\khach\21.jpg" />
+    <Content Include="Content\Picture\khach\22.jpg" />
+    <Content Include="Content\Picture\khach\23.jpg" />
+    <Content Include="Content\Picture\khach\24.jpg" />
+    <Content Include="Content\Picture\khach\25.jpg" />
+    <Content Include="Content\Picture\khach\26.jpg" />
+    <Content Include="Content\Picture\khach\27.jpg" />
+    <Content Include="Content\Picture\khach\3.jpg" />
+    <Content Include="Content\Picture\khach\4.jpg" />
+    <Content Include="Content\Picture\khach\5.jpg" />
+    <Content Include="Content\Picture\khach\6.jpg" />
+    <Content Include="Content\Picture\khach\7.jpg" />
+    <Content Include="Content\Picture\khach\8.jpg" />
+    <Content Include="Content\Picture\khach\9.jpg" />
+    <Content Include="Content\Picture\mekong\10.jpg" />
+    <Content Include="Content\Picture\mekong\11.jpg" />
+    <Content Include="Content\Picture\mekong\12.jpg" />
+    <Content Include="Content\Picture\mekong\13.jpg" />
+    <Content Include="Content\Picture\mekong\14.jpg" />
+    <Content Include="Content\Picture\mekong\3.jpg" />
+    <Content Include="Content\Picture\mekong\4.jpg" />
+    <Content Include="Content\Picture\mekong\5.jpg" />
+    <Content Include="Content\Picture\mekong\6.jpg" />
+    <Content Include="Content\Picture\mekong\7.jpg" />
+    <Content Include="Content\Picture\mekong\8.jpg" />
+    <Content Include="Content\Picture\mekong\9.jpg" />
+    <Content Include="Content\plugins\booked\assets\css\animationsdc8c.css" />
+    <Content Include="Content\plugins\booked\assets\css\iconsdc8c.css" />
+    <Content Include="Content\plugins\booked\assets\css\responsivedc8c.css" />
+    <Content Include="Content\plugins\booked\assets\css\stylesdc8c.css" />
+    <Content Include="Content\plugins\booked\assets\js\functionsdc8c.js" />
+    <Content Include="Content\plugins\booked\assets\js\spin.jquery7406.js" />
+    <Content Include="Content\plugins\booked\assets\js\spin.min7406.js" />
+    <Content Include="Content\plugins\booked\assets\js\tooltipster\css\themes\tooltipster-light9b70.css" />
+    <Content Include="Content\plugins\booked\assets\js\tooltipster\css\tooltipster9b70.css" />
+    <Content Include="Content\plugins\booked\assets\js\tooltipster\js\jquery.tooltipster.min9b70.js" />
+    <Content Include="Content\plugins\contact-form-7\images\ajax-loader.gif" />
+    <Content Include="Content\plugins\contact-form-7\includes\css\styles1748.css" />
+    <Content Include="Content\plugins\contact-form-7\includes\js\scripts1748.js" />
+    <Content Include="Content\plugins\essential-grid\public\assets\css\jquery.esgbox.min5bf8.css" />
+    <Content Include="Content\plugins\essential-grid\public\assets\css\settings5bf8.css" />
+    <Content Include="Content\plugins\essential-grid\public\assets\font\fontello\css\fontello5bf8.css" />
+    <Content Include="Content\plugins\essential-grid\public\assets\font\fontello\fonts\egfontdde9.svg" />
+    <Content Include="Content\plugins\essential-grid\public\assets\images\ajax-loader.gif" />
+    <Content Include="Content\plugins\essential-grid\public\assets\images\loader.gif" />
+    <Content Include="Content\plugins\essential-grid\public\assets\js\jquery.esgbox.min5bf8.js" />
+    <Content Include="Content\plugins\essential-grid\public\assets\js\jquery.themepunch.essential.min5bf8.js" />
+    <Content Include="Content\plugins\essential-grid\public\assets\js\jquery.themepunch.tools.min5bf8.js" />
+    <Content Include="Content\plugins\js_composer\assets\css\js_composer.min24b2.css" />
+    <Content Include="Content\plugins\js_composer\assets\fonts\vc_grid\vc_grid_v157a1.svg" />
+    <Content Include="Content\plugins\js_composer\assets\fonts\vc_icons_v2\fonts\vcpb-plugin-iconsb82a.svg" />
+    <Content Include="Content\plugins\js_composer\assets\images\flickr.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\address-book.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\alarm-clock.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\anchor.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\application-image.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\arrow.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\asterisk.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\auction-hammer.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\balloon-buzz.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\balloon-facebook.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\balloon-twitter.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\balloon.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\battery-full.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\binocular.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\blue-document-excel.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\blue-document-image.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\blue-document-music.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\blue-document-office.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\blue-document-pdf.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\blue-document-powerpoint.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\blue-document-word.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\bookmark.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\camcorder.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\camera.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\chart-pie.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\chart.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\clock.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\control.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\fire.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\heart.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\mail.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\plus-shield.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\icons\video.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\spinner.gif" />
+    <Content Include="Content\plugins\js_composer\assets\images\toggle_close.png" />
+    <Content Include="Content\plugins\js_composer\assets\images\toggle_open.png" />
+    <Content Include="Content\plugins\js_composer\assets\js\dist\js_composer_front.min24b2.js" />
+    <Content Include="Content\plugins\js_composer\assets\js\vendors\woocommerce-add-to-cart24b2.js" />
+    <Content Include="Content\plugins\js_composer\assets\lib\bower\flexslider\jquery.flexslider-min24b2.js" />
+    <Content Include="Content\plugins\js_composer\assets\lib\bower\isotope\dist\isotope.pkgd.min24b2.js" />
+    <Content Include="Content\plugins\js_composer\assets\vc\alert.png" />
+    <Content Include="Content\plugins\js_composer\assets\vc\blur.svg" />
+    <Content Include="Content\plugins\js_composer\assets\vc\exclamation.png" />
+    <Content Include="Content\plugins\js_composer\assets\vc\info.png" />
+    <Content Include="Content\plugins\js_composer\assets\vc\remove.png" />
+    <Content Include="Content\plugins\js_composer\assets\vc\tick.png" />
+    <Content Include="Content\plugins\revslider\public\assets\assets\coloredbg.png" />
+    <Content Include="Content\plugins\revslider\public\assets\assets\gridtile.png" />
+    <Content Include="Content\plugins\revslider\public\assets\assets\gridtile_3x3.png" />
+    <Content Include="Content\plugins\revslider\public\assets\assets\gridtile_3x3_white.png" />
+    <Content Include="Content\plugins\revslider\public\assets\assets\gridtile_white.png" />
+    <Content Include="Content\plugins\revslider\public\assets\assets\loader.gif" />
+    <Content Include="Content\plugins\revslider\public\assets\css\closedhand.html" />
+    <Content Include="Content\plugins\revslider\public\assets\css\openhand.html" />
+    <Content Include="Content\plugins\revslider\public\assets\css\settings23da.css" />
+    <Content Include="Content\plugins\revslider\public\assets\fonts\revicons\revicons90c6.svg" />
+    <Content Include="Content\plugins\revslider\public\assets\js\jquery.themepunch.revolution.min23da.js" />
+    <Content Include="Content\plugins\trx_utils\images\bg_massag.jpg" />
+    <Content Include="Content\plugins\trx_utils\images\img-massage.png" />
+    <Content Include="Content\plugins\trx_utils\js\trx_utils.js" />
+    <Content Include="Content\plugins\trx_utils\shortcodes\theme.shortcodes.css" />
+    <Content Include="Content\plugins\trx_utils\shortcodes\theme.shortcodes.js" />
+    <Content Include="Content\plugins\woocommerce\assets\css\photoswipe\default-skin\default-skin.png" />
+    <Content Include="Content\plugins\woocommerce\assets\css\photoswipe\default-skin\default-skin.svg" />
+    <Content Include="Content\plugins\woocommerce\assets\css\photoswipe\default-skin\default-skin9d52.css" />
+    <Content Include="Content\plugins\woocommerce\assets\css\photoswipe\default-skin\preloader.gif" />
+    <Content Include="Content\plugins\woocommerce\assets\css\photoswipe\photoswipe9d52.css" />
+    <Content Include="Content\plugins\woocommerce\assets\css\select29d52.css" />
+    <Content Include="Content\plugins\woocommerce\assets\css\woocommerce-layout9d52.css" />
+    <Content Include="Content\plugins\woocommerce\assets\css\woocommerce-smallscreen9d52.css" />
+    <Content Include="Content\plugins\woocommerce\assets\css\woocommerce9d52.css" />
+    <Content Include="Content\plugins\woocommerce\assets\fonts\star.svg" />
+    <Content Include="Content\plugins\woocommerce\assets\fonts\WooCommerce.svg" />
+    <Content Include="Content\plugins\woocommerce\assets\images\icons\credit-cards\amex.svg" />
+    <Content Include="Content\plugins\woocommerce\assets\images\icons\credit-cards\diners.svg" />
+    <Content Include="Content\plugins\woocommerce\assets\images\icons\credit-cards\discover.svg" />
+    <Content Include="Content\plugins\woocommerce\assets\images\icons\credit-cards\jcb.svg" />
+    <Content Include="Content\plugins\woocommerce\assets\images\icons\credit-cards\laser.svg" />
+    <Content Include="Content\plugins\woocommerce\assets\images\icons\credit-cards\maestro.svg" />
+    <Content Include="Content\plugins\woocommerce\assets\images\icons\credit-cards\mastercard.svg" />
+    <Content Include="Content\plugins\woocommerce\assets\images\icons\credit-cards\visa.svg" />
+    <Content Include="Content\plugins\woocommerce\assets\images\icons\loader.svg" />
+    <Content Include="Content\plugins\woocommerce\assets\js\accounting\accounting.minaffb.js" />
+    <Content Include="Content\plugins\woocommerce\assets\js\frontend\add-to-cart.min9d52.js" />
+    <Content Include="Content\plugins\woocommerce\assets\js\frontend\address-i18n.min9d52.js" />
+    <Content Include="Content\plugins\woocommerce\assets\js\frontend\cart-fragments.min9d52.js" />
+    <Content Include="Content\plugins\woocommerce\assets\js\frontend\cart.min9d52.js" />
+    <Content Include="Content\plugins\woocommerce\assets\js\frontend\checkout.min9d52.js" />
+    <Content Include="Content\plugins\woocommerce\assets\js\frontend\country-select.min9d52.js" />
+    <Content Include="Content\plugins\woocommerce\assets\js\frontend\lost-password.min9d52.js" />
+    <Content Include="Content\plugins\woocommerce\assets\js\frontend\password-strength-meter.min9d52.js" />
+    <Content Include="Content\plugins\woocommerce\assets\js\frontend\price-slider.min9d52.js" />
+    <Content Include="Content\plugins\woocommerce\assets\js\frontend\single-product.min9d52.js" />
+    <Content Include="Content\plugins\woocommerce\assets\js\frontend\woocommerce.min9d52.js" />
+    <Content Include="Content\plugins\woocommerce\assets\js\jquery-blockui\jquery.blockUI.min44fd.js" />
+    <Content Include="Content\plugins\woocommerce\assets\js\jquery-ui-touch-punch\jquery-ui-touch-punch.min9d52.js" />
+    <Content Include="Content\plugins\woocommerce\assets\js\js-cookie\js.cookie.min6b25.js" />
+    <Content Include="Content\plugins\woocommerce\assets\js\photoswipe\photoswipe-ui-default.min0235.js" />
+    <Content Include="Content\plugins\woocommerce\assets\js\photoswipe\photoswipe.min0235.js" />
+    <Content Include="Content\plugins\woocommerce\assets\js\selectWoo\selectWoo.full.min4b68.js" />
+    <Content Include="Content\plugins\woocommerce\assets\js\zoom\jquery.zoom.min5a35.js" />
+    <Content Include="Content\plugins\wp-gdpr-compliance\assets\css\front4053.css" />
+    <Content Include="Content\plugins\wp-gdpr-compliance\assets\js\front4053.js" />
+    <Content Include="Content\plugins\wp-gdpr-compliance\assets\vendor\micromodal\micromodal.min4053.js" />
+    <Content Include="Content\scss\bootstrap\bootstrap-grid.css" />
+    <Content Include="Content\scss\bootstrap\bootstrap-reboot.css" />
+    <Content Include="Content\scss\bootstrap\bootstrap.css" />
+    <Content Include="Content\scss\socials.css" />
+    <Content Include="Content\scss\style.css" />
+    <Content Include="Content\scss\variables.css" />
+    <Content Include="Content\scss\widgets.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\themes\massage-therapist\css\fontello\css\fontello.css" />
+    <Content Include="Content\themes\massage-therapist\css\fontello\font\fontello4224.svg" />
+    <Content Include="Content\themes\massage-therapist\css\plugin.booked.css" />
+    <Content Include="Content\themes\massage-therapist\css\plugin.woocommerce.css" />
+    <Content Include="Content\themes\massage-therapist\css\responsive.css" />
+    <Content Include="Content\themes\massage-therapist\css\theme.css" />
+    <Content Include="Content\themes\massage-therapist\fw\css\core.animation.css" />
+    <Content Include="Content\themes\massage-therapist\fw\css\core.portfolio.css" />
+    <Content Include="Content\themes\massage-therapist\fw\js\core.init.js" />
+    <Content Include="Content\themes\massage-therapist\fw\js\core.messages\core.messages.css" />
+    <Content Include="Content\themes\massage-therapist\fw\js\core.messages\core.messages.js" />
+    <Content Include="Content\themes\massage-therapist\fw\js\core.reviews.js" />
+    <Content Include="Content\themes\massage-therapist\fw\js\core.utils.js" />
+    <Content Include="Content\themes\massage-therapist\fw\js\countdown\jquery.countdown.js" />
+    <Content Include="Content\themes\massage-therapist\fw\js\countdown\jquery.plugin.js" />
+    <Content Include="Content\themes\massage-therapist\fw\js\diagram\chart.min.js" />
+    <Content Include="Content\themes\massage-therapist\fw\js\hover\jquery.hoverdir.js" />
+    <Content Include="Content\themes\massage-therapist\fw\js\photostack\modernizr.min.js" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\css\prettyPhoto.css" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\default\loader.gif" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\default\sprite.png" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="Content\themes\massage-therapist\fw\js\prettyphoto\jquery.prettyPhoto.minca7f.js" />
+    <Content Include="Content\themes\massage-therapist\fw\js\social\social-share.js" />
+    <Content Include="Content\themes\massage-therapist\fw\js\superfish.js" />
+    <Content Include="Content\themes\massage-therapist\fw\js\swiper\swiper.css" />
+    <Content Include="Content\themes\massage-therapist\fw\js\swiper\swiper.js" />
+    <Content Include="Content\themes\massage-therapist\images\bg\texture_1.png" />
+    <Content Include="Content\themes\massage-therapist\images\bg\texture_10.png" />
+    <Content Include="Content\themes\massage-therapist\images\bg\texture_11.png" />
+    <Content Include="Content\themes\massage-therapist\images\bg\texture_12.png" />
+    <Content Include="Content\themes\massage-therapist\images\bg\texture_2.png" />
+    <Content Include="Content\themes\massage-therapist\images\bg\texture_3.png" />
+    <Content Include="Content\themes\massage-therapist\images\bg\texture_5.png" />
+    <Content Include="Content\themes\massage-therapist\images\bg\texture_6.png" />
+    <Content Include="Content\themes\massage-therapist\images\bg\texture_7.png" />
+    <Content Include="Content\themes\massage-therapist\images\bg\texture_8.png" />
+    <Content Include="Content\themes\massage-therapist\images\bg\texture_9.png" />
+    <Content Include="Content\themes\massage-therapist\images\bg_dark.jpg" />
+    <Content Include="Content\themes\massage-therapist\images\bg_light.jpg" />
+    <Content Include="Content\themes\massage-therapist\images\bg_massag.jpg" />
+    <Content Include="Content\themes\massage-therapist\images\bg_massage.png" />
+    <Content Include="Content\themes\massage-therapist\images\bg_yellow.jpg" />
+    <Content Include="Content\themes\massage-therapist\images\boxed.jpg" />
+    <Content Include="Content\themes\massage-therapist\images\controls.png" />
+    <Content Include="Content\themes\massage-therapist\images\massage_bg.png" />
+    <Content Include="Content\themes\massage-therapist\images\rating_summary_bg.png" />
+    <Content Include="Content\themes\massage-therapist\images\sticky.png" />
+    <Content Include="Content\themes\massage-therapist\images\texture_center.png" />
+    <Content Include="Content\themes\massage-therapist\images\texture_slider.png" />
+    <Content Include="Content\themes\massage-therapist\images\texture_top.png" />
+    <Content Include="Content\themes\massage-therapist\images\woo\shop-cat-bg-1.jpg" />
+    <Content Include="Content\themes\massage-therapist\images\woo\shop-cat-bg-2.jpg" />
+    <Content Include="Content\themes\massage-therapist\images\woo\shop-cat-bg-3.jpg" />
+    <Content Include="Content\themes\massage-therapist\images\woo\shop-cat-bg-4.jpg" />
+    <Content Include="Content\themes\massage-therapist\images\woo\shop-cat-bg-5.jpg" />
+    <Content Include="Content\themes\massage-therapist\images\woo\shop-cat-bg-6.jpg" />
+    <Content Include="Content\themes\massage-therapist\js\theme.init.js" />
+    <Content Include="Content\themes\massage-therapist\js\tms-0.4.1.js" />
+    <Content Include="Content\themes\massage-therapist\style.css" />
+    <Content Include="Content\uploads\2016\08\background-2-756x362.jpg" />
+    <Content Include="Content\uploads\2016\08\background-2-780x362.jpg" />
+    <Content Include="Content\uploads\2016\08\background-5.jpg" />
+    <Content Include="Content\uploads\2016\08\background-5c0c1.jpg" />
+    <Content Include="Content\uploads\2016\08\background-6d823.jpg" />
+    <Content Include="Content\uploads\2016\08\background-8.jpg" />
+    <Content Include="Content\uploads\2016\08\bg-1.jpg" />
+    <Content Include="Content\uploads\2016\08\bg.jpg" />
+    <Content Include="Content\uploads\2016\08\bgg.jpg" />
+    <Content Include="Content\uploads\2016\08\bgg03a0.jpg" />
+    <Content Include="Content\uploads\2016\08\bg_im.jpg" />
+    <Content Include="Content\uploads\2016\08\bg_masagge1.jpg" />
+    <Content Include="Content\uploads\2016\08\call-1.jpg" />
+    <Content Include="Content\uploads\2016\08\call-1f5f2.jpg" />
+    <Content Include="Content\uploads\2016\08\image-1-1170x659.jpg" />
+    <Content Include="Content\uploads\2016\08\image-1-370x197.jpg" />
+    <Content Include="Content\uploads\2016\08\image-1.jpg" />
+    <Content Include="Content\uploads\2016\08\image-10-1170x659.jpg" />
+    <Content Include="Content\uploads\2016\08\image-10-370x214.jpg" />
+    <Content Include="Content\uploads\2016\08\image-10.jpg" />
+    <Content Include="Content\uploads\2016\08\image-2-1170x659.jpg" />
+    <Content Include="Content\uploads\2016\08\image-2-370x210.jpg" />
+    <Content Include="Content\uploads\2016\08\image-2.jpg" />
+    <Content Include="Content\uploads\2016\08\image-3-1170x659.jpg" />
+    <Content Include="Content\uploads\2016\08\image-3-370x208.jpg" />
+    <Content Include="Content\uploads\2016\08\image-3.jpg" />
+    <Content Include="Content\uploads\2016\08\image-5-1170x659.jpg" />
+    <Content Include="Content\uploads\2016\08\image-5-370x212.jpg" />
+    <Content Include="Content\uploads\2016\08\image-5-571x321.jpg" />
+    <Content Include="Content\uploads\2016\08\image-5.jpg" />
+    <Content Include="Content\uploads\2016\08\image-6-1-370x201.jpg" />
+    <Content Include="Content\uploads\2016\08\image-7-1170x659.jpg" />
+    <Content Include="Content\uploads\2016\08\image-7-370x238.jpg" />
+    <Content Include="Content\uploads\2016\08\image-7-370x245.jpg" />
+    <Content Include="Content\uploads\2016\08\image-7.jpg" />
+    <Content Include="Content\uploads\2016\08\image-8-1170x659.jpg" />
+    <Content Include="Content\uploads\2016\08\image-8-370x243.jpg" />
+    <Content Include="Content\uploads\2016\08\image-8-370x245.jpg" />
+    <Content Include="Content\uploads\2016\08\image-8-547x362.jpg" />
+    <Content Include="Content\uploads\2016\08\image-8-780x362.jpg" />
+    <Content Include="Content\uploads\2016\08\image-8.jpg" />
+    <Content Include="Content\uploads\2016\08\image-9-1170x659.jpg" />
+    <Content Include="Content\uploads\2016\08\image-9-370x215.jpg" />
+    <Content Include="Content\uploads\2016\08\image-9-623x362.jpg" />
+    <Content Include="Content\uploads\2016\08\image-9-780x362.jpg" />
+    <Content Include="Content\uploads\2016\08\image-9.jpg" />
+    <Content Include="Content\uploads\2016\08\logo-1.png" />
+    <Content Include="Content\uploads\2016\08\logo-2.png" />
+    <Content Include="Content\uploads\2016\08\parallax_1.jpg" />
+    <Content Include="Content\uploads\2016\08\parallax_3.jpg" />
+    <Content Include="Content\uploads\2016\08\price-1-1.jpg" />
+    <Content Include="Content\uploads\2016\08\price-2-1.jpg" />
+    <Content Include="Content\uploads\2016\08\price-3-1.jpg" />
+    <Content Include="Content\uploads\2016\08\promo.jpg" />
+    <Content Include="Content\uploads\2016\08\rosa-1.jpg" />
+    <Content Include="Content\uploads\2016\08\service-3-1170x659.jpg" />
+    <Content Include="Content\uploads\2016\08\service-3.jpg" />
+    <Content Include="Content\uploads\2016\08\service-6-1170x659.jpg" />
+    <Content Include="Content\uploads\2016\08\service-6.jpg" />
+    <Content Include="Content\uploads\2016\08\service-7.jpg" />
+    <Content Include="Content\uploads\2016\08\test_bg.jpg" />
+    <Content Include="Content\uploads\2016\08\test_bge544.jpg" />
+    <Content Include="Content\uploads\2016\09\1.jpg" />
+    <Content Include="Content\uploads\2016\09\2.jpg" />
+    <Content Include="Content\uploads\2016\09\3jpg.jpg" />
+    <Content Include="Content\uploads\2016\09\slider-2.jpg" />
+    <Content Include="Content\uploads\2016\09\slider-3.jpg" />
+    <Content Include="Content\uploads\2016\09\slides_1.jpg" />
+    <Content Include="Content\wlwmanifest.xml" />
+    <Content Include="Data\bai1.txt" />
+    <Content Include="Data\bai2.txt" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\plugins\essential-grid\public\assets\font\fontello\fonts\egfontdde9.eot" />
+    <Content Include="Content\plugins\essential-grid\public\assets\font\fontello\fonts\egfontdde9.ttf" />
+    <Content Include="Content\plugins\essential-grid\public\assets\font\fontello\fonts\egfontdde9.woff" />
+    <Content Include="Content\plugins\js_composer\assets\fonts\vc_grid\vc_grid_v157a1.eot" />
+    <Content Include="Content\plugins\js_composer\assets\fonts\vc_grid\vc_grid_v157a1.ttf" />
+    <Content Include="Content\plugins\js_composer\assets\fonts\vc_grid\vc_grid_v157a1.woff" />
+    <Content Include="Content\plugins\js_composer\assets\fonts\vc_grid\vc_grid_v1d41d.eot" />
+    <Content Include="Content\plugins\js_composer\assets\fonts\vc_icons_v2\fonts\vcpb-plugin-iconsb82a.eot" />
+    <Content Include="Content\plugins\js_composer\assets\fonts\vc_icons_v2\fonts\vcpb-plugin-iconsb82a.ttf" />
+    <Content Include="Content\plugins\js_composer\assets\fonts\vc_icons_v2\fonts\vcpb-plugin-iconsb82a.woff" />
+    <Content Include="Content\plugins\revslider\public\assets\fonts\revicons\revicons90c6.eot" />
+    <Content Include="Content\plugins\revslider\public\assets\fonts\revicons\revicons90c6.ttf" />
+    <Content Include="Content\plugins\revslider\public\assets\fonts\revicons\revicons90c6.woff" />
+    <Content Include="Content\plugins\woocommerce\assets\fonts\star.eot" />
+    <Content Include="Content\plugins\woocommerce\assets\fonts\star.ttf" />
+    <Content Include="Content\plugins\woocommerce\assets\fonts\star.woff" />
+    <Content Include="Content\plugins\woocommerce\assets\fonts\stard41d.eot" />
+    <Content Include="Content\plugins\woocommerce\assets\fonts\WooCommerce.eot" />
+    <Content Include="Content\plugins\woocommerce\assets\fonts\WooCommerce.ttf" />
+    <Content Include="Content\plugins\woocommerce\assets\fonts\WooCommerce.woff" />
+    <Content Include="Content\plugins\woocommerce\assets\fonts\WooCommerced41d.eot" />
+    <Content Include="Content\themes\massage-therapist\css\fontello\font\fontello.woff" />
+    <Content Include="Content\themes\massage-therapist\css\fontello\font\fontello4224.eot" />
+    <Content Include="Content\themes\massage-therapist\css\fontello\font\fontello4224.svg.tmp" />
+    <Content Include="Content\themes\massage-therapist\css\fontello\font\fontello4224.ttf" />
+    <Content Include="Content\themes\massage-therapist\css\fontello\font\fontello4224.woff" />
+    <Content Include="Content\themes\massage-therapist\css\fontello\font\fontello4224.woff2" />
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Content\fonts\codropsicons\codropsicons.eot" />
+    <Content Include="Content\fonts\codropsicons\codropsicons.ttf" />
+    <Content Include="Content\fonts\codropsicons\codropsicons.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\fonts\icomoon\icomoon.eot" />
+    <Content Include="Content\fonts\icomoon\icomoon.ttf" />
+    <Content Include="Content\fonts\icomoon\icomoon.woff" />
+    <Content Include="Content\fonts\themify.eot" />
+    <Content Include="Content\fonts\themify.ttf" />
+    <Content Include="Content\fonts\themify.woff" />
+    <Content Include="Content\scss\.sass-cache\0c2f4e7e3ce607a0f7f238a71122520ed74aaa15\style.scssc" />
+    <Content Include="Content\scss\.sass-cache\0c2f4e7e3ce607a0f7f238a71122520ed74aaa15\variables.scssc" />
+    <Content Include="Content\scss\.sass-cache\0c2f4e7e3ce607a0f7f238a71122520ed74aaa15\_gauge.scssc" />
+    <Content Include="Content\scss\.sass-cache\0c2f4e7e3ce607a0f7f238a71122520ed74aaa15\_switches.scssc" />
+    <Content Include="Content\scss\.sass-cache\0c2f4e7e3ce607a0f7f238a71122520ed74aaa15\_widgets.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_alert.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_background-variant.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_badge.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_border-radius.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_box-shadow.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_breakpoints.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_buttons.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_caret.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_clearfix.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_float.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_forms.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_gradients.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_grid-framework.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_grid.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_hover.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_image.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_list-group.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_lists.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_nav-divider.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_pagination.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_reset-text.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_resize.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_screen-reader.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_size.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_table-row.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_text-emphasis.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_text-hide.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_text-truncate.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_transition.scssc" />
+    <Content Include="Content\scss\.sass-cache\1ea663541d8aa72314e8caea4edf18e46ea3ed2e\_visibility.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\bootstrap.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_alert.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_badge.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_breadcrumb.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_button-group.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_buttons.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_card.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_carousel.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_close.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_code.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_custom-forms.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_dropdown.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_forms.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_functions.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_grid.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_images.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_input-group.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_jumbotron.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_list-group.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_media.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_mixins.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_modal.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_nav.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_navbar.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_pagination.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_popover.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_print.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_progress.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_reboot.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_root.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_tables.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_tooltip.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_transitions.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_type.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_utilities.scssc" />
+    <Content Include="Content\scss\.sass-cache\590089d940a3045eb8c8b24b183c435305a7d5a9\_variables.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\bootstrap.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_alert.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_badge.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_breadcrumb.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_button-group.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_buttons.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_card.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_carousel.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_close.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_code.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_custom-forms.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_dropdown.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_forms.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_functions.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_grid.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_images.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_input-group.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_jumbotron.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_list-group.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_media.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_mixins.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_modal.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_nav.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_navbar.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_pagination.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_popover.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_print.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_progress.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_reboot.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_root.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_tables.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_tooltip.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_transitions.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_type.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_utilities.scssc" />
+    <Content Include="Content\scss\.sass-cache\62cfef4a3fbfab02df9a4ee49a4d404e06273937\_variables.scssc" />
+    <Content Include="Content\scss\.sass-cache\6da42945727bdadaec570db1596987e0a46bfa4d\socials.scssc" />
+    <Content Include="Content\scss\.sass-cache\6da42945727bdadaec570db1596987e0a46bfa4d\style.scssc" />
+    <Content Include="Content\scss\.sass-cache\6da42945727bdadaec570db1596987e0a46bfa4d\variables.scssc" />
+    <Content Include="Content\scss\.sass-cache\6da42945727bdadaec570db1596987e0a46bfa4d\_gauge.scssc" />
+    <Content Include="Content\scss\.sass-cache\6da42945727bdadaec570db1596987e0a46bfa4d\_switches.scssc" />
+    <Content Include="Content\scss\.sass-cache\6da42945727bdadaec570db1596987e0a46bfa4d\_widgets.scssc" />
+    <Content Include="Content\scss\.sass-cache\6e69d195df721b3a89b57cbd4813c065acff1449\_align.scssc" />
+    <Content Include="Content\scss\.sass-cache\6e69d195df721b3a89b57cbd4813c065acff1449\_background.scssc" />
+    <Content Include="Content\scss\.sass-cache\6e69d195df721b3a89b57cbd4813c065acff1449\_borders.scssc" />
+    <Content Include="Content\scss\.sass-cache\6e69d195df721b3a89b57cbd4813c065acff1449\_clearfix.scssc" />
+    <Content Include="Content\scss\.sass-cache\6e69d195df721b3a89b57cbd4813c065acff1449\_display.scssc" />
+    <Content Include="Content\scss\.sass-cache\6e69d195df721b3a89b57cbd4813c065acff1449\_embed.scssc" />
+    <Content Include="Content\scss\.sass-cache\6e69d195df721b3a89b57cbd4813c065acff1449\_flex.scssc" />
+    <Content Include="Content\scss\.sass-cache\6e69d195df721b3a89b57cbd4813c065acff1449\_float.scssc" />
+    <Content Include="Content\scss\.sass-cache\6e69d195df721b3a89b57cbd4813c065acff1449\_position.scssc" />
+    <Content Include="Content\scss\.sass-cache\6e69d195df721b3a89b57cbd4813c065acff1449\_screenreaders.scssc" />
+    <Content Include="Content\scss\.sass-cache\6e69d195df721b3a89b57cbd4813c065acff1449\_sizing.scssc" />
+    <Content Include="Content\scss\.sass-cache\6e69d195df721b3a89b57cbd4813c065acff1449\_spacing.scssc" />
+    <Content Include="Content\scss\.sass-cache\6e69d195df721b3a89b57cbd4813c065acff1449\_text.scssc" />
+    <Content Include="Content\scss\.sass-cache\6e69d195df721b3a89b57cbd4813c065acff1449\_visibility.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_alert.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_background-variant.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_badge.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_border-radius.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_box-shadow.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_breakpoints.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_buttons.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_caret.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_clearfix.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_float.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_forms.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_gradients.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_grid-framework.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_grid.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_hover.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_image.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_list-group.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_lists.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_nav-divider.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_pagination.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_reset-text.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_resize.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_screen-reader.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_size.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_table-row.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_text-emphasis.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_text-hide.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_text-truncate.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_transition.scssc" />
+    <Content Include="Content\scss\.sass-cache\c64c3075ab570bf2e2c270d1fb05ff7e3db68931\_visibility.scssc" />
+    <Content Include="Content\scss\.sass-cache\d192277f41c6848ff7411af310ee7b2a42ab6d76\_align.scssc" />
+    <Content Include="Content\scss\.sass-cache\d192277f41c6848ff7411af310ee7b2a42ab6d76\_background.scssc" />
+    <Content Include="Content\scss\.sass-cache\d192277f41c6848ff7411af310ee7b2a42ab6d76\_borders.scssc" />
+    <Content Include="Content\scss\.sass-cache\d192277f41c6848ff7411af310ee7b2a42ab6d76\_clearfix.scssc" />
+    <Content Include="Content\scss\.sass-cache\d192277f41c6848ff7411af310ee7b2a42ab6d76\_display.scssc" />
+    <Content Include="Content\scss\.sass-cache\d192277f41c6848ff7411af310ee7b2a42ab6d76\_embed.scssc" />
+    <Content Include="Content\scss\.sass-cache\d192277f41c6848ff7411af310ee7b2a42ab6d76\_flex.scssc" />
+    <Content Include="Content\scss\.sass-cache\d192277f41c6848ff7411af310ee7b2a42ab6d76\_float.scssc" />
+    <Content Include="Content\scss\.sass-cache\d192277f41c6848ff7411af310ee7b2a42ab6d76\_position.scssc" />
+    <Content Include="Content\scss\.sass-cache\d192277f41c6848ff7411af310ee7b2a42ab6d76\_screenreaders.scssc" />
+    <Content Include="Content\scss\.sass-cache\d192277f41c6848ff7411af310ee7b2a42ab6d76\_sizing.scssc" />
+    <Content Include="Content\scss\.sass-cache\d192277f41c6848ff7411af310ee7b2a42ab6d76\_spacing.scssc" />
+    <Content Include="Content\scss\.sass-cache\d192277f41c6848ff7411af310ee7b2a42ab6d76\_text.scssc" />
+    <Content Include="Content\scss\.sass-cache\d192277f41c6848ff7411af310ee7b2a42ab6d76\_visibility.scssc" />
+    <Content Include="Content\scss\bootstrap\bootstrap-grid.css.map" />
+    <Content Include="Content\scss\bootstrap\bootstrap-grid.scss" />
+    <Content Include="Content\scss\bootstrap\bootstrap-reboot.css.map" />
+    <Content Include="Content\scss\bootstrap\bootstrap-reboot.scss" />
+    <Content Include="Content\scss\bootstrap\bootstrap.css.map" />
+    <Content Include="Content\scss\bootstrap\bootstrap.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_alert.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_badge.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_box-shadow.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_breakpoints.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_buttons.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_caret.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_float.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_forms.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_gradients.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_grid.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_hover.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_image.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_list-group.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_lists.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_navbar-align.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_pagination.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_resize.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_screen-reader.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_size.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_table-row.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_text-hide.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_text-truncate.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_transition.scss" />
+    <Content Include="Content\scss\bootstrap\mixins\_visibility.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_align.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_background.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_borders.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_clearfix.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_display.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_embed.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_flex.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_float.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_position.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_screenreaders.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_sizing.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_spacing.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_text.scss" />
+    <Content Include="Content\scss\bootstrap\utilities\_visibility.scss" />
+    <Content Include="Content\scss\bootstrap\_alert.scss" />
+    <Content Include="Content\scss\bootstrap\_badge.scss" />
+    <Content Include="Content\scss\bootstrap\_breadcrumb.scss" />
+    <Content Include="Content\scss\bootstrap\_button-group.scss" />
+    <Content Include="Content\scss\bootstrap\_buttons.scss" />
+    <Content Include="Content\scss\bootstrap\_card.scss" />
+    <Content Include="Content\scss\bootstrap\_carousel.scss" />
+    <Content Include="Content\scss\bootstrap\_close.scss" />
+    <Content Include="Content\scss\bootstrap\_code.scss" />
+    <Content Include="Content\scss\bootstrap\_custom-forms.scss" />
+    <Content Include="Content\scss\bootstrap\_dropdown.scss" />
+    <Content Include="Content\scss\bootstrap\_forms.scss" />
+    <Content Include="Content\scss\bootstrap\_functions.scss" />
+    <Content Include="Content\scss\bootstrap\_grid.scss" />
+    <Content Include="Content\scss\bootstrap\_images.scss" />
+    <Content Include="Content\scss\bootstrap\_input-group.scss" />
+    <Content Include="Content\scss\bootstrap\_jumbotron.scss" />
+    <Content Include="Content\scss\bootstrap\_list-group.scss" />
+    <Content Include="Content\scss\bootstrap\_media.scss" />
+    <Content Include="Content\scss\bootstrap\_mixins.scss" />
+    <Content Include="Content\scss\bootstrap\_modal.scss" />
+    <Content Include="Content\scss\bootstrap\_nav.scss" />
+    <Content Include="Content\scss\bootstrap\_navbar.scss" />
+    <Content Include="Content\scss\bootstrap\_pagination.scss" />
+    <Content Include="Content\scss\bootstrap\_popover.scss" />
+    <Content Include="Content\scss\bootstrap\_print.scss" />
+    <Content Include="Content\scss\bootstrap\_progress.scss" />
+    <Content Include="Content\scss\bootstrap\_reboot.scss" />
+    <Content Include="Content\scss\bootstrap\_root.scss" />
+    <Content Include="Content\scss\bootstrap\_tables.scss" />
+    <Content Include="Content\scss\bootstrap\_tooltip.scss" />
+    <Content Include="Content\scss\bootstrap\_transitions.scss" />
+    <Content Include="Content\scss\bootstrap\_type.scss" />
+    <Content Include="Content\scss\bootstrap\_utilities.scss" />
+    <Content Include="Content\scss\bootstrap\_variables.scss" />
+    <Content Include="Content\scss\socials.css.map" />
+    <Content Include="Content\scss\socials.scss" />
+    <Content Include="Content\scss\style.css.map" />
+    <Content Include="Content\scss\style.scss" />
+    <Content Include="Content\scss\variables.scss" />
+    <Content Include="Content\scss\_gauge.scss" />
+    <Content Include="Content\scss\_switches.scss" />
+    <Content Include="Content\scss\_widgets.scss" />
+    <Content Include="Content\Admin\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\Admin\fonts\themify.eot" />
+    <Content Include="Content\Admin\fonts\themify.ttf" />
+    <Content Include="Content\Admin\fonts\themify.woff" />
+    <Content Include="Content\Admin\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\Admin\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\Admin\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\Admin\fonts\FontAwesome.otf" />
+    <Content Include="Content\Admin\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\Admin\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\Admin\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\Admin\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Web.config" />
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ImageController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\ServicesController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Post.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Services\Index.cshtml" />
+    <Content Include="Views\Image\Index.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Services\MassageBody.cshtml" />
+    <Content Include="Views\Services\FootMassage.cshtml" />
+    <Content Include="Views\Image\HoiThao.cshtml" />
+    <Content Include="Views\Image\KhachHang.cshtml" />
+    <Content Include="Views\Image\Mekong.cshtml" />
+    <Content Include="Views\Services\MinnoRox.cshtml" />
+    <Content Include="Views\Services\Minno.cshtml" />
+    <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\XoaBaiViet.cshtml" />
+    <Content Include="Views\Shared\_Layout_Admin.cshtml" />
+    <Content Include="Views\Admin\TablePostsDeletePartial.cshtml" />
+    <Content Include="Views\Admin\TablePostsDetailsPartial.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59378</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:59378/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,105 @@
+﻿@using AnzamtechWS.Areas.Admin.Models
+@model GroupDanhMuc
+@{
+    ViewBag.Title = "Thêm danh mục";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="block-header">
+    <ol class="breadcrumb breadcrumb-arrow">
+        <li><a href="/Admin/Home">Trang chủ</a></li>
+        <li><a href="/Admin/DanhMuc">Danh mục</a></li>
+        <li class="active"><span>Thêm danh mục</span></li>
+    </ol>
+</div>
+@Html.Raw(Model.DanhMucModel.GetHTMLMessage())
+<div class="form-content col-lg-12 col-md-12 col-sm-12 col-xs-12 pl-0 pr-0">
+    <div class="card">
+        <div class="header bg-blue-grey ">
+            <h2>
+                Thêm danh mục
+            </h2>
+        </div>
+        @using (Html.BeginForm(new { area = "Admin", controller = "DanhMuc", action = "ThemDM" }))
+        {
+            <div class="body">
+                <h2 class="card-inside-title">Thông tin danh mục</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group d-flex flex-column">
+                            @Html.TextBoxFor(u => u.DanhMucModel.TenDanhMuc, Model.DanhMucConModel.TenDMC, new { @class = "form-control", @placeholder = "Tên danh mục" })
+                            @Html.ValidationMessageFor(u => u.DanhMucModel.TenDanhMuc, "", new { @class = "text-danger pt-1" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group d-flex flex-column">
+
+                            @Html.TextBoxFor(u => u.DanhMucModel.Tag, Model.DanhMucModel.Tag, new { @class = "form-control ", @placeholder = "Tag" })
+                        </div>
+                    </div>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary m-t-15 waves-effect">Hoàn tất</button>
+                <button type="reset" class="btn m-t-15 waves-effect btn-danger">Hủy</button>
+            </div>
+        }
+
+
+    </div>
+</div>
+
+@Html.Raw(Model.DanhMucConModel.GetHTMLMessage())
+
+<div class="form-content col-lg-12 col-md-12 col-sm-12 col-xs-12 pl-0 pr-0">
+    <div class="card">
+        <div class="header bg-blue-grey ">
+            <h2>
+                Thêm danh mục con
+            </h2>
+        </div>
+        @using (Html.BeginForm(new { area = "Admin", controller = "DanhMuc", action = "ThemDMC" }))
+        {
+            <div class="body">
+                <h2 class="card-inside-title">Danh mục</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group d-flex flex-column">
+                            @Html.DropDownListFor(m => m.DanhMucConModel.MaDM, new SelectList(Model.DanhMucModel.GetJSONDSDanhMuc(), "MaDM", "TenDM") ,new { @class = "form-control" })
+                            @Html.ValidationMessageFor(u => u.DanhMucConModel.MaDM, "", new { @class = "text-danger pt-1" })
+
+
+                        </div>
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Thông tin danh mục con</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group d-flex flex-column">
+
+                            @Html.TextBoxFor(u => u.DanhMucConModel.TenDMC, Model.DanhMucConModel.TenDMC, new { @class = "form-control ", @placeholder = "Tên danh mục con" })
+                            @Html.ValidationMessageFor(u => u.DanhMucConModel.TenDMC, "", new { @class = "text-danger pt-1" })
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group d-flex flex-column">
+
+                            @Html.TextBoxFor(u => u.DanhMucConModel.Tag, Model.DanhMucConModel.Tag, new { @class = "form-control ", @placeholder = "Tag" })
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary m-t-15 waves-effect">Hoàn tất</button>
+                <button type="reset" class="btn m-t-15 waves-effect btn-danger">Hủy</button>
+            </div>
+        }
+
+
+    </div>
+</div>

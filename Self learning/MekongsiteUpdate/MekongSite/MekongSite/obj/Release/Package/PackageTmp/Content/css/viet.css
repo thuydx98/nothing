@@ -1,0 +1,62 @@
+﻿#minno-model {
+    width: 85%;
+    height: auto;
+    margin-left: 5%;
+}
+#nangcomat {
+    width: 70%;
+    height: auto;
+}
+#minno-randa {
+    width: 77%;
+    height: auto;
+    /*margin-left: 10%;*/
+}
+#banner-inno {
+    width: 35%;
+    height: auto;
+    margin-left: 25%;
+}
+#minno-banner {
+    width: 77%;
+    height: auto;
+}
+#param_1 {
+    padding-top: 4%;
+    font-size: 155%;
+    padding-left: 10%;
+}
+#minno-seoro {
+    width: 100%;
+    height: auto;
+}
+#param_2 {
+    padding-top: 4%;
+    font-size: 155%;
+    line-height: unset;
+}
+#minno{
+    text-align: center;
+}
+#header-minno {
+    text-align: center;
+    font-size: 175%;
+}
+#header-minno {
+    font-size: 125%;
+}
+#mid {
+    padding-bottom: 1%;
+}
+.voucher {
+    font-size: 125%;
+    padding: 0% 12%; 
+}
+.footer {
+    font-size: 125%;
+    padding-left: 13%;
+}
+#fb{
+    font-size:100%;
+}
+

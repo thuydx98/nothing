@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+  
+  body {
+    overflow: hidden;
+    display: flex;
+    background: #111;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+  }
+  
+  #box {
+    position: relative;
+    display: flex;
+    width: 130px;
+    height: 200px;
+    margin: auto;
+    transform-style: preserve-3d;
+    transform: rotateX(-10deg);
+  }
+  
+  #box>img, #box>video {
+    transform-style: preserve-3d;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 200px;
+    font-size: 50px;
+    text-align: center;
+    box-shadow: 0 0 8px #fff;
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
+  }
+  
+  #box>img:hover, #box>video:hover {
+    box-shadow: 0 0 15px #fffd;
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0007);
+  }
+  
+  #box > p {
+    margin: auto;
+    transform: translateY(100px) rotateX(90deg);
+    background-color: #0005;
+    color: #fff;
+  }
+  
+  #music-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }

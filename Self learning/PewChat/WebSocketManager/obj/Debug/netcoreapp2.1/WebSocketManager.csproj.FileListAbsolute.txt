@@ -1,0 +1,16 @@
+C:\Users\Thuy Dao Xuan\Desktop\PewChat\WebSocketManager\bin\Debug\netcoreapp2.1\WebSocketManager.deps.json
+C:\Users\Thuy Dao Xuan\Desktop\PewChat\WebSocketManager\bin\Debug\netcoreapp2.1\WebSocketManager.dll
+C:\Users\Thuy Dao Xuan\Desktop\PewChat\WebSocketManager\bin\Debug\netcoreapp2.1\WebSocketManager.pdb
+C:\Users\Thuy Dao Xuan\Desktop\PewChat\WebSocketManager\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\Thuy Dao Xuan\Desktop\PewChat\WebSocketManager\bin\Debug\netcoreapp2.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Thuy Dao Xuan\Desktop\PewChat\WebSocketManager\bin\Debug\netcoreapp2.1\WebSocketManager.Common.dll
+C:\Users\Thuy Dao Xuan\Desktop\PewChat\WebSocketManager\bin\Debug\netcoreapp2.1\WebSocketManager.Common.pdb
+C:\Users\Thuy Dao Xuan\Desktop\PewChat\WebSocketManager\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\Thuy Dao Xuan\Desktop\PewChat\WebSocketManager\bin\Debug\netcoreapp2.1\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\Thuy Dao Xuan\Desktop\PewChat\WebSocketManager\obj\Debug\netcoreapp2.1\WebSocketManager.csprojAssemblyReference.cache
+C:\Users\Thuy Dao Xuan\Desktop\PewChat\WebSocketManager\obj\Debug\netcoreapp2.1\WebSocketManager.csproj.CoreCompileInputs.cache
+C:\Users\Thuy Dao Xuan\Desktop\PewChat\WebSocketManager\obj\Debug\netcoreapp2.1\WebSocketManager.AssemblyInfoInputs.cache
+C:\Users\Thuy Dao Xuan\Desktop\PewChat\WebSocketManager\obj\Debug\netcoreapp2.1\WebSocketManager.AssemblyInfo.cs
+C:\Users\Thuy Dao Xuan\Desktop\PewChat\WebSocketManager\obj\Debug\netcoreapp2.1\WebSocketManager.csproj.CopyComplete
+C:\Users\Thuy Dao Xuan\Desktop\PewChat\WebSocketManager\obj\Debug\netcoreapp2.1\WebSocketManager.dll
+C:\Users\Thuy Dao Xuan\Desktop\PewChat\WebSocketManager\obj\Debug\netcoreapp2.1\WebSocketManager.pdb

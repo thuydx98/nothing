@@ -1,0 +1,39 @@
+﻿@using AnzamtechWS.Areas.Admin.Models
+@model TagModel
+@{
+    ViewBag.Title = "Thêm Tag";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="block-header">
+    <ol class="breadcrumb breadcrumb-arrow">
+        <li><a href="/Admin/Home">Trang chủ</a></li>
+        <li><a href="/Admin/BaiViet">Bài viết</a></li>
+        <li class="active"><span>Thêm Tag</span></li>
+    </ol>
+</div>
+@Html.Raw(Model.GetHTMLMessage())
+<div class="form-content col-lg-12 col-md-12 col-sm-12 col-xs-12 pl-0 pr-0">
+    <div class="card">
+        <div class="header">
+            <h2>
+                Thêm Tag
+            </h2>
+        </div>
+        <div class="body">
+            @using (Html.BeginForm(new { area = "Admin", controller = "BaiViet", action = "ThemTag" }))
+            {
+
+                <h2 class="card-inside-title">Tên Tag</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @Html.TextBoxFor(u=>u.TenTag, Model.TenTag, new { @class = "form-control"})
+                           
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary" >Thêm</button>
+            }
+        </div>
+    </div>
+</div>

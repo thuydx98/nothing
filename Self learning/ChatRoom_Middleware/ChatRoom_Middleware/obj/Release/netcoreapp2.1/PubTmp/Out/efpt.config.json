@@ -1,0 +1,1 @@
+﻿{"ContextClassName":"PayablesContext","DefaultDacpacSchema":null,"IdReplace":false,"IncludeConnectionString":true,"OutputPath":"Models","ProjectRootNamespace":"ChatRoom_Middleware","SelectedToBeGenerated":0,"Tables":["dbo.ArchivedInvoiceLineItems"],"UseDatabaseNames":true,"UseFluentApiOnly":true,"UseHandleBars":false,"UseInflector":false}

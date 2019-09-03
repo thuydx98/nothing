@@ -1,0 +1,192 @@
+﻿@using AnzamtechWS.Areas.Admin.Models
+@model QuanLyTrangModel
+@{
+    ViewBag.Title = "Quản lý trang";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@Styles.Render("~/style/imagedialog")
+@Scripts.Render("~/bundle/imagedialog")
+@Html.Partial("../SanPham/ImageDialog")
+<div class="block-header">
+    <ol class="breadcrumb breadcrumb-arrow">
+        <li><a href="/Admin/Home">Trang chủ</a></li>
+        <li class="active"><span>Quản lý trang</span></li>
+    </ol>
+</div>
+<script>
+    var myImageDialog = undefined;
+    function CreateImageDialog(MaDMA) {
+        $.get("/Admin/HinhAnh/GetTypeImage", function (data, status) {
+            if (status == "success") {
+                myImageDialog = new ImageDiaLog({
+                    MaDMA: MaDMA,
+                    urlGetAlbum: '/Admin/UploadImage/GetAlbum',
+                    urlGetFolders: '/Admin/UploadImage/GetFolders',
+                    urlUploadImage: '/Admin/UploadImage/Index',
+                    urlGetImageInfor: '/Admin/HinhAnh/GetImageByID',
+                    LoaiAnh: data
+
+                });
+                myImageDialog.CreateTreeView();
+                myImageDialog.CreateListView();
+                myImageDialog.InitFileUpload();
+            }
+        });
+    }
+    $(document).ready(function () {
+        $("#Logo").click(function () {
+            CreateImageDialog(@Model.DMALogo.MaDMA);
+            myImageDialog.Show(0);
+        });
+    });
+</script>
+<div class="form-content col-lg-12 col-md-12 col-sm-12 col-xs-12 pl-0 pr-0">
+    <div class="card">
+        <div class="header">
+            <h2>
+                Thông số trang
+            </h2>
+        </div>
+        <div class="body">
+            @using (Html.BeginForm(new { area = "Admin", controller = "QuanLyTrang", action = "Index" }))
+            { 
+                <h2 class="card-inside-title">Quản lý ảnh</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <button type="button" class="btn btn-primary" id="Logo">Logo</button>
+                        <button type="button" class="btn btn-primary">Banner</button>
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Mô tả công ty</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @Html.TextBoxFor(m=>m.MoTaCongTy, Model.MoTaCongTy, new { @class = "form-control" } )    
+                        </div>
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Giới thiệu công ty</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                           @Html.TextAreaFor(m => m.GioiThieuCongTy, new { @class = "form-control", @rows="10"})
+
+                        </div>
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Vị trí</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @Html.TextBoxFor(m => m.ViTri, Model.ViTri, new { @class = "form-control" })
+
+                        </div>
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Liên kết Facebook</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @Html.TextBoxFor(m => m.LinkFB, Model.LinkFB, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Liên kết Google</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @Html.TextBoxFor(m => m.LinkGPlus, Model.LinkGPlus, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Liên kết Tweeter</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @Html.TextBoxFor(m => m.LinkTweeter, Model.LinkTweeter, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Liên kết Instagram</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @Html.TextBoxFor(m => m.LinkInstagram, Model.LinkInstagram, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Điện thoại cố định</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @Html.TextBoxFor(m => m.DTCoDinh, Model.DTCoDinh, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Điện thoại di động</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @Html.TextBoxFor(m => m.DTDiDong, Model.DTDiDong, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Địa chỉ</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @Html.TextBoxFor(m => m.DiaChiCty, Model.DiaChiCty, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Email</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @Html.TextBoxFor(m => m.EmailCty, Model.EmailCty, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Email nhân viên sale</h2>
+                    <div class="row clearfix">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                @Html.TextBoxFor(m => m.EmailSale, Model.EmailSale, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="card-inside-title">Điện thoại nhân viên sale</h2>
+                    <div class="row clearfix">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                @Html.TextBoxFor(m => m.DTNVSale, Model.DTNVSale, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="card-inside-title">Email nhân viên kỹ thuật</h2>
+                    <div class="row clearfix">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                @Html.TextBoxFor(m => m.EmailKyThuat, Model.EmailKyThuat, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="card-inside-title">Điện thoại nhân viên kỹ thuật</h2>
+                    <div class="row clearfix">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                @Html.TextBoxFor(m => m.DTNNKyThuat, Model.DTNNKyThuat, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-primary m-t-15 waves-effect">Hoàn tất</button>
+                    </div>
+                </div>
+            }
+            
+        </div>
+    </div>
+
+</div>

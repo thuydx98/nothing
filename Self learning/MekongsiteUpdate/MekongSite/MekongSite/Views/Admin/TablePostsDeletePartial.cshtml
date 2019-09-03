@@ -1,0 +1,13 @@
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<Post>
+
+@for (int i = 0; i < Model.Count; i++)
+{
+    <tr>
+        <th scope="row">@((Model.PageNumber - 1) * 5 + i + 1)</th>
+        <td>@Model[i].Title</td>
+        <td>@(Model[i].Content.Length <= 50 ? Model[i].Content : Model[i].Content.Substring(0, 50) + "...")</td>
+        <td>@Model[i].CreatedDate</td>
+        <td><button type="button" class="btn btn-danger btn-sm btnDelete" data-idPage="@Model.PageNumber" data-id="@Model[i].Post_ID">Xóa</button></td>
+    </tr>
+}

@@ -1,0 +1,76 @@
+﻿@using AnzamtechWS.Areas.Admin.Models
+@using AnzamtechWS.Areas.User.Models
+@using AnzamtechWS.Helper
+@model BaiVietModel
+@{
+    Layout = "/Areas/User/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Tin tức";
+}
+
+<div class="mt-5 mb-5"></div>
+<div class="container">
+    <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-md-8">
+            <h3 class="my-4 d-flex flex-column">
+                Danh sách bài viết
+                <small class="text-muted" style="font-size: .55em">Mang đến cho bạn những tin tức mới nhất mới nhất từ ANZ AMTECH</small>
+            </h3>
+            @{ var listDM = Model.GetDanhMucs();}
+            @{ PagedList.IPagedList<BaiViet> listBV = null;}
+            @{ var indexDM = listDM[0].MaDMBV;}
+            @if (ViewBag.MaDMBV != null)
+            {
+                indexDM = ViewBag.MaDMBV;
+            }
+            @if (listDM != null && listDM.Count > 0)
+            {
+                listBV = Model.ListBaiVietByMaDM(indexDM);
+            }
+            @if (listBV != null)
+            {
+                foreach (var item in listBV)
+                {
+                    <article class="card-news mb-4">
+                        @{ var a = item.DanhMucAnh.Anhs.Where(u => u.LoaiAnh.TenLoai.Contains("Ảnh đại diện bài viết")).Take<Anh>(1);}
+                        @{ var path = "/TinTuc/" + Helper.ConvertVN(item.DanhMucBaiViet.TenDanhMuc).Replace(' ', '-') + "-" + item.MaDMBV + "/" + Helper.ConvertVN(item.TenBV).Replace(' ', '-') + "-" + item.MaBV; }
+                        <div class="col-12 pl-4 pr-4">
+                            @if (a != null && a.Count() > 0)
+                            {
+                                <a href="@path" class="baner-image">
+                                    <img class="lazy" data-src="@a.ElementAt(0).Path/@a.ElementAt(0).TenAnh" src="~/image/pixel.gif" alt="@a.ElementAt(0).Tag">
+                                </a>
+                            }
+                            else
+                            {
+                                <a href="@path" class="baner-image">
+                                    <img class="container-image" src="http://placehold.it/750x300" alt="Card image cap">
+                                </a>
+                            }
+                        </div>
+
+                        <div class="card-body">
+                            <h4 class="card-title">@item.TenBV</h4>
+                            <p class="card-text">@item.MoTa</p>
+                            <a href="@path" class="btn btn-primary">Đọc thêm</a>
+                        </div>
+                        <div class="card-footer text-muted" style="font-size:.9em">
+                            Đăng ngày @item.NgayDang.ToString("dd/MM/yyyy") bởi
+                            <a href="@path">@item.NhanVien.TenDN</a>
+                        </div>
+                    </article>
+
+                }
+            }
+            <!-- Blog Post -->
+
+        </div>
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+           @Html.Partial("SlideBar", new SlideBarModel {  DanhMucBaiViets = listDM, MaDMBV = indexDM })
+        </div>
+        <!-- Side Widget -->
+        
+    </div>
+</div>
+<!-- /.row -->

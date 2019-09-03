@@ -1,0 +1,273 @@
+﻿@using AnzamtechWS.Areas.Admin.Models
+@using AnzamtechWS.Helper
+@using PagedList
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "Sản phẩm";
+    Layout = "~/Areas/User/Views/Shared/_Layout.cshtml";
+}
+
+@section ScriptView
+{
+    <script>
+
+
+        $(document).ready(function () {
+            $(".left-sidebar > ul").on("click", function (e) {
+                var subNav = $(e.target);
+
+                if (subNav.hasClass("dropdown")) {
+                    var parent = subNav.parent();
+                    if (parent.hasClass("active")) {
+                        parent.removeClass("active");
+                        parent.children(".sub-nav").slideUp();
+
+                    } else {
+                        $.each($(".left-sidebar > ul > li").not(parent), function (key, obj) {
+                            if ($(obj).hasClass("active")) {
+                                $(obj).removeClass("active");
+                                $(obj).children(".sub-nav").slideUp();
+                            }
+                        });
+
+                        parent.toggleClass("active");
+                        parent.children(".sub-nav").slideToggle(250);
+                    }
+                    //  console.log($(".left-sidebar > ul > li").not(parent));
+
+
+                }
+            });
+
+
+
+
+        });
+
+    </script>
+}
+@section ScrollView
+    {
+    sr.reveal('.left-sidebar', {
+    origin: 'right',
+    duration: 500
+    });
+}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3">
+            <div class="left-sidebar mb-5">
+                <div class="title mobile">
+                    <h5 class="mb-0">Danh mục sản phẩm</h5>
+                </div>
+                <ul class="nav d-flex flex-column">
+                    @{
+                        DanhMucModel modelDM = new DanhMucModel();
+                        var list = modelDM.GetDSDanhMuc();
+
+                    }
+                    @if (list != null)
+                    {
+                        foreach (var item in list)
+                        {
+                            if (item.PageController == null)
+                            {
+                                string active = "";
+                                if (ViewBag.MaDM == item.MaDM)
+                                {
+                                    active = "class=active";
+                                }
+                                string path = "/" + Helper.ConvertVN(item.TenDanhMuc).Replace(' ', '-') + "-" + item.MaDM;
+                                <li @active>
+
+                                    @{ var listdmc = item.DanhMucCons; }
+                                    @if (listdmc != null && listdmc.Count() > 0)
+                                    {
+                                        <a href="javascript:void(0);" class="dropdown">@item.TenDanhMuc</a>
+                                        <ul class="sub-nav p-0" style="display:@(active == ""?"none":"block")">
+
+                                            @foreach (var dmc in listdmc)
+                                            {
+                                                <li class="@((dmc.MaDMC == ViewBag.MaDMC)?"active":"")"><a href="@path/@Html.Raw(Helper.ConvertVN(dmc.TenDMC).Replace(' ', '-') + "-" + dmc.MaDMC)">@dmc.TenDMC</a></li>
+                                            }
+
+                                        </ul>
+                                    }
+                                    else
+                                    {
+                                        <a href="javascript:void(0);">@item.TenDanhMuc</a>
+                                    }
+                                </li>
+                                                }
+                                                else
+                                                {
+                                                    <li>
+                                                        @{
+                                                                GiaiPhapModel mGP = new GiaiPhapModel() { MaDM = item.MaDM };
+                                                                var listGP = mGP.GetListGPByMaDM();
+                                                            }
+                                                       @if (listGP != null)
+                                                       {
+                                                        <a href="javascript:void(0);" class="dropdown">@item.TenDanhMuc</a>
+                                                            <ul class="sub-nav p-0" style="display:none">
+
+                                                                @foreach (var gp in listGP)
+                                                                {
+                                                                    <li><a href="/GiaiPhap/@item.PageController/@Helper.ConvertVN(gp.TenGP).Replace(' ', '-')-@gp.MaGP">@gp.TenGP</a></li>
+                                                                }
+
+                                                            </ul>
+                                                       }
+                                                    </li>
+                                                }
+                                            }
+                                        }
+
+                </ul>
+            </div>
+            <div class="left-sidebar mb-5">
+                <div class="title mobile">
+                    <h5 class="mb-0">Sản phẩm nổi bật</h5>
+                </div>
+                <div class="d-flex flex-column">
+                    @{
+                        SanPhamModel model = new SanPhamModel();
+                        var listRP = model.GetSanPhamNoiBat();
+                    }
+                    @if (listRP != null)
+                    {
+                        foreach (var item in listRP)
+                        {
+                            var a = item.DanhMucAnh.Anhs.Where(u => u.LoaiAnh.TenLoai.Contains("Ảnh đại diện sản phẩm")).Take<Anh>(1);
+                            var path = "/" + Helper.ConvertVN(item.DanhMucCon.DanhMuc.TenDanhMuc).Replace(' ', '-') + "-" + item.DanhMucCon.MaDM + "/" + Helper.ConvertVN(item.DanhMucCon.TenDMC).Replace(' ', '-') + "-" + item.DanhMucCon.MaDMC + "/" + Helper.ConvertVN(item.TenSP).Replace(' ', '-') + "-" + item.MaSP;
+                            <div class="d-flex flex-row pt-2 pb-2">
+                                <div class="image-related">
+                                    <a href="@path" class="img-size-prealated container-image d-flex justify-content-center">
+                                        @if (a != null && a.Count() > 0)
+                                        {
+                                            <img class="lazy" data-src="@Html.Raw(a.ElementAt<Anh>(0).Path + "/" + a.ElementAt<Anh>(0).TenAnh)" src="/image/pixel.gif" />
+                                        }
+                                        else
+                                        {
+                                            <img class="lazy" data-src="#" src="/image/pixel.gif" />
+                                        }
+
+                                    </a>
+                                </div>
+                                <div class="card-body pt-2 pb-0 pl-0 pr-0">
+                                    <h5 class="card-title mb-1">@item.TenSP</h5>
+
+                                    @{  var listgia = item.GiaSPs.OrderByDescending(u => u.NgayTao).Take<GiaSP>(1); }
+                                    @if (listgia != null && listgia.Count() > 0)
+                                    {
+                                        <p class="card-text mb-1">
+                                            @Html.Raw(Helper.GetCurrencyVND(listgia.ElementAt(0).GiaSP1));
+                                        </p>
+                                        <span class="card-text"><a href="@path">Xem thêm</a></span>
+                                    }
+                                    else
+                                    {
+                                        <span class="card-text"><a href="@path">Xem thêm</a></span>
+                                    }
+
+
+                                </div>
+                            </div>
+                                            }
+                                        }
+
+            </div>
+            
+        </div>
+            <div class="left-sidebar mb-5">
+                <div class="title mobile">
+                    <h5 class="mb-0">Liên hệ</h5>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-8 col-xl-9">
+            <div class="container-fluid ">
+                <div class="row justify-content-center feature-product">
+                    @{
+
+                        SanPhamModel modelSP = new SanPhamModel();
+
+                        IPagedList<SanPham> listSP = null;
+                        if (ViewBag.MaDM != null && ViewBag.MaDMC == null)
+                        {
+                            modelSP.MaDM = ViewBag.MaDM;
+                            modelSP.PageNumber = ViewBag.ID;
+                            listSP = modelSP.GetSanPhamByMaDM();
+                        }
+                        if (ViewBag.MaDM != null && ViewBag.MaDMC != null)
+                        {
+                            modelSP.PageNumber = ViewBag.ID;
+                            modelSP.MaDM = ViewBag.MaDM;
+                            modelSP.MaDMC = ViewBag.MaDMC;
+                            listSP = modelSP.GetSanPhamByMaDMC();
+                        }
+                    }
+                    @if (listSP != null)
+                    {
+                        foreach (SanPham item in listSP)
+                        {
+                            DanhMucAnh dma = item.DanhMucAnh;
+                            var a = dma.Anhs.Where(u => u.LoaiAnh.TenLoai.Contains("Ảnh đại diện sản phẩm")).Take<Anh>(1);
+                            DanhMucCon dmc = item.DanhMucCon;
+                            var g = item.GiaSPs.OrderByDescending(u => u.NgayTao).Take(1);
+                            var path = "/" + Helper.ConvertVN(dmc.DanhMuc.TenDanhMuc).Replace(' ', '-') + "-" + dmc.MaDM + "/" + Helper.ConvertVN(dmc.TenDMC).Replace(' ', '-') + "-" + dmc.MaDMC + "/" + Helper.ConvertVN(item.TenSP).Replace(' ', '-') + "-" + item.MaSP;
+                            <div class="col-xl-4 col-lg-4 col-sm-6 col-10 mb-5 ">
+                                <div class="card h-100">
+                                    <div class="d-flex justify-content-center">
+                                        <a href="@path" class="container-image">
+                                            @if (a != null && a.Count() > 0)
+                                            {
+                                                <img class="lazy" data-src="@Html.Raw(a.ElementAt<Anh>(0).Path + "/" + a.ElementAt<Anh>(0).TenAnh)" src="/image/pixel.gif" />
+                                            }
+                                            else
+                                            {
+                                                <img class="lazy" data-src="#" src="/image/pixel.gif" />
+                                            }
+
+                                        </a>
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="@path">@item.TenSP</a>
+                                        </h4>
+                                        <h5>
+                                            @if (g != null && g.Count() > 0)
+                                            {
+                                                @Html.Raw(Helper.GetCurrencyVND(g.ElementAt(0).GiaSP1))
+                                            }
+
+                                        </h5>
+                                        <p class="card-text limit-word">@item.Tag</p>
+                                        <a class="btn btn-primary mt-2 mb-1" href="@path">Xem chi tiết</a>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-muted">★ ★ ★ ★ ☆</small>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+            <div class="container-fluid">
+                @if (ViewBag.MaDM != null && ViewBag.MaDMC == null)
+                {
+                    @Html.PagedListPager(listSP, page => Url.Content("/" + ViewBag.CatName + "-" + ViewBag.MaDM + "/Trang-" + page), PagedListRenderOptions.ClassicPlusFirstAndLast)
+
+                }
+                @if (ViewBag.MaDM != null && ViewBag.MaDMC != null)
+                {
+                    @Html.PagedListPager(listSP, page => Url.Content("/" + ViewBag.CatName + "-" + ViewBag.MaDM + "/" + ViewBag.SubCat + "-" + ViewBag.MaDMC + "/Trang-" + page), PagedListRenderOptions.ClassicPlusFirstAndLast)
+
+                }
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,200 @@
+﻿/*Downloaded from https://www.codeseek.co/allicarn/truncated-pagination-jPowab */
+
+h1 {
+    font-weight: 200;
+}
+
+hr {
+    border-top: 1px solid #ddd;
+    border-bottom: 0;
+    margin: 20px 0;
+}
+
+.pagination {
+    display: list-item;
+    margin: 20px 0 0;
+    font-size: 0;
+    text-align: center;
+}
+
+.pagination a {
+    margin-top: 5px;
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    background-color: white ;
+    border: 1px solid #000;
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+    a:hover, .pagination > ol > li > a:hover {
+        background-color: beige;
+        text-decoration: underline;
+    }
+
+ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+.pagination li {
+    display: inline-block;
+    margin: 0 2.5px;
+}
+
+    li.active a {
+        background-color: deepskyblue;
+    }
+
+        li.active a:hover {
+            text-decoration: none;
+            cursor: default;
+        }
+
+.prev.disabled, .next.disabled {
+    cursor: default;
+    background: #ccc;
+    color: #888;
+    border-color: #888;
+}
+
+    .prev.disabled:hover, .next.disabled:hover {
+        cursor: default;
+        text-decoration: none;
+    }
+
+.prev {
+    margin-right: 2.5px;
+}
+
+.next {
+    margin-left: 2.5px;
+}
+
+@media (max-width: 767px) {
+    li:first-child, li.active, li.active-sibling:nth-last-child(2), li:last-child {
+        display: inline-block !important;
+    }
+
+        li:first-child:nth-last-child(n+6) ~ li {
+            display: none;
+        }
+
+            li:first-child:nth-last-child(n+6) ~ li:nth-last-child(-n+3) {
+                display: inline-block;
+            }
+
+            li:first-child:nth-last-child(n+6) ~ li:nth-last-child(3):before {
+                content: "\2026";
+                font-size: 24px;
+                display: inline-block;
+                margin-right: 2.5px;
+            }
+
+            li:first-child:nth-last-child(n+6).active:before, li:first-child:nth-last-child(n+6) ~ li.active:before {
+                content: "\2026";
+                font-size: 24px;
+                display: inline-block;
+                margin-right: 2.5px;
+            }
+
+            li:first-child:nth-last-child(n+6).active:after, li:first-child:nth-last-child(n+6) ~ li.active:after {
+                content: "\2026";
+                font-size: 24px;
+                display: inline-block;
+                margin-left: 2.5px;
+            }
+
+            li:first-child:nth-last-child(n+6).active:nth-child(-n+2):before, li:first-child:nth-last-child(n+6).active:nth-child(-n+2):after, li:first-child:nth-last-child(n+6).active:nth-last-child(-n+2):before, li:first-child:nth-last-child(n+6).active:nth-last-child(-n+2):after, li:first-child:nth-last-child(n+6) ~ li.active:nth-child(-n+2):before, li:first-child:nth-last-child(n+6) ~ li.active:nth-child(-n+2):after, li:first-child:nth-last-child(n+6) ~ li.active:nth-last-child(-n+2):before, li:first-child:nth-last-child(n+6) ~ li.active:nth-last-child(-n+2):after {
+                display: none;
+            }
+
+            li:first-child:nth-last-child(n+6).active ~ li:nth-last-child(-n+3), li:first-child:nth-last-child(n+6) ~ li.active ~ li:nth-last-child(-n+3) {
+                display: none;
+            }
+
+            li:first-child:nth-last-child(n+6).active ~ li:nth-child(-n+3), li:first-child:nth-last-child(n+6) ~ li.active ~ li:nth-child(-n+3) {
+                display: inline-block;
+            }
+
+            li:first-child:nth-last-child(n+6).active ~ li:nth-child(-n+2):after, li:first-child:nth-last-child(n+6) ~ li.active ~ li:nth-child(-n+2):after {
+                display: none;
+            }
+
+            li:first-child:nth-last-child(n+6).active ~ li:nth-child(3):after, li:first-child:nth-last-child(n+6) ~ li.active ~ li:nth-child(3):after {
+                content: "\2026";
+                font-size: 24px;
+                display: inline-block;
+                margin-left: 2.5px;
+            }
+}
+
+@media (min-width: 768px) {
+    .pagination li:first-child, .pagination li.active-sibling, .pagination li.active, .pagination li.active + li, .pagination li:last-child {
+        display: inline-block !important;
+    }
+
+        li:first-child:nth-last-child(n+8) ~ li {
+            display: none;
+        }
+
+            li:first-child:nth-last-child(n+8) ~ li.active-sibling:before {
+                content: "\2026";
+                font-size: 24px;
+                display: inline-block;
+                margin-right: 2.5px;
+            }
+
+            li:first-child:nth-last-child(n+8) ~ li.active + li:after {
+                content: "\2026";
+                font-size: 24px;
+                display: inline-block;
+                margin-left: 2.5px;
+            }
+
+            li:first-child:nth-last-child(n+8) ~ li:nth-last-child(-n+5) {
+                display: inline-block;
+            }
+
+            li:first-child:nth-last-child(n+8) ~ li:nth-last-child(5):before {
+                content: "\2026";
+                font-size: 24px;
+                display: inline-block;
+                margin-right: 2.5px;
+            }
+
+            li:first-child:nth-last-child(n+8) ~ li:nth-child(-n+2):before, li:first-child:nth-last-child(n+8) ~ li:nth-child(-n+2):after, li:first-child:nth-last-child(n+8) ~ li:nth-last-child(-n+2):before, li:first-child:nth-last-child(n+8) ~ li:nth-last-child(-n+2):after, li:first-child:nth-last-child(n+8) ~ li.active-sibling:nth-last-child(-n+4):before, li:first-child:nth-last-child(n+8) ~ li.active-sibling:nth-last-child(-n+4):after {
+                display: none !important;
+            }
+
+            li:first-child:nth-last-child(n+8).active ~ li:nth-last-child(-n+5), li:first-child:nth-last-child(n+8) ~ li.active ~ li:nth-last-child(-n+5) {
+                display: none;
+            }
+
+                li:first-child:nth-last-child(n+8).active ~ li:nth-last-child(-n+5):before, li:first-child:nth-last-child(n+8) ~ li.active ~ li:nth-last-child(-n+5):before {
+                    display: none;
+                }
+
+            li:first-child:nth-last-child(n+8).active ~ li:nth-child(-n+5), li:first-child:nth-last-child(n+8) ~ li.active ~ li:nth-child(-n+5) {
+                display: inline-block;
+            }
+
+            li:first-child:nth-last-child(n+8).active ~ li:nth-child(-n+4):after, li:first-child:nth-last-child(n+8) ~ li.active ~ li:nth-child(-n+4):after {
+                display: none;
+            }
+
+            li:first-child:nth-last-child(n+8).active ~ li:nth-child(5):after, li:first-child:nth-last-child(n+8) ~ li.active ~ li:nth-child(5):after {
+                content: "\2026";
+                font-size: 24px;
+                display: inline-block;
+                margin-left: 2.5px;
+            }
+
+            li:first-child:nth-last-child(n+8).active:before, li:first-child:nth-last-child(n+8).active:after, li:first-child:nth-last-child(n+8) ~ li.active:before, li:first-child:nth-last-child(n+8) ~ li.active:after {
+                display: none;
+            }
+}

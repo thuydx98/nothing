@@ -1,0 +1,115 @@
+﻿@using AnzamtechWS.Areas.Admin.Models
+@using PagedList
+@using PagedList.Mvc
+@model BaiVietModel
+@{
+    ViewBag.Title = "Quản lý bài viết";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="block-header">
+    <ol class="breadcrumb breadcrumb-arrow">
+        <li><a href="/Admin/Home">Trang chủ</a></li>
+        <li><a href="/Admin/BaiViet">Bài viết</a></li>
+        <li class="active"><span>Quản lý bài viết</span></li>
+    </ol>
+</div>
+@Html.Raw(Model.GetHTMLMessage())
+<div class="form-content col-lg-12 col-md-12 col-sm-12 col-xs-12 pl-0 pr-0">
+    <div class="card">
+        <div class="header">
+            <h2>
+                Tìm bài viết
+            </h2>
+        </div>
+        <div class="body">
+            @using (Html.BeginForm(new { area = "Admin", controller = "BaiViet", action = "Index" }))
+            {
+
+                <h2 class="card-inside-title">Danh mục bài viết</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @Html.DropDownListFor(u => u.MaDMBV, Model.GetDanhMucBV(), new { @class = "form-control", @placeholder = "Từ khóa" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @Html.TextBoxFor(u => u.Keyword, Model.Keyword, new { @class = "form-control", @placeholder = "Từ khóa" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-primary m-t-15 waves-effect">Tìm kiếm</button>
+                    </div>
+                </div>
+
+            }
+            <h2 class="card-inside-title">Kết quả tìm kiếm</h2>
+            <div class="row clearfix table-responsive">
+                <div class="col-sm-12">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th width="40">ID</th>
+                                <th>Tên bài viết</th>
+                                <th>Ngày đăng</th>
+                                <th width="40">&nbsp;</th>
+                                <th width="40">&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{ IPagedList<BaiViet> ListBV = null;}
+
+                            @if (Session["TKPaging"] == null)
+                            {
+                                <tr>
+                                    <td colspan="9">Không có dữ liệu</td>
+                                </tr>
+                            }
+                            else
+                            {
+                                ListBV = Model.GetDSTimKiem();
+                                if (ListBV != null)
+                                {
+                                    foreach (var item in ListBV)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @item.MaBV
+                                            </td>
+                                            <td>
+                                                @item.TenBV
+                                            </td>
+                                            <td>
+                                                @item.NgayDang.ToString("dd/MM/yyyy")
+                                            </td>
+                                            <td>
+                                                <a href="/Admin/BaiViet/ChinhSuaBV?MaBV=@item.MaBV" class="btn btn-info d-flex align align-self-center"><i class="material-icons">mode_edit</i></a>
+                                            </td>
+                                            <td>
+                                                <a href="/Admin/BaiViet/XoaBV?MaBV=@item.MaBV" class="btn btn-info d-flex align align-self-center"><i class="material-icons">delete</i></a>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-sm-12">
+                  @if (ListBV != null)
+                  {
+                    @Html.PagedListPager(ListBV, u=> Url.Content("/Admin/BaiViet/Index?pageid=" + u), PagedListRenderOptions.ClassicPlusFirstAndLast)
+                  }
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

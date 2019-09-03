@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4f25ad2b0d684a7fa0b858e1dd1ac5c5" Name="Diagram1" ZoomLevel="94">
+        <EntityTypeShape EntityType="SingCallModel.Anh" Width="1.5" PointX="2.625" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SingCallModel.CtDonHang" Width="1.5" PointX="10.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SingCallModel.CtNhapHang" Width="1.5" PointX="8.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SingCallModel.DanhMuc" Width="1.5" PointX="1.5" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SingCallModel.DanhMucAnh" Width="1.5" PointX="4.625" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SingCallModel.DanhMucBaiViet" Width="1.5" PointX="11.375" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SingCallModel.DanhMucCon" Width="1.5" PointX="3.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SingCallModel.DonHang" Width="1.5" PointX="6" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="SingCallModel.GiaSP" Width="1.5" PointX="8.25" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="SingCallModel.KhachHang" Width="1.5" PointX="3.75" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="SingCallModel.LoaiAnh" Width="1.5" PointX="0.5" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SingCallModel.NhanVien" Width="1.5" PointX="3.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SingCallModel.NhapHang" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SingCallModel.NhaSanXuat" Width="1.5" PointX="3.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SingCallModel.SanPham" Width="1.5" PointX="6.875" PointY="6.5" IsExpanded="true" />
+        <AssociationConnector Association="SingCallModel.FK_Anh_DanhMucAnh" ManuallyRouted="false" />
+        <AssociationConnector Association="SingCallModel.FK_Anh_LoaiAnh" ManuallyRouted="false" />
+        <AssociationConnector Association="SingCallModel.FK_CtDonHang_DonHang" ManuallyRouted="false" />
+        <AssociationConnector Association="SingCallModel.FK_CtDonHang_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="SingCallModel.FK_CtNhapHang_NhapHang" ManuallyRouted="false" />
+        <AssociationConnector Association="SingCallModel.FK_CtNhapHang_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="SingCallModel.FK_DanhMucCon_DanhMuc" ManuallyRouted="false" />
+        <AssociationConnector Association="SingCallModel.FK_SanPham_DanhMucAnh" ManuallyRouted="false" />
+        <AssociationConnector Association="SingCallModel.FK_SanPham_DanhMucCon" ManuallyRouted="false" />
+        <AssociationConnector Association="SingCallModel.FK_DonHang_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="SingCallModel.FK_GiaSP_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="SingCallModel.FK_GiaSP_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="SingCallModel.FK_NhapHang_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="SingCallModel.FK_NhapHang_NhaSanXuat" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="SingCallModel.ThongSo" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SingCallModel.Tag" Width="1.5" PointX="16.25" PointY="3.875" />
+        <EntityTypeShape EntityType="SingCallModel.BaiViet" Width="1.5" PointX="13.875" PointY="3.625" />
+        <AssociationConnector Association="SingCallModel.FK_BaiViet_DanhMucAnh" />
+        <AssociationConnector Association="SingCallModel.FK_BaiViet_DanhMucBaiViet" />
+        <AssociationConnector Association="SingCallModel.FK_BaiViet_NhanVien" />
+        <AssociationConnector Association="SingCallModel.ChiTietTag" />
+        <EntityTypeShape EntityType="SingCallModel.GiaiPhap" Width="1.5" PointX="13.875" PointY="9.375" />
+        <AssociationConnector Association="SingCallModel.FK_GiaiPhap_DanhMuc" />
+        <AssociationConnector Association="SingCallModel.FK_GiaiPhap_DanhMucAnh" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,125 @@
+﻿@if (HttpContext.Current.Session["LoginAdmin"]==null)
+{
+    Session["URLLoginAdmin"] = Request.Url.AbsoluteUri;
+    Response.Redirect("~/Admin/DangNhap");
+}
+
+@using AnzamtechWS.Helper
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Admin Page</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+    
+    @Styles.Render("~/style/share")
+    @Styles.Render("~/style/admin")
+    @Scripts.Render("~/bundle/jquery")
+    @Scripts.Render("~/bundle/share")
+    @Scripts.Render("~/bundle/admin")
+
+    @Scripts.Render("~/bundle/ajax")
+  
+    @RenderSection("Script", false)
+</head>
+<body class="ls-closed">
+    <nav class="navbar navbar-expand-sm navbar-blue fixed-top" id="header">
+        <div class="container-fluid pt-2 pb-2">
+            <div class="d-flex flex-row">
+                <div class="col  d-lg-none">
+                    <a class="bars"></a>
+                </div>
+                <a class="navbar-brand pl-2" href="#">Trang quản lý</a>
+            </div>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse flex-row">
+
+                <ul class="navbar-nav ml-auto flex-row">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <aside id="leftsidebar" class="sidebar">
+        <!-- User Info -->
+        <div class="user-info">
+            <div class="image">
+                <img src="~/image/AdminImage/user.png" width="48" height="48" alt="User">
+            </div>
+            <div class="info-container">
+                <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John Doe</div>
+                <div class="email">john.doe@example.com</div>
+                <div class="btn-group user-helper-dropdown">
+               
+                    <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
+                    <ul class="dropdown-menu pull-right">
+                        <li><a href="javascript:void(0);" class=" waves-effect waves-block"><i class="material-icons">person</i>Profile</a></li>
+                        <li role="seperator" class="divider"></li>
+                        <li><a href="javascript:void(0);" class=" waves-effect waves-block"><i class="material-icons">group</i>Followers</a></li>
+                        <li><a href="javascript:void(0);" class=" waves-effect waves-block"><i class="material-icons">shopping_cart</i>Sales</a></li>
+                        <li><a href="javascript:void(0);" class=" waves-effect waves-block"><i class="material-icons">favorite</i>Likes</a></li>
+                        <li role="seperator" class="divider"></li>
+                        <li><a href="~/Admin/DangNhap/Logout" class=" waves-effect waves-block"><i class="material-icons">input</i>Sign Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- #User Info -->
+        <!-- Menu -->
+        <div class="menu">
+                <ul class="list">
+                    <li class="header">Công cụ quản lý</li>
+                     @Html.Raw(Helper.PrintMenuAdmin(ViewBag.Title))
+                    <li class="header">LABELS</li>
+                    <li>
+                        <a href="javascript:void(0);" class=" waves-effect waves-block">
+                            <i class="material-icons col-red">donut_large</i>
+                            <span>Important</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class=" waves-effect waves-block">
+                            <i class="material-icons col-amber">donut_large</i>
+                            <span>Warning</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class=" waves-effect waves-block">
+                            <i class="material-icons col-light-blue">donut_large</i>
+                            <span>Information</span>
+                        </a>
+                    </li>
+                </ul>
+        </div>
+        <!-- #Menu -->
+        <!-- Footer -->
+        <div class="legal">
+            <div class="copyright">
+                © 2017 - 2018<a href="javascript:void(0);"> Admin Page - AMD Groups</a>.
+            </div>
+            <div class="version">
+                <b>Version: </b> 1.0.0
+            </div>
+        </div>
+        <!-- #Footer -->
+    </aside>
+    <section class="content">
+            @RenderBody()
+    </section>
+
+</body>
+</html>

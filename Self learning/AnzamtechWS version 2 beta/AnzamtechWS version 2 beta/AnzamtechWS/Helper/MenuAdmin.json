@@ -1,0 +1,84 @@
+﻿{
+  "Nodes": [
+    {
+      "Name": "Trang chủ",
+      "Icon": "home",
+      "url": "/Admin/Home",
+      "Child": []
+    },
+    {
+      "Name": "Quản lý sản phẩm",
+      "Icon": "widgets",
+      "url": "",
+      "Child": [
+        {
+          "Name": "Thêm sản phẩm",
+          "url": "/Admin/SanPham/ThemSanPham"
+        },
+        {
+          "Name": "Danh sách sản phẩm",
+          "url": "/Admin/SanPham"
+        }
+      ]
+    },
+    {
+      "Name": "Quản lý danh mục",
+      "Icon": "widgets",
+      "url": "",
+      "Child": [
+        {
+          "Name": "Thêm danh mục",
+          "url": "/Admin/DanhMuc/ThemDM"
+        },
+        {
+          "Name": "Danh sách danh mục",
+          "url": "/Admin/DanhMuc"
+        }
+      ]
+    },
+    {
+      "Name": "Quản lý bài viết",
+      "Icon": "widgets",
+      "url": "",
+      "Child": [
+        {
+          "Name": "Thêm bài viết",
+          "url": "/Admin/BaiViet/ThemBV"
+        },
+        {
+          "Name": "Thêm Tag",
+          "url": "/Admin/BaiViet/ThemTag"
+        },
+        {
+          "Name": "Thêm danh muc bài viết",
+          "url": "/Admin/BaiViet/ThemDanhMucBV"
+        },
+        {
+          "Name": "Danh sách bài viết",
+          "url": "/Admin/BaiViet"
+        }
+      ]
+    },
+    {
+      "Name": "Quản lý giải pháp",
+      "Icon": "widgets",
+      "url": "",
+      "Child": [
+        {
+          "Name": "Thêm giải pháp",
+          "url": "/Admin/GiaiPhap/ThemGP"
+        },
+        {
+          "Name": "Danh sách giải pháp",
+          "url": "/Admin/GiaiPhap"
+        }
+      ]
+    },
+    {
+      "Name": "Quản lý trang",
+      "Icon": "widgets",
+      "url": "/Admin/QuanLyTrang",
+      "Child": []
+    }
+  ]
+}

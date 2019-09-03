@@ -1,0 +1,26 @@
+﻿@using AnzamtechWS.Areas.Admin.Models
+@model GiaiPhap
+@{
+    ViewBag.Title = Model.TenGP;
+    Layout = "~/Areas/User/Views/Shared/_Layout.cshtml";
+    var listHA = Model.DanhMucAnh.Anhs.Where(u => u.LoaiAnh.TenLoai.Contains("Ảnh đại diện sản phẩm"));
+}
+@section MetaSeoTag{
+    <meta name="description" content="@Model.TenGP" />
+    <meta property="og:title" content="@Model.TenGP" />
+    <meta property="og:image" content="@((listHA.Count() > 0)?("http://" + Request.Url.Host + listHA.ElementAt<Anh>(0).Path + "/" + listHA.ElementAt<Anh>(0).TenAnh):"")" />
+}
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-12 block-header">
+            <ol class="breadcrumb breadcrumb-arrow">
+                <li><a href="/">Trang chủ</a></li>
+                <li><a href="/GiaiPhap/PhanCung">Giải pháp thiết bị của ANZ AMTECH</a></li>
+                <li class="active"><span>@Model.TenGP</span></li>
+            </ol>
+        </div>
+        <div class="col-12 mt-5">
+           @Html.Raw(Server.HtmlDecode(Model.NoiDung))
+        </div>
+    </div>
+</div>

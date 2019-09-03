@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="title">Login</h2>
+<form action="/Login/Login" method="post" class="formLogin">
+    <input name="username" type="text" placeholder="Tài khoản" />
+    <input name="password" type="password" placeholder="Mật khẩu" />
+    <input type="submit" value="LOGIN"/>
+</form>

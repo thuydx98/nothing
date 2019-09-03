@@ -1,0 +1,9 @@
+C:\Users\Thuy Dao Xuan\Desktop\PewChat\WebSocketManager.Common\bin\Debug\netcoreapp2.1\WebSocketManager.Common.deps.json
+C:\Users\Thuy Dao Xuan\Desktop\PewChat\WebSocketManager.Common\bin\Debug\netcoreapp2.1\WebSocketManager.Common.dll
+C:\Users\Thuy Dao Xuan\Desktop\PewChat\WebSocketManager.Common\obj\Debug\netcoreapp2.1\WebSocketManager.Common.csprojAssemblyReference.cache
+C:\Users\Thuy Dao Xuan\Desktop\PewChat\WebSocketManager.Common\obj\Debug\netcoreapp2.1\WebSocketManager.Common.csproj.CoreCompileInputs.cache
+C:\Users\Thuy Dao Xuan\Desktop\PewChat\WebSocketManager.Common\obj\Debug\netcoreapp2.1\WebSocketManager.Common.AssemblyInfoInputs.cache
+C:\Users\Thuy Dao Xuan\Desktop\PewChat\WebSocketManager.Common\obj\Debug\netcoreapp2.1\WebSocketManager.Common.AssemblyInfo.cs
+C:\Users\Thuy Dao Xuan\Desktop\PewChat\WebSocketManager.Common\bin\Debug\netcoreapp2.1\WebSocketManager.Common.pdb
+C:\Users\Thuy Dao Xuan\Desktop\PewChat\WebSocketManager.Common\obj\Debug\netcoreapp2.1\WebSocketManager.Common.dll
+C:\Users\Thuy Dao Xuan\Desktop\PewChat\WebSocketManager.Common\obj\Debug\netcoreapp2.1\WebSocketManager.Common.pdb

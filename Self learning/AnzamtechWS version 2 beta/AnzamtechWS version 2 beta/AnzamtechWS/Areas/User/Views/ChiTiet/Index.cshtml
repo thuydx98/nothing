@@ -1,0 +1,183 @@
+﻿@using AnzamtechWS.Areas.Admin.Models
+@using AnzamtechWS.Helper
+@model SanPham
+@{
+    ViewBag.Title = Model.TenSP;
+    Layout = "~/Areas/User/Views/Shared/_Layout.cshtml";
+    var listHA = Model.DanhMucAnh.Anhs.Where(u=>u.LoaiAnh.TenLoai.Contains("Ảnh sản phẩm"));
+}
+@section MetaSeoTag{
+    <meta name="description" content="@Model.TenSP" />
+    <meta property="og:title" content="@Model.TenSP" />
+    <meta property="og:description" content="@Model.MoTa" />
+    <meta property="og:image" content="@((listHA.Count() > 0)?("http://" + Request.Url.Host + listHA.ElementAt<Anh>(0).Path + "/" + listHA.ElementAt<Anh>(0).TenAnh):"")" />
+}
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-12 block-header">
+            <ol class="breadcrumb breadcrumb-arrow">
+                <li><a href="/">Trang chủ</a></li>
+                <li><a href="/@Helper.ConvertVN(Model.DanhMucCon.DanhMuc.TenDanhMuc).Replace(' ', '-')-@Model.DanhMucCon.DanhMuc.MaDM">@Model.DanhMucCon.DanhMuc.TenDanhMuc</a></li>
+                <li><a href="/@Helper.ConvertVN(Model.DanhMucCon.DanhMuc.TenDanhMuc).Replace(' ', '-')-@Model.DanhMucCon.DanhMuc.MaDM/@Helper.ConvertVN(Model.DanhMucCon.TenDMC).Replace(' ', '-')-@Model.MaDMC">@Model.DanhMucCon.TenDMC</a></li>
+                <li class="active"><span></span></li>
+            </ol>
+        </div>
+        <div class="col-12 mt-5 mb-5">
+            <div class="row">
+                <div class="col-lg-5 col-xl-4 pl-0">
+                    <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
+                        @if (listHA != null && listHA.Count() > 0)
+                        {
+                            foreach (var item in listHA)
+                            {
+                                <li data-thumb="@(item.Path + "/" + item.TenAnh)">
+                                    <a class="container-image baner-image d-flex" href="javascript:void(0)"><img class="lazy" alt="@item.Tag" data-src="@(item.Path + "/" + item.TenAnh)" src="~/image/pixel.gif" /></a>
+                                </li>
+
+
+                            }
+                        }
+                    </ul>
+
+                </div>
+                <div class="col-lg-7 col-xl-5 pl-2">
+                    <div class="d-flex flex-column detail-product">
+                        <h3 class="header">@Model.TenSP</h3>
+                        <p class="body">@Model.MoTa</p>
+                        <span>@Model.Tag</span>
+                        <div class="rate">
+                            <i class="fa fa-star active" aria-hidden="true"></i>
+                            <i class="fa fa-star active" aria-hidden="true"></i>
+                            <i class="fa fa-star active" aria-hidden="true"></i>
+                            <i class="fa fa-star active" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                        <span class="price">
+                            Giá:
+                            @{ var GiaSP = Model.GiaSPs.OrderByDescending(u => u.NgayTao).Take<GiaSP>(1); }
+                            @if (GiaSP != null && GiaSP.Count() > 0)
+                            {
+                                @Html.Raw(Helper.GetCurrencyVND(GiaSP.ElementAt(0).GiaSP1));
+                            }
+                            else
+                            {
+                                <a href="tel:123131231" class="contact">Liên Hệ</a>
+                            }
+
+                        </span>
+                        <div class="fa-product">
+                            <button type="button" class="btn btn-success">
+                                <i class="fa fa-heart mr-2" aria-hidden="true"></i> Sản phẩm yêu thích
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-none d-xl-block col-xl-3 pl-0 pr-0">
+                    <div class="left-sidebar mb-5">
+                        <div class="title mobile">
+                            <h5 class="mb-0">Sản phẩm liên quan</h5>
+                        </div>
+                        <div class="d-flex flex-column">
+                            @{
+                                SanPhamModel model = new SanPhamModel()
+                                {
+                                    TenSP = Model.TenSP
+                                };
+                                var listRP = model.GetSanPhamLienQuan();
+                            }
+                            @if (listRP != null)
+                            {
+                                foreach (var item in listRP)
+                                {
+                                    var a = item.DanhMucAnh.Anhs.Where(u => u.LoaiAnh.TenLoai.Contains("Ảnh đại diện sản phẩm")).Take<Anh>(1);
+                                    var path = "/" + Helper.ConvertVN(item.DanhMucCon.DanhMuc.TenDanhMuc).Replace(' ', '-') + "-" + item.DanhMucCon.MaDM + "/" + Helper.ConvertVN(item.DanhMucCon.TenDMC).Replace(' ', '-') + "-" + item.DanhMucCon.MaDMC + "/" + Helper.ConvertVN(item.TenSP).Replace(' ', '-') + "-" + item.MaSP;
+                                    <div class="d-flex flex-row pt-2 pb-2">
+                                        <div class="image-related">
+                                            <a href="@path" class="img-size-prealated container-image d-flex justify-content-center">
+                                                @if (a != null && a.Count() > 0)
+                                                {
+                                                    <img class="lazy" data-src="@Html.Raw(a.ElementAt<Anh>(0).Path + "/" + a.ElementAt<Anh>(0).TenAnh)" src="/image/pixel.gif" />
+                                                }
+                                                else
+                                                {
+                                                    <img class="lazy" data-src="#" src="/image/pixel.gif" />
+                                                }
+
+                                            </a>    
+                                        </div>
+                                        <div class="card-body pt-2 pb-0 pl-0 pr-0">
+                                            <h5 class="card-title mb-1">@item.TenSP</h5>
+                                          
+                                            @{  GiaSP = item.GiaSPs.OrderByDescending(u => u.NgayTao).Take<GiaSP>(1); }
+                                            @if (GiaSP != null && GiaSP.Count() > 0)
+                                            {
+                                                <p class="card-text mb-1">
+                                                    @Html.Raw(Helper.GetCurrencyVND(GiaSP.ElementAt(0).GiaSP1));
+                                                </p>
+                                                <span class="card-text"><a href="@path">Xem thêm</a></span>
+                                            }
+                                            else
+                                            {
+                                                <span class="card-text"><a href="@path">Xem thêm</a></span>
+                                            }
+
+
+                                        </div>
+                                    </div>
+                                                    }
+                                                }
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 pl-0 pr-0">
+        <ul id="tabsJustified" class="nav nav-tabs">
+            <li class="nav-item"><a href="" data-target="#ttchitiet" data-toggle="tab" class="nav-link small active"><h6>Thông tin chi tiết</h6></a></li>
+            <li class="nav-item"><a href="" data-target="#binhluan" data-toggle="tab" class="nav-link small "><h6>Bình luận</h6></a></li>
+            <li class="nav-item"><a href="" data-target="#rating" data-toggle="tab" class="nav-link small"><h6>Đánh giá</h6></a></li>
+        </ul>
+    </div>
+    <div class="col-12 pl-0 pr-0">
+        <div id="tabsJustifiedContent" class="tab-content">
+            <div id="ttchitiet" class="tab-pane fade tab-boder-content p-3 show active">
+                @Html.Raw(Server.HtmlDecode(Model.ChiTienSP))
+            </div>
+            <div id="binhluan" class="tab-pane tab-boder-content fade p-3">
+
+            </div>
+            <div id="rating" class="tab-pane fade tab-boder-content p-3">
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section ScriptView{
+    <link rel="stylesheet" href="~/Content/User/lightslider.css" />
+    <script src="~/Scripts/User/lightslider.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            $('#image-gallery').lightSlider({
+                gallery: true,
+                item: 1,
+                thumbItem: @listHA.Count(),
+                slideMargin: 0,
+                speed: 500,
+                auto: true,
+                loop: true,
+                onSliderLoad: function () {
+                    $('#image-gallery').removeClass('cS-hidden');
+                }
+            });
+            $("#image-gallery img.lazy").on("load", function () {
+                $('#image-gallery').css("height", "auto");
+            });
+        });
+    </script>
+}

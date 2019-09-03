@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MekongSite", "MekongSite\MekongSite.csproj", "{A0F7CB3D-1AED-490E-811A-FB2A060D52B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0F7CB3D-1AED-490E-811A-FB2A060D52B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0F7CB3D-1AED-490E-811A-FB2A060D52B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0F7CB3D-1AED-490E-811A-FB2A060D52B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0F7CB3D-1AED-490E-811A-FB2A060D52B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7CED24DC-D7E1-4631-AC2F-CDB1D63EE087}
+	EndGlobalSection
+EndGlobal

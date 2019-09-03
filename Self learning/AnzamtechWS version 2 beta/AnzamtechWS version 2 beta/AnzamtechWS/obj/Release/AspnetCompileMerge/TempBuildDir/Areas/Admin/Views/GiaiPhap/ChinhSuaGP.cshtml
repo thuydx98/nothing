@@ -1,0 +1,143 @@
+﻿@using AnzamtechWS.Areas.Admin.Models
+@model GiaiPhapModel
+@{
+    ViewBag.Title = "Danh sách giải pháp";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@Styles.Render("~/style/imagedialog")
+@Scripts.Render("~/bundle/imagedialog")
+@Html.Partial("../SanPham/ImageDialog")
+@section Script{
+    <script>
+        var myImageDialog = undefined;
+        $.get("/Admin/HinhAnh/GetTypeImage", function (data, status) {
+                if (status == "success") {
+                    myImageDialog = new ImageDiaLog({
+                        MaDMA: @Model.MaDMA,
+                        urlGetAlbum: '/Admin/UploadImage/GetAlbum',
+                        urlGetFolders: '/Admin/UploadImage/GetFolders',
+                        urlUploadImage: '/Admin/UploadImage/Index',
+                        urlGetImageInfor: '/Admin/HinhAnh/GetImageByID',
+                        urlRemoveImage: '/Admin/UploadImage/XoaAnh',
+                        LoaiAnh: data
+
+                    });
+                    myImageDialog.CreateTreeView();
+                    myImageDialog.CreateListView();
+                    myImageDialog.InitFileUpload();
+                }
+        });
+        $(document).ready(function () {
+            $("#ManagerAlbum").click(function () {
+                    myImageDialog.Show(0);
+            })
+        })
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Include Editor style. -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1/css/froala_style.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Create a tag that we will use as the editable area. -->
+    <!-- You can use a div tag as well. -->
+    <!-- Include jQuery lib. -->
+    <!-- Include Editor JS files. -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1/js/froala_editor.pkgd.min.js"></script>
+}
+<div class="block-header">
+    <ol class="breadcrumb breadcrumb-arrow">
+        <li><a href="/Admin/Home">Trang chủ</a></li>
+        <li><a href="/Admin/GiaiPhap">Giải pháp</a></li>
+        <li class="active"><span>Sửa giải pháp</span></li>
+    </ol>
+</div>
+@Html.Raw(Model.GetHTMLMessage())
+<div class="form-content col-lg-12 col-md-12 col-sm-12 col-xs-12 pl-0 pr-0">
+    <div class="card">
+        <div class="header">
+            <h2>
+                Thêm bài viết
+            </h2>
+        </div>
+        <div class="body">
+            @using (Html.BeginForm(new { area = "Admin", controller = "GiaiPhap", action = "ChinhSuaGP" }))
+            {
+                @Html.HiddenFor(u => u.ID)
+                @Html.HiddenFor(u=>u.MaDMA)
+                <h2 class="card-inside-title">Tạo danh mục ảnh</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <button type="button" class="btn btn-primary" id="ManagerAlbum">Quản lý thư mục ảnh</button>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Danh mục</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @{ DanhMucModel modelDM = new DanhMucModel();}
+
+                            @Html.DropDownListFor(u => u.MaDM, new SelectList(modelDM.GetDSDanhMucGP(), "MaDM", "TenDanhMuc"), new { @class = "form-control" })
+
+                        </div>
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Tên giải pháp</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @Html.TextBoxFor(u => u.TenGP, Model.TenGP, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+             
+           
+                <h2 class="card-inside-title">Nội dung</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @Html.TextAreaFor(u => u.NoiDung, new { @id = "NoiDung" })
+                        </div>
+                        <script>
+                                $(function () {
+                                    $.FroalaEditor.DefineIcon('insert', { NAME: 'image' });
+                                    $.FroalaEditor.RegisterCommand('insert', {
+                                        title: 'Insert HTML',
+                                        focus: true,
+                                        undo: true,
+                                        refreshAfterCallback: true,
+                                        callback: function () {
+                                            if (myImageDialog != undefined) {
+                                                myImageDialog.Show(1);
+                                                var my = this;
+                                                $(".imagedialog").on("selected", function (ev, path, tag) {
+                                                    my.html.insert('<img src="' + path + '" alt="' + tag + '" />');
+                                                });
+                                            } else {
+                                                alert("Chưa tạo danh mục ảnh");
+                                            }
+
+
+                                        }
+                                    });
+                                    $('#NoiDung').froalaEditor({
+                                        height: 700,
+                                        toolbarButtons: ['insert', '|', 'fullscreen', 'bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript', '|', 'fontFamily', 'fontSize', 'color', 'inlineStyle', 'paragraphStyle', '|', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'outdent', 'indent', 'quote', '-', 'insertLink', 'insertVideo', 'insertTable', '|', 'emoticons', 'specialCharacters', 'insertHR', 'selectAll', 'clearFormatting', '|', 'print', 'help', 'html', '|', 'undo', 'redo']
+
+                                    });
+                                });
+                        </script>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-primary m-t-15 waves-effect">Hoàn tất</button>
+                    </div>
+                </div>
+
+                                    }
+        </div>
+    </div>
+</div>

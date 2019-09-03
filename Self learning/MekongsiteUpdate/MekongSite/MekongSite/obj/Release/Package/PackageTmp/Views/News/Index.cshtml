@@ -1,0 +1,111 @@
+﻿@model List<string>
+@{
+    ViewBag.Title = "Tin tức";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+    $(".idNews").addClass("current-menu-parent ");
+
+</script>
+<link href="/Content/css/ANZCore.css" rel="stylesheet" />
+<style>
+    .list-img {
+        width: 22%;
+    }
+</style>
+<section class="blog-three">
+    <div class="con">
+        <div class="r">
+            <div class="c-12">
+                <h1 class="text-center text-blue text-primary1 pb-5">BÀI VIẾT</h1>
+            </div>
+
+            @*<div class="c-m-12 pl-3 pr-3">
+            <div class="blog-box d-m-f">
+                <div class="blog-content">
+                    <h5>
+                        <a>Purience cream &Aacute; mask</a>
+                    </h5>
+                    <ul class="d-f">
+                        <li>
+                            <i class="fa fa-calendar"> 20/12/2018</i>
+                        </li>
+                        <li class="fa fa-user-o">
+                            <a>Medibless Việt Nam</a>
+                        </li>
+                    </ul>
+                    <p>
+                        ❗XIN ĐỪNG❗Chăm sóc làn da một cách "nửa vời"<br />
+                    </p>
+                    <div>
+                        <img src="~/Content/images/08.jpg" class="list-img" />
+                        <img src="~/Content/images/08.jpg" class="list-img" />
+                        <img src="~/Content/images/08.jpg" class="list-img" />
+                        <img src="~/Content/images/08.jpg" class="list-img" />
+                    </div>
+                    <ul></ul>
+                    <span>
+                        <a href="https://www.facebook.com/OfficialMediblessVN/posts/1129268500555738">
+                            Chi Tiết
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>*@
+
+            @if (Model.Count > 0)
+            {
+                foreach (string str in Model)
+                {
+                    try
+                    {
+                        string[] content = str.Split('\n');
+                        string[] temp = content[0].Split('-');
+                        string _title = temp[0];
+                        string _author = temp[1];
+                        string _date = temp[2];
+
+                        string _link = content[content.Length-1];
+
+                        <div class="c-m-12 pl-3 pr-3">
+                            <div class="blog-box d-m-f">
+                                <div class="blog-content">
+                                    <h5>
+                                        <a>@_title</a>
+                                    </h5>
+                                    <ul class="d-f">
+                                        <li>
+                                            <i class="fa fa-calendar">@_date</i>
+                                        </li>
+                                        <li class="fa fa-user-o">
+                                            <a>@_author</a>
+                                        </li>
+                                    </ul>
+                                    <p>
+                                        @for(int i = 1; i < content.Length - 2; i++)
+                                        {
+                                            @content[i] <br/>
+                                        }
+                                    </p>
+                                    <span>
+                                        <a href="@_link">
+                                            Chi Tiết
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    catch
+                    {
+
+                    }
+
+                }
+            }
+
+
+        </div>
+    </div>
+</section>

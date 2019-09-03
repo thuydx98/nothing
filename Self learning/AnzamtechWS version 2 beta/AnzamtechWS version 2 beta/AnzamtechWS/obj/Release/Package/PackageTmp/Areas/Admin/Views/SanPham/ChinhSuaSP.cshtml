@@ -1,0 +1,269 @@
+﻿@using AnzamtechWS.Areas.Admin.Models
+@using AnzamtechWS.Helper
+@model SanPhamModel
+@{
+    ViewBag.Title = "Sửa sản phẩm";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@Styles.Render("~/style/imagedialog")
+@Scripts.Render("~/bundle/imagedialog")
+@Html.Partial("ImageDialog")
+@section Script{
+    <script>
+
+        function ChangeDM() {
+            $('#DMC').children().remove();
+            $.get("/Admin/DanhMuc/GetDanhMucCon?id=" + $("#danhmucsp").val(), function (data, status) {
+                if (data.length == 0) {
+                    $('#DMC').append($('<option>', {
+                        text: 'Chọn'
+                    }));
+                    return;
+                }
+                for (var i = 0; i < data.length; i++) {
+                    if (@Model.MaDMC == data[i].MaDMC) {
+                        $('#DMC').append($('<option value="' + data[i].MaDMC + '" selected>' + data[i].TenDMC + '</option>'));
+                    } else {
+                        $('#DMC').append($('<option value="' + data[i].MaDMC + '">' + data[i].TenDMC + '</option>'));
+                    }
+                }
+            });
+        }
+         $.get("/Admin/DanhMuc/GetDanhMuc", function (data, status) {
+             $("#danhmucsp").ready(function () {
+                 if (data.length == 0) {
+                    $('#danhmucsp').append($('<option>', {
+                        text: 'Chọn'
+                    }));
+                    return;
+                }
+                for (var i = 0; i < data.length; i++) {
+                    if (@Model.MaDM == data[i].MaDM) {
+                        $('#danhmucsp').append($('<option value="' + data[i].MaDM + '" selected>' + data[i].TenDM + '</option>'));
+                    } else {
+                        $('#danhmucsp').append($('<option value="' + data[i].MaDM + '">' + data[i].TenDM + '</option>'));
+                    }
+
+                }
+                ChangeDM();
+             });
+            });
+        $(document).ready(function () {
+            $("#danhmucsp").change(function () {
+                ChangeDM();
+            });
+        });
+    </script>
+
+    <script>
+
+        var myImageDialog;
+        $(function () {
+
+            $.get("/Admin/HinhAnh/GetTypeImage", function (data, status) {
+                if (status == "success") {
+                    myImageDialog = new ImageDiaLog({
+                        MaDMA: '@Model.MaDMA',
+                        urlGetAlbum: '/Admin/UploadImage/GetAlbum',
+                        urlGetFolders: '/Admin/UploadImage/GetFolders',
+                        urlUploadImage: '/Admin/UploadImage/Index',
+                        urlGetImageInfor: '/Admin/HinhAnh/GetImageByID',
+                        urlRemoveImage: '/Admin/UploadImage/XoaAnh',
+                        LoaiAnh: data
+
+                    });
+                    myImageDialog.CreateTreeView();
+                    myImageDialog.CreateListView();
+                    myImageDialog.InitFileUpload();
+                }
+            });
+            $("#quanlyanh").click(function () {
+                myImageDialog.Show(0);
+            });
+        })
+
+
+        function proccessClick()
+        {
+            myImageDialog.Show(1);
+        }
+
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Include Editor style. -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1/css/froala_style.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Create a tag that we will use as the editable area. -->
+    <!-- You can use a div tag as well. -->
+    <!-- Include jQuery lib. -->
+    <!-- Include Editor JS files. -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1/js/froala_editor.pkgd.min.js"></script>
+}
+
+<div class="block-header">
+    <ol class="breadcrumb breadcrumb-arrow">
+        <li><a href="/Admin/Home">Trang chủ</a></li>
+        <li><a href="/Admin/SanPham">Sản phẩm</a></li>
+        <li class="active"><span>Chỉnh sửa sản phẩm</span></li>
+    </ol>
+</div>
+<div class="form-content col-lg-12 col-md-12 col-sm-12 col-xs-12 pl-0 pr-0">
+    <div class="card">
+        <div class="header bg-blue-grey ">
+            <h2>
+                Thêm danh mục
+            </h2>
+        </div>
+        @using (Html.BeginForm(new { area = "Admin", controller = "SanPham", action = "ChinhSuaSP" }))
+        {
+            @Html.HiddenFor(u => u.MaSP, Model.MaSP)
+            <div class="body">
+
+                <h2 class="card-inside-title">Danh mục sản phẩm</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <select class="form-control" id="danhmucsp"></select>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Danh mục con</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @Html.DropDownListFor(m => m.MaDMC, new SelectList(new List<DanhMucCon>(), "MaDMC", "TenDMC"), new { @class = "form-control", @id = "DMC" })
+
+                        </div>
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Thông tin giá sản phẩm</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12 ">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th width="40">ID</th>
+                                    <th>Ngày tạo</th>
+                                    <th>Giá Sản phẩm</th>
+                                    <th>Nhân viên</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    GiaSPModel modelGia = new GiaSPModel()
+                                    {
+                                        MaSP = Model.MaSP
+                                    };
+                                    var listGia = modelGia.GetGiaSPByMaSP();
+
+                                }
+                                @if (listGia != null && listGia.Count() > 0)
+                                {
+                                    foreach (var item in listGia)
+                                    {
+                                        <tr>
+                                            <td>@item.MaGia</td>
+                                            <td>@item.NgayTao.ToString("dd/MM/yyyy hh:mm:ss")</td>
+                                            <td>@Helper.GetCurrencyVND(item.GiaSP1)</td>
+                                            <td></td>
+                                        </tr>
+                                    }
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td colspan="4"> Chưa có dữ liệu giá tiền sản phẩm</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Giá sản phẩm</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <div class="form-line">
+                                @Html.TextBoxFor(m => m.GiaTienSP, Model.GiaTienSP.ToString(), new { @class = "form-control", @placeholder = "Giá sản phẩm" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Hình ảnh sản phẩm</h2>
+                <button type="button" id="quanlyanh" class="btn btn-primary m-t-15 waves-effect">Quản lý ảnh</button>
+                <h2 class="card-inside-title">Tên sản phẩm</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+
+                        <div class="form-group">
+                            <div class="form-line">
+                                @Html.TextBoxFor(m => m.TenSP, Model.TenSP, new { @class = "form-control", @placeholder = "Tên sản phẩm" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Tag</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <div class="form-line">
+                                @Html.TextBoxFor(m => m.Tag, Model.Tag, new { @class = "form-control", @placeholder = "Tag" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Mô tả</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        @Html.TextAreaFor(m => m.Mota, new { @class = "form-control", @placeholder = "Mô tả", @rows = "6" })
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Chi tiết sản phẩm</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <div class="form-line">
+                                @Html.TextAreaFor(m => m.ChiTietSP, new { @class = "form-control", @id = "ChiTietSP" })
+                                <script>
+                                    $(function () {
+                                        $.FroalaEditor.DefineIcon('insert', { NAME: 'image' });
+                                        $.FroalaEditor.RegisterCommand('insert', {
+                                            title: 'Insert HTML',
+                                            focus: true,
+                                            undo: true,
+                                            refreshAfterCallback: true,
+                                            callback: function () {
+                                                if (myImageDialog != undefined) {
+                                                    myImageDialog.Show(1);
+                                                    var my = this;
+                                                    $(".imagedialog").on("selected", function (ev, path, tag) {
+                                                        my.html.insert('<img src="' + path + '" alt="' + tag + '" />');
+                                                    });
+                                                } else {
+                                                    alert("Chưa tạo danh mục ảnh");
+                                                }
+
+
+                                            }
+                                        });
+                                        $('#ChiTietSP').froalaEditor({
+                                            height: 700,
+                                            toolbarButtons: ['insert', '|', 'fullscreen', 'bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript', '|', 'fontFamily', 'fontSize', 'color', 'inlineStyle', 'paragraphStyle', '|', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'outdent', 'indent', 'quote', '-', 'insertLink', 'insertVideo', 'insertTable', '|', 'emoticons', 'specialCharacters', 'insertHR', 'selectAll', 'clearFormatting', '|', 'print', 'help', 'html', '|', 'undo', 'redo']
+
+                                        });
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary m-t-15 waves-effect">Hoàn tất</button>
+                <button type="reset" class="btn m-t-15 waves-effect btn-danger">Hủy</button>
+            </div>
+                                    }
+
+    </div>
+</div>

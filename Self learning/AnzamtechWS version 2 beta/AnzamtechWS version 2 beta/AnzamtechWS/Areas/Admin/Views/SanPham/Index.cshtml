@@ -1,0 +1,186 @@
+﻿@using AnzamtechWS.Areas.Admin.Models
+@using AnzamtechWS.Helper
+@model SanPhamModel
+@{
+    ViewBag.Title = "Danh sách sản phẩm";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@section Script
+{
+    <script>
+        $.get("/Admin/DanhMuc/GetDanhMuc", function (data, status) {
+            $('#danhmucsp').append($('<option>', {
+                text: 'Chọn',
+                value: '0'
+            }));
+
+            for (var i = 0; i < data.length; i++) {
+                $('#danhmucsp').append($('<option>', {
+                    value: data[i].MaDM,
+                    text: data[i].TenDM
+                }));
+
+            }
+            ChangeDM();
+        });
+        function ChangeDM() {
+            $('#DMC').children().remove();
+            $.get("/Admin/DanhMuc/GetDanhMucCon?id=" + $("#danhmucsp").val(), function (data, status) {
+
+                $('#DMC').append($('<option>', {
+                    text: 'Chọn',
+                    value: '0'
+                }));
+                for (var i = 0; i < data.length; i++) {
+                    $('#DMC').append($('<option>', {
+                        value: data[i].MaDMC,
+                        text: data[i].TenDMC
+                    }));
+                }
+            });
+        }
+        $(document).ready(function () {
+            $("#danhmucsp").change(function () {
+                ChangeDM();
+            });
+        });
+    </script>
+}
+<div class="block-header">
+    <ol class="breadcrumb breadcrumb-arrow">
+        <li><a href="/Admin/Home">Trang chủ</a></li>
+        <li><a href="/Admin/SanPham">Sản phẩm</a></li>
+        <li class="active"><span>Danh sách sản phẩm</span></li>
+    </ol>
+</div>
+<div class="form-content col-lg-12 col-md-12 col-sm-12 col-xs-12 pl-0 pr-0">
+    <div class="card">
+        <div class="header">
+            <h2>
+                Tìm sản phẩm
+            </h2>
+        </div>
+        <div class="body">
+            @using (Html.BeginForm(new { area = "Admin", controller = "SanPham", action = "Index" }))
+            {
+                <h2 class="card-inside-title">Danh mục sản phẩm</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @Html.DropDownListFor(m => m.MaDM, new SelectList(new List<DanhMucCon>(), "MaDM", "TenDM"), new { @class = "form-control", @id = "danhmucsp" })
+                        </div>
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Danh mục sản phẩm con</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @Html.DropDownListFor(m => m.MaDMC, new SelectList(new List<DanhMucCon>(), "MaDMC", "TenDMC"), new { @class = "form-control", @id = "DMC" })
+
+                        </div>
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Trạng thái</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @Html.DropDownListFor(m => m.TrangThai, Model.DSTrangThai(), new { @class = "form-control" })
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @Html.TextBoxFor(m => m.Keyword, Model.Keyword, new { @class = "form-control", @placeholder = "Từ khóa" })
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-primary m-t-15 waves-effect">Tìm kiếm</button>
+                    </div>
+                </div>
+
+            }
+            <h2 class="card-inside-title">Kết quả tìm kiếm</h2>
+            <div class="row clearfix table-responsive">
+                <div class="col-sm-12">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th width="40">ID</th>
+                                <th width="120">Hình ảnh</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Số lượng</th>
+                                <th>Giá</th>
+                                <th>Trạng thái</th>
+                                <th width="40">&nbsp;</th>
+                                <th width="40">&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+
+                            @if (ViewData["Result"] == null)
+                            {
+                                <tr>
+                                    <td colspan="9">Không có dữ liệu</td>
+                                </tr>
+                            }
+                            else
+                            {
+                                var listsp = Model.TimKiemSP();
+                                if (listsp != null)
+                                {
+                                    foreach (var item in listsp)
+                                    {
+                                        <tr>
+                                            <td>@item.MaSP</td>
+                                            @{ DanhMucAnh dm = item.DanhMucAnh; }
+                                            @{ var a = dm.Anhs.Where(u => u.LoaiAnh.TenLoai.Contains("Ảnh đại diện sản phẩm")).Take<Anh>(1); }
+                                        
+                                            @if (a != null && a.Count() > 0)
+                                            {
+                                                <td><img src="@Html.Encode(a.ElementAt<Anh>(0).Path + "/" + a.ElementAt<Anh>(0).TenAnh )" width="100" height="100" tag="@(a.ElementAt<Anh>(0).Tag)" /></td>
+                                            }
+                                            else
+                                            {
+                                                <td>Chưa có ảnh</td>
+                                            }
+                                            <td>@item.TenSP</td>
+                                            <td>@item.SoLuong</td>
+                                            @{ ICollection<GiaSP> list = item.GiaSPs; }
+                                            @if (list != null && list.Count > 0)
+                                            {
+
+                                                var priceItem = list.OrderByDescending(u=>u.NgayTao);
+
+                                                <td>@Html.Raw(Helper.GetCurrencyVND(priceItem.First<GiaSP>().GiaSP1))</td>
+                                            }
+                                            else
+                                            {
+                                                <td>Chưa có giá</td>
+                                            }
+                                            <td></td>
+                                            <td><a href="/Admin/SanPham/ChinhSuaSP?MaSP=@item.MaSP" class="btn btn-info d-flex align align-self-center"><i class="material-icons">mode_edit</i></a></td>
+                                            <td><a href="/Admin/SanPham/XoaSP?MaSP=@item.MaSP" class="btn btn-info d-flex align align-self-center"><i class="material-icons">delete</i></a></td>
+                                        </tr>
+                                    }
+                                }
+
+
+                            }
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,683 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="mekong health and beauty" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="icon" href="~/Content/images/ico.ico">
+    <title>@ViewBag.Title</title>
+    <style type="text/css">
+        a {
+            text-decoration: none !important;
+        }
+
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+
+        .callMe {
+            position: fixed;
+            right: 27px;
+            bottom: 100px;
+            z-index: 50;
+            background: rgba(255,255,255,0.5);
+            border: 1px solid #333;
+            padding: 10px;
+            border-radius: 10px;
+            padding-bottom: 0;
+            width: auto;
+        }
+
+        .content_wrap h1, a, span {
+            font-family: "Times New Roman" !important;
+        }
+    </style>
+    <link type="text/css" href="~/Content/css/mess.css" rel="stylesheet" />
+    <link rel='stylesheet' id='booked-icons-css' href='~/Content/plugins/booked/assets/css/iconsdc8c.css?ver=2.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='booked-tooltipster-css' href='~/Content/plugins/booked/assets/js/tooltipster/css/tooltipster9b70.css?ver=3.3.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='booked-tooltipster-theme-css' href='~/Content/plugins/booked/assets/js/tooltipster/css/themes/tooltipster-light9b70.css?ver=3.3.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='booked-animations-css' href='~/Content/plugins/booked/assets/css/animationsdc8c.css?ver=2.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='booked-styles-css' href='~/Content/plugins/booked/assets/css/stylesdc8c.css?ver=2.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='booked-responsive-css' href='~/Content/plugins/booked/assets/css/responsivedc8c.css?ver=2.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='contact-form-7-css' href='~/Content/plugins/contact-form-7/includes/css/styles1748.css?ver=5.0.5' type='text/css' media='all' />
+    <link rel='stylesheet' id='essential-grid-plugin-settings-css' href='~/Content/plugins/essential-grid/public/assets/css/settings5bf8.css?ver=2.2.5' type='text/css' media='all' />
+    <link rel='stylesheet' id='tp-open-sans-css' href='http://fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C600%2C700%2C800&amp;ver=4.9.8' type='text/css' media='all' />
+    <link rel='stylesheet' id='tp-raleway-css' href='http://fonts.googleapis.com/css?family=Raleway%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900&amp;ver=4.9.8' type='text/css' media='all' />
+    <link rel='stylesheet' id='tp-droid-serif-css' href='http://fonts.googleapis.com/css?family=Droid+Serif%3A400%2C700&amp;ver=4.9.8' type='text/css' media='all' />
+    <link rel='stylesheet' id='tp-fontello-css' href='~/Content/plugins/essential-grid/public/assets/font/fontello/css/fontello5bf8.css?ver=2.2.5' type='text/css' media='all' />
+    <link rel='stylesheet' id='rs-plugin-settings-css' href='~/Content/plugins/revslider/public/assets/css/settings23da.css?ver=5.4.8' type='text/css' media='all' />
+    <link rel='stylesheet' id='woocommerce-layout-css' href='~/Content/plugins/woocommerce/assets/css/woocommerce-layout9d52.css?ver=3.5.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='woocommerce-smallscreen-css' href='~/Content/plugins/woocommerce/assets/css/woocommerce-smallscreen9d52.css?ver=3.5.1' type='text/css' media='only screen and (max-width: 768px)' />
+    <link rel='stylesheet' id='woocommerce-general-css' href='~/Content/plugins/woocommerce/assets/css/woocommerce9d52.css?ver=3.5.1' type='text/css' media='all' />
+    <style id='woocommerce-inline-inline-css' type='text/css'>
+
+        .woocommerce form .form-row .required {
+            visibility: visible;
+        }
+    </style>
+    <link rel='stylesheet' id='massage-therapist-font-google-fonts-style-css' href='http://fonts.googleapis.com/css?family=Lora:400,700|Source+Sans+Pro:300,300italic,400,400italic,700,700italic&amp;subset=latin,latin-ext' type='text/css' media='all' />
+    <link rel='stylesheet' id='massage-therapist-fontello-style-css' href='~/Content/themes/massage-therapist/css/fontello/css/fontello.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='massage-therapist-main-style-css' href='~/Content/themes/massage-therapist/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='massage-therapist-animation-style-css' href='~/Content/themes/massage-therapist/fw/css/core.animation.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='massage_therapist-shortcodes-style-css' href='~/Content/plugins/trx_utils/shortcodes/theme.shortcodes.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='massage-therapist-theme-style-css' href='~/Content/themes/massage-therapist/css/theme.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='massage-therapist-plugin.booked-style-css' href='~/Content/themes/massage-therapist/css/plugin.booked.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='massage-therapist-responsive-style-css' href='~/Content/themes/massage-therapist/css/responsive.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='mediaelement-css' href='~/Content/js/mediaelement/mediaelementplayer-legacy.min45a0.css?ver=4.2.6-78496d1' type='text/css' media='all' />
+    <link rel='stylesheet' id='wp-mediaelement-css' href='~/Content/js/mediaelement/wp-mediaelement.min5010.css?ver=4.9.8' type='text/css' media='all' />
+    <link rel='stylesheet' id='js_composer_front-css' href='~/Content/plugins/js_composer/assets/css/js_composer.min24b2.css?ver=5.5.5' type='text/css' media='all' />
+    <link rel='stylesheet' id='wpgdprc.css-css' href='~/Content/plugins/wp-gdpr-compliance/assets/css/front4053.css?ver=1542115792' type='text/css' media='all' />
+    <style id='wpgdprc.css-inline-css' type='text/css'>
+
+        div.wpgdprc .wpgdprc-switch .wpgdprc-switch-inner:before {
+            content: 'Yes';
+        }
+
+        div.wpgdprc .wpgdprc-switch .wpgdprc-switch-inner:after {
+            content: 'No';
+        }
+    </style>
+    <script type='text/javascript' src='~/Content/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
+    <script type='text/javascript' src='~/Content/js/jquery/jquery-migrate.min330a.js?ver=1.4.1'></script>
+    <script type='text/javascript' src='~/Content/plugins/essential-grid/public/assets/js/jquery.esgbox.min5bf8.js?ver=2.2.5'></script>
+    <script type='text/javascript' src='~/Content/plugins/essential-grid/public/assets/js/jquery.themepunch.tools.min5bf8.js?ver=2.2.5'></script>
+    <script type='text/javascript' src='~/Content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min23da.js?ver=5.4.8'></script>
+    <script type='text/javascript' src='~/Content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min44fd.js?ver=2.70'></script>
+    <script type='text/javascript' src='~/Content/plugins/woocommerce/assets/js/frontend/add-to-cart.min9d52.js?ver=3.5.1'></script>
+    <script type='text/javascript' src='~/Content/plugins/js_composer/assets/js/vendors/woocommerce-add-to-cart24b2.js?ver=5.5.5'></script>
+    <script type='text/javascript' src='~/Content/themes/massage-therapist/fw/js/photostack/modernizr.min.js'></script>
+    <script type='text/javascript' src='~/Content/js/mediaelement/mediaelement-and-player.min45a0.js?ver=4.2.6-78496d1'></script>
+    <script type='text/javascript' src='~/Content/js/mediaelement/mediaelement-migrate.min5010.js?ver=4.9.8'></script>
+    <script type='text/javascript' src='~/Content/plugins/wp-gdpr-compliance/assets/vendor/micromodal/micromodal.min4053.js?ver=1542115792'></script>
+    <style type="text/css" data-type="vc_shortcodes-custom-css">
+        .vc_custom_1472481984982 {
+            background-image: url(/Content/uploads/2016/08/background-6d823.jpg?id=219) !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
+        }
+
+        .vc_custom_1472997079049 {
+            background-image: url(/Content/uploads/2016/08/bgg.jpg) !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
+        }
+
+        .vc_custom_1472818069165 {
+            background-image: url(/Content/uploads/2016/08/test_bg.jpg?id=494) !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
+        }
+
+        .vc_custom_1472997100012 {
+            background-image: url(/Content/uploads/2016/08/bg.jpg?id=575) !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
+        }
+
+        .vc_custom_1473075557867 {
+            background-image: url(/Content/uploads/2016/08/promo.jpg?id=471) !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
+        }
+
+        .vc_custom_1473070221742 {
+            background-image: url(/Content/uploads/2016/08/call-1.jpg?id=490) !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
+        }
+
+        .vc_custom_1472059582507 {
+            background-image: url(/Content/uploads/2016/08/background-5.jpg?id=207) !important;
+        }
+
+        .vc_custom_1472481964183 {
+            margin-bottom: 0.9rem !important;
+        }
+
+        .vc_custom_1472811420469 {
+            margin-bottom: -0.5rem !important;
+        }
+
+        .vc_custom_1472635897416 {
+            margin-bottom: 1.2rem !important;
+        }
+
+        .vc_custom_1472483884914 {
+            margin-top: 0.5em !important;
+            margin-bottom: 0.15em !important;
+        }
+
+        .vc_custom_1472822733363 {
+            margin-bottom: 1.2rem !important;
+        }
+
+        .vc_custom_1472717884680 {
+            margin-bottom: 0.66rem !important;
+        }
+    </style>
+    <noscript>
+        <style type="text/css">
+
+            .wpb_animate_when_almost_visible {
+                opacity: 1;
+            }
+
+            .btn {
+                border-radius: 50%;
+            }
+        </style>
+    </noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body class="home page-template-default page page-id-37 woocommerce-no-js massage_therapist_body body_style_wide body_filled article_style_stretch layout_single-standard template_single-standard scheme_original top_panel_show top_panel_above sidebar_hide sidebar_outer_hide wpb-js-composer js-comp-ver-5.5.5 vc_responsive">
+    <div>
+        <a class="callMe btn btn-danger" style="border-radius: 50%" href="tel:(0292) 3733 002"><i class="fa fa-volume-control-phone" style="font-size:36px"></i></a>
+    </div>
+    <!-- chen messs-->
+    <div class="fb-livechat">
+        <div class="ctrlq fb-overlay"></div>
+        <div class="fb-widget">
+            <div class="ctrlq fb-close"></div>
+            <div class="fb-page" data-href="https://www.facebook.com/mekonghealthbeauty/" data-tabs="messages" data-width="360" data-height="400" data-small-header="true" data-hide-cover="true" data-show-facepile="false">
+                <blockquote cite="http://webpool3.nhotim.vn/" class="fb-xfbml-parse-ignore"> </blockquote>
+            </div>
+            <div class="fb-credit">
+                <a href="#" target="_blank"> </a>
+            </div>
+            <div id="fb-root"></div>
+        </div>
+        <a href="https://m.me/mekonghealthbeauty" title="Send us a message on Facebook" class="ctrlq fb-button"></a>
+    </div>
+    <script src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9"></script>
+
+    <script>
+        $(document).ready(function () {
+            var t = { delay: 125, overlay: $(".fb-overlay"), widget: $(".fb-widget"), button: $(".fb-button") }; setTimeout(function () { $("div.fb-livechat").fadeIn() }, 8 * t.delay), $(".ctrlq").on("click", function (e) {
+                e.preventDefault(), t.overlay.is(":visible") ? (t.overlay.fadeOut(t.delay), t.widget.stop().animate({ bottom: 0, opacity: 0 }, 2 * t.delay, function () { $(this).hide("slow"), t.button.show() })) :
+
+                    t.button.fadeOut("medium", function () { t.widget.stop().show().animate({ bottom: "30px", opacity: 1 }, 2 * t.delay), t.overlay.fadeIn(t.delay) })
+            })
+        });</script>
+    <!---->
+    <a id="toc_home" class="sc_anchor" title="Home" data-description="&lt;i&gt;Return to Home&lt;/i&gt; - &lt;br&gt;navigate to home page of the site" data-icon="icon-home" data-url="http://massage-therapist.ancorathemes.com/" data-separator="yes"></a>
+    <a id="toc_top" class="sc_anchor" title="To Top" data-description="&lt;i&gt;Back to top&lt;/i&gt; - &lt;br&gt;scroll to top of the page" data-icon="icon-double-up" data-url="" data-separator="yes"></a>
+
+
+
+    <div class="body_wrap">
+
+        <div class="page_wrap">
+            <div class="top_panel_fixed_wrap"></div>
+            <header class="top_panel_wrap top_panel_style_2 scheme_original">
+                <div class="top_panel_wrap_inner top_panel_inner_style_2 top_panel_position_above">
+                    <div style="background-image: @*url(/Content/images/nav.jpg);*@" class="top_panel_middle">
+                        <div class="content_wrap">
+                            <div class="columns_wrap columns_fluid">
+                                <div class="column-3_12 contact_field contact-addr">
+                                    <span class="contact_icon icon-location-1"></span>
+                                    @*<span class="contact_email"><a>sd</a>Số 8 Ngô Quyền</span>*@
+                                    <span class="contact_label contact_phone"><a href="#"> Số 8 Ngô Quyền</a></span>
+                                    <span class="contact_label contact_phone"><a href="tel:(0292) 3733 002"> Ninh Kiều, Cần Thơ</a></span>
+                                </div>
+                                <div class="column-6_12 contact_logo">
+                                    <div class="logo">
+                                        <a href=""><img src="~/Content/uploads/2016/08/logo-1.png" class="logo_main" alt="img" width="159" height="115">@Html.ActionLink(" ", "Index", "Home")</a>
+
+                                    </div>
+                                </div>
+                                <div class="column-2_12 offset-1_12 contact_field contact-phone">
+                                    <span class="contact_icon  icon-icon_12"></span>
+                                    <span class="contact_email">Liên hệ</span>
+                                    <span class="contact_label contact_phone"><a href="tel:(0292) 3733 002">(0292) 3733 002</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top_panel_bottom">
+                        <div class="content_wrap clearfix">
+                            <nav class="menu_main_nav_area menu_hover_fade">
+                                <ul id="menu_main" class="menu_main_nav">
+                                    <li id="menu-item-49" class="menu-item menu-item-type-custom menu-item-object-custom idHome">
+                                        @Html.ActionLink("TRANG CHỦ", "Index", "Home")
+                                    </li>
+
+                                    <li id="menu-item-51" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-51 idDichvu">
+                                        <a href="#"><span>DỊCH VỤ</span></a>
+                                        <ul class="sub-menu">
+                                            <li id="menu-item-47" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-47">
+                                                @Html.ActionLink("Thông tin", "Index", "Services")
+                                            </li>
+                                            <li id="menu-item-47" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-47">
+                                                <a href="#"><span>Massages</span></a>
+                                                <ul class="sub-menu">
+                                                    <li id="menu-item-99">
+                                                        @Html.ActionLink("Foot", "FootMassage", "Services", null, new { @class = "menu-item menu-item-type-post_type menu-item-object-page menu-item-99" })
+                                                    </li>
+                                                    <li>
+                                                        @Html.ActionLink("Body", "MassageBody", "Services", null, new { @class = "menu-item menu-item-type-post_type menu-item-object-page menu-item-99" })
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li id="menu-item-47" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-47">
+                                                <a href="#"><span>Minno Vortex</span></a>
+                                                <ul class="sub-menu">
+                                                    <li id="menu-item-99">
+                                                        @Html.ActionLink("Công nghệ Vortex", "Minno", "Services")
+                                                    </li>
+                                                    <li>
+                                                        @Html.ActionLink("Minno Vortex", "MinnoRox", "Services")
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+
+                                        </ul>
+                                    </li>
+                                    <li id="menu-item-51" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-51 idHinhanh">
+                                        <a href="#"><span>HÌNH ẢNH</span></a>
+                                        <ul class="sub-menu">
+                                            <li id="menu-item-47" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-47 ">
+                                                @Html.ActionLink("Hội thảo công nghệ", "HoiThao", "Image")
+                                            </li>
+                                            <li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-47 ">
+                                                @Html.ActionLink("Khách hàng", "KhachHang", "Image")
+
+                                            </li>
+                                            <li id="menu-item-217" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-217 ">
+                                                @Html.ActionLink("Góc nhỏ Mekong", "Mekong", "Image")
+
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45 idNews">
+                                        @Html.ActionLink("TIN TỨC", "Index", "News")
+                                    </li>
+                                    <li id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45 idLienhe">
+                                        @Html.ActionLink("LIÊN HỆ", "Index", "Contact")
+                                    </li>
+                                    <li id="menu-item-51" class="menu-item menu-item-type-custom menu-item-object-custom idGioithieu">
+                                        @Html.ActionLink("GIỚI THIỆU", "Index", "About")
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="header_mobile">
+                <div class="content_wrap">
+                    <div class="menu_button icon-menu"></div>
+                    <div class="logo">
+                        <a href=""><img src="~/Content/uploads/2016/08/logo-1.png" class="logo_main" alt="img" width="159" height="115"></a>
+                    </div>
+                </div>
+                <div class="side_wrap">
+                    <div class="close">Close</div>
+                    <div class="panel_top">
+                        <nav class="menu_main_nav_area">
+                            <ul id="menu_mobile" class="menu_main_nav">
+                                <li class="menu-item menu-item-49 idHome">
+                                    @Html.ActionLink("TRANG CHỦ", "Index", "Home")
+                                </li>
+                                @*<li id="menu-item-51" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-51 idDichvu">
+            <a href="#"><span>DỊCH VỤ</span></a>
+            <ul class="sub-menu">
+                <li id="menu-item-47" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-47">
+                    @Html.ActionLink("Thông tin", "Index", "Services")
+
+                </li>
+                <li id="menu-item-47" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-47">
+                    <a href="#"><span>Massages</span></a>
+                    <ul class="sub-menu">
+                        <li id="menu-item-99">
+                            @Html.ActionLink("Foot", "FootMassage", "Services", null, new { @class = "menu-item menu-item-type-post_type menu-item-object-page menu-item-99" })
+                        </li>
+                        <li>
+                            @Html.ActionLink("Body", "MassageBody", "Services", null, new { @class = "menu-item menu-item-type-post_type menu-item-object-page menu-item-99" })
+                        </li>
+                    </ul>
+                </li>
+                <li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-47">
+                    @Html.ActionLink("Vortex", "Minno", "Services")
+
+                </li>
+                <li id="menu-item-217" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-217">
+                    @Html.ActionLink("INNOJECTOR", "MinnoRox", "Services")
+
+                </li>
+            </ul>
+        </li>*@
+
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-50">
+                                    <a href="#"><span>DỊCH VỤ</span></a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-620">
+                                            <a href="#"><span>Massages</span></a>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99">
+                                                    @Html.ActionLink("Foot", "FootMassage", "Services", null, new { @class = "menu-item menu-item-type-post_type menu-item-object-page menu-item-99" })
+                                                </li>
+                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99">
+                                                    @Html.ActionLink("Body", "MassageBody", "Services", null, new { @class = "menu-item menu-item-type-post_type menu-item-object-page menu-item-99" })
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-619">
+                                            <a href="#"><span>Minno Vortex</span></a>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92">
+                                                    @Html.ActionLink("Công nghệ Vortex", "Minno", "Services")
+                                                </li>
+                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244">
+                                                    @Html.ActionLink("Minno Vortex", "MinnoRox", "Services")
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+
+
+                                <li id="menu-item-51" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-51 idHinhanh">
+                                    <a href="#"><span>HÌNH ẢNH</span></a>
+                                    <ul class="sub-menu">
+                                        <li id="menu-item-47" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-47 ">
+                                            @Html.ActionLink("Hội thảo công nghệ", "HoiThao", "Image")
+                                        </li>
+                                        <li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-47 ">
+                                            @Html.ActionLink("Khách hàng", "KhachHang", "Image")
+
+                                        </li>
+                                        <li id="menu-item-217" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-217 ">
+                                            @Html.ActionLink("Góc nhỏ Mekong", "Mekong", "Image")
+
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45 idNews">@Html.ActionLink("TIN TỨC", "Index", "News")</li>
+
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45 idLienhe">@Html.ActionLink("LIÊN HỆ", "Index", "Contact")</li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51 idGioithieu">
+                                    @Html.ActionLink("GIỚI THIỆU", "Index", "About")
+
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="panel_bottom">
+                    </div>
+                </div>
+                <div class="mask"></div>
+            </div>
+            @RenderBody()
+
+            <footer class="contacts_wrap scheme_original">
+                <div class="contacts_wrap_inner">
+                    <div class="content_wrap">
+                        <div class="columns_wrap columns_fluid">
+                            <div class="column-5_12 footer_address">
+                                <div class="contacts_address">
+                                    <address>
+                                        @*<span>Địa chỉ: Số 8 Ngô Quyền</span> Ninh Kiều, Cần Thơ
+                                    <span>Liên hệ</span><br><a href="#"></a><a href="tel: (0292) 3733 002"> (0292) 3733 002</a>*@
+                                        <div id="sc_googlemap_513240635" class="sc_googlemap" style="width:100%;height:120px;" data-zoom="16" data-style="inverse">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.793013015181!2d105.78600811465668!3d10.033932392827891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a062a2213e473f%3A0x779c441edf68c3fd!2zOCBOZ8O0IFF1eeG7gW4sIFTDom4gQW4sIE5pbmggS2nhu4F1LCBD4bqnbiBUaMahLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2sus!4v1543332615809" scrolling="no" marginheight="0" marginwidth="0" frameborder="0" aria-label=""></iframe>
+                                        </div>
+                                    </address>
+                                </div>
+                            </div><div class="column-1_6">
+                                <div class="logo">
+                                    <a href=""><img src="~/Content/uploads/2016/08/logo-1.png" class="logo_footer" alt="img" width="159" height="115">@Html.ActionLink(" ", "Index", "Home", new { @class = "" })</a>
+                                </div>
+
+                            </div>
+                            <div class="column-5_12 footer_phone">
+                                <div class="contacts_address">
+                                    <address style="text-align:center;">
+                                        <div width="auto" class="row">
+                                            @*<div class="fb-like" data-href="https://www.facebook.com/mekonghealthbeauty/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>*@
+                                        </div>
+                                        <div id="fb-root"></div>
+                                        <script>
+                                            (function (d, s, id) {
+                                                var js, fjs = d.getElementsByTagName(s)[0];
+                                                if (d.getElementById(id)) return;
+                                                js = d.createElement(s); js.id = id;
+                                                js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2';
+                                                fjs.parentNode.insertBefore(js, fjs);
+                                            }(document, 'script', 'facebook-jssdk'));</script>
+                                        <div class="fb-page" data-href="https://www.facebook.com/pg/mekonghealthbeauty/photos/?ref=page_internal" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/pg/mekonghealthbeauty/photos/?ref=page_internal" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/pg/mekonghealthbeauty/photos/?ref=page_internal">Mekong Health And Beauty</a></blockquote></div>
+                                    </address>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <div class="copyright_wrap copyright_style_menu  scheme_original">
+                <div class="copyright_wrap_inner">
+                    <div class="content_wrap">
+                        <div class="copyright_text">
+                            <p>
+                                <a href="#" target="_blank" rel="noopener">Nhotim</a> © 2018. All rights reserved.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="scroll_to_top icon-up" title="Scroll to top"></a>
+    <div class="custom_html_section"></div>
+
+
+    <script type="text/javascript">
+        function revslider_showDoubleJqueryError(sliderID) {
+            var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
+            errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
+            errorMessage += "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";
+            errorMessage += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";
+            errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
+            jQuery(sliderID).show().html(errorMessage);
+        }
+    </script>
+    <link rel='stylesheet' id='massage-therapist-swiperslider-style-css' href='~/Content/themes/massage-therapist/fw/js/swiper/swiper.css' type='text/css' media='all' />
+    <script type='text/javascript' src='~/Content/js/jquery/ui/core.mine899.js?ver=1.11.4'></script>
+    <script type='text/javascript' src='~/Content/js/jquery/ui/datepicker.mine899.js?ver=1.11.4'></script>
+    <script type='text/javascript'>
+        jQuery(document).ready(function (jQuery) { jQuery.datepicker.setDefaults({ "closeText": "Close", "currentText": "Today", "monthNames": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], "monthNamesShort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], "nextText": "Next", "prevText": "Previous", "dayNames": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "dayNamesShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], "dayNamesMin": ["S", "M", "T", "W", "T", "F", "S"], "dateFormat": "dd M", "firstDay": 1, "isRTL": false }); });
+    </script>
+    <script type='text/javascript' src='~/Content/plugins/booked/assets/js/spin.min7406.js?ver=2.0.1'></script>
+    <script type='text/javascript' src='~/Content/plugins/booked/assets/js/spin.jquery7406.js?ver=2.0.1'></script>
+    <script type='text/javascript' src='~/Content/plugins/booked/assets/js/tooltipster/js/jquery.tooltipster.min9b70.js?ver=3.3.0'></script>
+
+    <script type='text/javascript' src='~/Content/plugins/booked/assets/js/functionsdc8c.js?ver=2.2'></script>
+
+    <script type='text/javascript' src='~/Content/plugins/contact-form-7/includes/js/scripts1748.js?ver=5.0.5'></script>
+
+    <script type='text/javascript' src='~/Content/plugins/trx_utils/js/trx_utils.js'></script>
+    <script type='text/javascript' src='~/Content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min6b25.js?ver=2.1.4'></script>
+
+    <script type='text/javascript' src='~/Content/plugins/woocommerce/assets/js/frontend/woocommerce.min9d52.js?ver=3.5.1'></script>
+    <script type='text/javascript'>
+
+        var wc_cart_fragments_params = { "ajax_url": "\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/?wc-ajax=%%endpoint%%", "cart_hash_key": "wc_cart_hash_57e05d906cb0a470e77c7ea392454138", "fragment_name": "wc_fragments_57e05d906cb0a470e77c7ea392454138" };
+
+    </script>
+    <script type='text/javascript' src='~/Content/plugins/woocommerce/assets/js/frontend/cart-fragments.min9d52.js?ver=3.5.1'></script>
+    <script type='text/javascript' src='~/Content/themes/massage-therapist/fw/js/superfish.js'></script>
+    <script type='text/javascript' src='~/Content/themes/massage-therapist/fw/js/core.utils.js'></script>
+
+
+    <script type='text/javascript' src='~/Content/themes/massage-therapist/fw/js/core.init.js'></script>
+    <script type='text/javascript' src='~/Content/themes/massage-therapist/js/theme.init.js'></script>
+    <script type='text/javascript' src='~/Content/js/mediaelement/wp-mediaelement.min5010.js?ver=4.9.8'></script>
+    <script type='text/javascript'>
+        var wpgdprcData = { "ajaxURL": "http:\/\/massage-therapist.ancorathemes.com\/wp-admin\/admin-ajax.php", "ajaxSecurity": "75e4ad17cf" };
+    </script>
+    <script type='text/javascript' src='~/Content/plugins/wp-gdpr-compliance/assets/js/front4053.js?ver=1542115792'></script>
+    <script type='text/javascript' src='~/Content/js/wp-embed.min5010.js?ver=4.9.8'></script>
+    <script type='text/javascript' src='~/Content/plugins/trx_utils/shortcodes/theme.shortcodes.js'></script>
+    <script type='text/javascript' src='~/Content/plugins/js_composer/assets/js/dist/js_composer_front.min24b2.js?ver=5.5.5'></script>
+    <script type='text/javascript' src='~/Content/themes/massage-therapist/fw/js/swiper/swiper.js'></script>
+    <!-- silder -->
+    <link rel="stylesheet" type="text/css" href="~/Content/css/slider.css">
+    <link type="text/css" href="~/Content/css/Redefine.css" rel="stylesheet" />
+    <script type="text/javascript" src="~/Content/js/tms-0.4.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.slider')._TMS({
+                show: 0,
+                pauseOnHover: true,
+                prevBu: '.prev',
+                nextBu: '.next',
+                playBu: false,
+                duration: 10000,
+                preset: 'zoomer',
+                pagination: true,
+                pagNums: false,
+                slideshow: 7000,
+                numStatus: false,
+                banners: false,
+                waitBannerAnimation: false,
+                progressBar: false
+            })
+        });
+    </script>
+
+    <script type="text/javascript">
+        var MASSAGE_THERAPIST_STORAGE = {
+            "system_message": {
+                "message": "",
+                "status": "",
+                "header": ""
+            },
+            "theme_font": "Source Sans Pro",
+            "theme_color": "#3b3b39",
+            "theme_bg_color": "#ffffff",
+            "strings": {
+                "ajax_error": "Invalid server answer",
+                "bookmark_add": "Add the bookmark",
+                "bookmark_added": "Current page has been successfully added to the bookmarks. You can see it in the right panel on the tab &#039;Bookmarks&#039;",
+                "bookmark_del": "Delete this bookmark",
+                "bookmark_title": "Enter bookmark title",
+                "bookmark_exists": "Current page already exists in the bookmarks list",
+                "search_error": "Error occurs in AJAX search! Please, type your query and press search icon for the traditional search way.",
+                "email_confirm": "On the e-mail address &quot;%s&quot; we sent a confirmation email. Please, open it and click on the link.",
+                "reviews_vote": "Thanks for your vote! New average rating is:",
+                "reviews_error": "Error saving your vote! Please, try again later.",
+                "error_like": "Error saving your like! Please, try again later.",
+                "error_global": "Global error text",
+                "name_empty": "The name can&#039;t be empty",
+                "name_long": "Too long name",
+                "email_empty": "Too short (or empty) email address",
+                "email_long": "Too long email address",
+                "email_not_valid": "Invalid email address",
+                "subject_empty": "The subject can&#039;t be empty",
+                "subject_long": "Too long subject",
+                "text_empty": "The message text can&#039;t be empty",
+                "text_long": "Too long message text",
+                "send_complete": "Send message complete!",
+                "send_error": "Transmit failed!",
+                "geocode_error": "Geocode was not successful for the following reason:",
+                "googlemap_not_avail": "Google map API not available!",
+                "editor_save_success": "Post content saved!",
+                "editor_save_error": "Error saving post data!",
+                "editor_delete_post": "You really want to delete the current post?",
+                "editor_delete_post_header": "Delete post",
+                "editor_delete_success": "Post deleted!",
+                "editor_delete_error": "Error deleting post!",
+                "editor_caption_cancel": "Cancel",
+                "editor_caption_close": "Close"
+            },
+
+            "ajax_nonce": "d3bc1f09da",
+            "site_protocol": "http",
+            "vc_edit_mode": "",
+            "accent1_color": "#edbf88",
+            "accent1_hover": "#898989",
+            "slider_height": "100",
+            "user_logged_in": "",
+            "toc_menu": "float",
+            "toc_menu_home": "1",
+            "toc_menu_top": "1",
+            "menu_fixed": "1",
+            "menu_mobile": "1024",
+            "menu_hover": "fade",
+            "button_hover": "fade",
+            "input_hover": "default",
+            "demo_time": "0",
+            "media_elements_enabled": "1",
+            "ajax_search_enabled": "1",
+            "ajax_search_min_length": "3",
+            "ajax_search_delay": "200",
+            "css_animation": "1",
+            "menu_animation_in": "fadeInUp",
+            "menu_animation_out": "fadeOutDown",
+            "popup_engine": "pretty",
+            "contacts_maxlength": "1000",
+            "comments_maxlength": "1000",
+            "remember_visitors_settings": "",
+            "admin_mode": "",
+            "isotope_resize_delta": "0.3",
+            "error_message_box": null,
+            "viewmore_busy": "",
+            "video_resize_inited": "",
+            "top_panel_height": "0"
+        };
+    </script>
+
+    @*FB plugin like*@
+
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+
+
+
+                                //current-menu-parent menu-item-has-children
+    </script>
+
+
+    <style>
+        #fb-root > div.fb_dialog.fb_dialog_advanced.fb_shrink_active {
+            right: initial !important;
+            left: 18pt;
+            z-index: 9999999 !important;
+        }
+
+        .fb-customerchat.fb_invisible_flow.fb_iframe_widget iframe {
+            right: initial !important;
+            left: 18pt !important;
+        }
+    </style>
+
+
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+﻿@using AnzamtechWS.Areas.Admin.Models
+@model DanhMucConModel
+@{
+    ViewBag.Title = "Danh Mục";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="block-header">
+    <ol class="breadcrumb breadcrumb-arrow">
+        <li><a href="/Admin/Home">Trang chủ</a></li>
+        <li><a href="/Admin/DanhMuc">Danh mục</a></li>
+        <li><a href="/Admin/DanhMuc/ChinhSuaDM?MaDM=@Model.MaDM">Sửa danh mục</a></li>
+        <li class="active"><span>Sửa danh mục con</span></li>
+    </ol>
+</div>
+
+
+@Html.Raw(Model.GetHTMLMessage())
+
+<div class="form-content col-lg-12 col-md-12 col-sm-12 col-xs-12 pl-0 pr-0">
+    <div class="card">
+        <div class="header">
+            <h2>
+                Sửa danh mục
+            </h2>
+        </div>
+        <div class="body">
+            @using (Html.BeginForm(new { area = "Admin", controller = "DanhMuc", action = "ChinhSuaDMC" }))
+            {
+                @Html.HiddenFor(u => u.MaDMC)
+                <h2 class="card-inside-title">Danh mục</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @Html.DropDownListFor(u=>u.MaDM, new SelectList(Model.GetDanhMucs(), "MaDM","TenDM"), new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Tên danh mục con</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @Html.TextBoxFor(u => u.TenDMC, Model.TenDMC, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Tag</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @Html.TextBoxFor(u => u.Tag, Model.Tag, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-primary m-t-15 waves-effect">Hoàn tất</button>
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+</div>

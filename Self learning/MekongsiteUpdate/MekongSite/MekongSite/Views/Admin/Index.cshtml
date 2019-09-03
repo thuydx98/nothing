@@ -1,0 +1,103 @@
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<Post>
+
+@{
+    ViewBag.Title = "Xem Bài Viết | Mekong Health and Beauty";
+    ViewBag.TitlePage = "Xem Bài Viết";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+<link href="~/Content/Admin/css/modal.css" rel="stylesheet" />
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <div class="row">
+
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong class="card-title">Xem tất cả bài viết</strong>
+                    </div>
+                    <div class="card-body">
+                        <table id="postsTable" class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Tiêu đề</th>
+                                    <th scope="col">Nội dung</th>
+                                    <th scope="col">Ngày tạo</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="contentTable">
+                                @for (int i = 0; i < Model.Count; i++)
+                                {
+                                    <tr>
+                                        <th scope="row">@((Model.PageNumber - 1) * 5 + i + 1)</th>
+                                        <td>@Model[i].Title</td>
+                                        <td>@(Html.Raw(Model[i].Content.Length <= 50 ? Model[i].Content : Model[i].Content.Substring(0, 50) + "..."))</td>
+                                        <td>@Model[i].CreatedDate</td>
+                                        <td><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#@Model[i].Post_ID">Chi tiết</button></td>
+                                    </tr>
+                                    <div class="modal fade scrollmodal pl-0" id="@Model[i].Post_ID" tabindex="-1" role="dialog" aria-labelledby="scrollmodalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="scrollmodalLabel">@Model[i].Title - @Model[i].CreatedDate</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="content">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                @Html.Raw(Model[i].Content)
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </tbody>
+                        </table>
+                        <div class="pagination">
+                            <a href="#" class="prev disabled"><<</a>
+                            <ol>
+                                <li class="active"><a>1</a></li>
+                                @for (int j = 1; j < Model.PageCount; j++)
+                                {
+                                    <li><a>@(j + 1)</a></li>
+                                }
+                            </ol>
+                            <a href="#" class="next">>></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div><!-- .animated -->
+</div>
+
+<script src="~/Content/Admin/js/vendor/jquery-1.11.3.min.js"></script>
+<script src="~/Content/Admin/js/paginationViewPost.js"></script>
+
+<script>
+
+    var error = '@ViewBag.Error403';
+    if (error !== null && error !== "") {
+        alert('Bạn phải là ADMIN mới có quyền truy cập trang Xóa Bài Viết.');
+    }
+
+    $('.scrollmodal').appendTo("body");
+
+    if (@Model.PageCount === 1) {
+        $(".pagination").remove();
+    }
+</script>

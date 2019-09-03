@@ -1,0 +1,214 @@
+﻿@using AnzamtechWS.Areas.Admin.Models
+@using AnzamtechWS.Helper
+@model SanPhamModel
+@{
+    ViewBag.Title = "";
+    Layout = "~/Areas/User/Views/Shared/_Layout.cshtml";
+}
+<div class="slider">
+    <div id="carouselExampleIndicators" class="carousel slide lazy" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active"> <a href="javascript:void(0)" class="baner-image"><img class="d-block img-fluid lazy" data-src="image/slide/slide1.jpg" alt="First slide" src="image/pixel.gif" /></a> </div>
+            <div class="carousel-item"><a href="javascript:void(0)" class="baner-image"> <img class="d-block img-fluid lazy" data-src="image/slide/slide2.jpg" alt="Second slide" src="image/pixel.gif" /> </a></div>
+            <div class="carousel-item"><a href="javascript:void(0)" class="baner-image"> <img class="d-block img-fluid lazy" data-src="image/slide/slide3.jpg" alt="Third slide" src="image/pixel.gif" /></a> </div>
+            <div class="carousel-item"> <a href="javascript:void(0)" class="baner-image"><img class="d-block img-fluid lazy" data-src="image/slide/slide4.jpg" alt="Third slide" src="image/pixel.gif" /></a> </div>
+            <div class="carousel-item"> <a href="javascript:void(0)" class="baner-image"><img class="d-block img-fluid lazy" data-src="image/slide/slide6.jpg" alt="Third slide" src="image/pixel.gif" /></a> </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-sm-center justify-content-center">
+            <div class="col-lg-3 col-md-6 col-sm-8 col-11 p-0">
+                <div class="product-content"> <a href="javascript:void(0)" class="baner-image"> <img class="sr-fade lazy" data-src="image/Top-Product/tp1.jpg" src="image/pixel.gif" /> </a> </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-8 col-11 p-0">
+                <div class="product-content"> <a href="javascript:void(0)" class="baner-image"> <img class="sr-fade lazy" data-src="image/Top-Product/tp2.jpg" src="image/pixel.gif" /> </a> </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-8 col-11 p-0">
+                <div class="product-content"> <a href="javascript:void(0)" class="baner-image"> <img class="sr-fade lazy" data-src="image/Top-Product/tp3.jpg" src="image/pixel.gif" /> </a> </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-8 col-11 p-0">
+                <div class="product-content"> <a href="javascript:void(0)" class="baner-image"> <img class="sr-fade lazy" data-src="image/Top-Product/tp4.jpg" src="image/pixel.gif" /> </a> </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="recent-post mt-0">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="text-center mb-5">GIẢI PHÁP PHẦN CỨNG CỦA ANZ AMTECH</h3>
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            @{ 
+                var modelGP = new GiaiPhapModel();
+                var listGP = modelGP.GetListGPPhanCung();
+             }
+            @if (listGP != null)
+            {
+                foreach (var item in listGP)
+                {
+                    var a = item.DanhMucAnh.Anhs.FirstOrDefault<Anh>(u=>u.LoaiAnh.TenLoai.Contains("Ảnh đại diện sản phẩm"));
+                    var path = "/GiaiPhap/PhanCung/" + Helper.ConvertVN(item.TenGP).Replace(' ', '-') + "-" + item.MaGP;
+                    <div class="col-xl-4 col-md-4 col-lg-4 col-xs-12 col-12 p-3 mt-5">
+                        <a class="baner-image solution-image container-image pop-solution" href="@path"><img class="lazy" data-src="@a.Path/@a.TenAnh" src="~/image/pixel.gif" alt="@a.Tag"></a>
+                        <p class="text-center mt-3 pl-5 pr-5"><a href="@path" class="solution">@item.TenGP</a></p>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-12">
+            <a href="/Admin/PhanCung/" class="baner-image">
+                <img class="lazy" data-src="/image/MoTa2.jpg" src="~/image/pixel.gif" />
+            </a>
+        </div>
+    </div>
+</div>
+<div class="feature-product">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="text-center mb-5">SẢN PHẨM NỔI BẬT</h3>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center ">
+
+            @{ var listSPNB = Model.GetSanPhamNoiBat(); }
+            @if (listSPNB != null)
+            {
+                foreach (SanPham item in listSPNB)
+                {
+                    DanhMucAnh dma = item.DanhMucAnh;
+                    var a = dma.Anhs.Where(u => u.LoaiAnh.TenLoai.Contains("Ảnh đại diện sản phẩm")).Take<Anh>(1);
+                    DanhMucCon dmc = item.DanhMucCon;
+                    var g = item.GiaSPs.OrderByDescending(u => u.NgayTao).Take(1);
+                    var path = "/" + Helper.ConvertVN(dmc.DanhMuc.TenDanhMuc).Replace(' ', '-') + "-" + dmc.MaDM + "/" + Helper.ConvertVN(dmc.TenDMC).Replace(' ', '-') + "-" + dmc.MaDMC + "/" + Helper.ConvertVN(item.TenSP).Replace(' ', '-') + "-" + item.MaSP;
+                    <div class="col-xl-3 col-lg-3 col-sm-6 col-10 mb-5 ">
+                        <div class="card h-100">
+                            <div class="d-flex justify-content-center">
+                                <a href="@path" class="container-image d-flex justify-content-center">
+                                    @if (a != null && a.Count() > 0)
+                                    {
+                                        <img class="lazy" data-src="@Html.Raw(a.ElementAt<Anh>(0).Path + "/" + a.ElementAt<Anh>(0).TenAnh)" src="image/pixel.gif" />
+                                    }
+                                    else
+                                    {
+                                        <img class="lazy" data-src="#" src="image/pixel.gif" />
+                                    }
+
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <a href="@path">@item.TenSP</a>
+                                </h4>
+                                <h5>
+                                    @if (g != null && g.Count() > 0)
+                                    {
+                                        @Html.Raw(Helper.GetCurrencyVND(g.ElementAt(0).GiaSP1))
+                                    }
+
+                                </h5>
+                                <p class="card-text limit-word">@item.Tag</p>
+                                <a class="btn btn-primary mt-2 mb-1" href="@path">Xem chi tiết</a>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">★ ★ ★ ★ ☆</small>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+
+</div>
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-12">
+            <a href="/Admin/PhanCung/" class="baner-image">
+                <img class="lazy" data-src="/image/MoTa1.png" src="~/image/pixel.gif" />
+            </a>
+        </div>
+    </div>
+</div>
+<div class="recent-post">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="text-center mb-5">TIN TỨC GẦN ĐÂY</h3>
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            @{ BaiVietModel bv = new BaiVietModel();}
+            @{ var listBV = bv.GetBaiVietNoiBat(2); }
+            @if (listBV != null && listBV.Count() > 0)
+            {
+                foreach (var item in listBV)
+                {
+                    var path = "/TinTuc/" + Helper.ConvertVN(item.DanhMucBaiViet.TenDanhMuc).Replace(' ', '-') + "-" + item.DanhMucBaiViet.MaDMBV + "/" + Helper.ConvertVN(item.TenBV).Replace(' ', '-') + "-" + item.MaBV;
+                    var Anh = item.DanhMucAnh.Anhs.FirstOrDefault<Anh>(u => u.LoaiAnh.TenLoai.Contains("Ảnh đại diện bài viết"));
+                    <div class="col-lg-6 col-10 grid-recent-post mb-5">
+                        @if (Anh != null)
+                        {
+                            <a href="@path" class="baner-image container-image"><img class="lazy" data-src="@(Anh.Path + "/" + Anh.TenAnh)" src="~/image/pixel.gif" /></a>
+                        }
+
+                        <h3 class="blog-title mb-0">
+                            <a href="@path">@item.TenBV</a>
+
+                        </h3>
+                        <div class="blog-info" style="font-size:.8em">
+                            <span class="blog-meta blog-meta-author"><span class="blog-icon"><i class="fontawesome-user"></i></span> Đăng ngày @item.NgayDang.ToString("dd/MM/yyyy")</span>
+                            <span class="blog-meta blog-meta-date"><span class="blog-icon"><i class="fontawesome-pencil"></i></span> bởi @item.NhanVien.TenDN </span>
+                        </div>
+                        <div class="blog-body mt-2">
+                            @item.MoTa
+                        </div>
+                        <div class="blog-read-more">
+                            <a href="@path">Xem thêm<span><i class="fontawesome-long-arrow-right"></i></span></a>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                Html.Raw("Chưa có bài viết nào được đăng");
+            }
+
+
+        </div>
+    </div>
+</div>
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-12">
+            <a href="/Admin/PhanCung/" class="baner-image">
+                <img class="lazy" data-src="/image/MoTa3.jpg" src="~/image/pixel.gif" />
+            </a>
+        </div>
+    </div>
+</div>

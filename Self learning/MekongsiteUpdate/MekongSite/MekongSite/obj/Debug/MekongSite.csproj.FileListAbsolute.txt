@@ -1,0 +1,357 @@
+G:\c#asp\MekongSite\MekongSite\bin\MekongSite.dll.config
+G:\c#asp\MekongSite\MekongSite\bin\MekongSite.dll
+G:\c#asp\MekongSite\MekongSite\bin\MekongSite.pdb
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\csc.exe
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\csc.exe.config
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\csc.rsp
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\csi.exe
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\csi.exe.config
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\csi.rsp
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\Microsoft.Managed.Core.targets
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\System.AppContext.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\System.Collections.Immutable.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\System.Console.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\System.Diagnostics.StackTrace.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\System.IO.Compression.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\System.IO.FileSystem.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\System.IO.FileSystem.Primitives.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\System.IO.Pipes.AccessControl.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\System.IO.Pipes.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\System.Reflection.Metadata.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\System.Security.AccessControl.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\System.Security.Claims.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\System.Security.Cryptography.Encoding.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\System.Security.Cryptography.Primitives.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\System.Security.Principal.Windows.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\System.Text.Encoding.CodePages.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\System.ValueTuple.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\System.Xml.ReaderWriter.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\System.Xml.XmlDocument.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\System.Xml.XPath.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\System.Xml.XPath.XDocument.dll
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\vbc.exe
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\vbc.exe.config
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\vbc.rsp
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\VBCSCompiler.exe
+G:\c#asp\MekongSite\MekongSite\bin\roslyn\VBCSCompiler.exe.config
+G:\c#asp\MekongSite\MekongSite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\c#asp\MekongSite\MekongSite\bin\Microsoft.Web.Infrastructure.dll
+G:\c#asp\MekongSite\MekongSite\bin\System.Web.Helpers.dll
+G:\c#asp\MekongSite\MekongSite\bin\System.Web.Mvc.dll
+G:\c#asp\MekongSite\MekongSite\bin\System.Web.Razor.dll
+G:\c#asp\MekongSite\MekongSite\bin\System.Web.Webpages.Deployment.dll
+G:\c#asp\MekongSite\MekongSite\bin\System.Web.Webpages.dll
+G:\c#asp\MekongSite\MekongSite\bin\System.Web.Webpages.Razor.dll
+G:\c#asp\MekongSite\MekongSite\bin\System.Web.Razor.xml
+G:\c#asp\MekongSite\MekongSite\bin\System.Web.Webpages.xml
+G:\c#asp\MekongSite\MekongSite\bin\System.Web.Webpages.Deployment.xml
+G:\c#asp\MekongSite\MekongSite\bin\System.Web.Webpages.Razor.xml
+G:\c#asp\MekongSite\MekongSite\bin\System.Web.Helpers.xml
+G:\c#asp\MekongSite\MekongSite\bin\System.Web.Mvc.xml
+G:\c#asp\MekongSite\MekongSite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\c#asp\MekongSite\MekongSite\obj\Debug\MekongSite.csprojAssemblyReference.cache
+G:\c#asp\MekongSite\MekongSite\obj\Debug\MekongSite.csproj.CoreCompileInputs.cache
+G:\c#asp\MekongSite\MekongSite\obj\Debug\MekongSite.csproj.CopyComplete
+G:\c#asp\MekongSite\MekongSite\obj\Debug\MekongSite.dll
+G:\c#asp\MekongSite\MekongSite\obj\Debug\MekongSite.pdb
+E:\MekongSite\MekongSite\bin\MekongSite.dll.config
+E:\MekongSite\MekongSite\bin\MekongSite.dll
+E:\MekongSite\MekongSite\bin\MekongSite.pdb
+E:\MekongSite\MekongSite\bin\roslyn\csc.exe
+E:\MekongSite\MekongSite\bin\roslyn\csc.exe.config
+E:\MekongSite\MekongSite\bin\roslyn\csc.rsp
+E:\MekongSite\MekongSite\bin\roslyn\csi.exe
+E:\MekongSite\MekongSite\bin\roslyn\csi.exe.config
+E:\MekongSite\MekongSite\bin\roslyn\csi.rsp
+E:\MekongSite\MekongSite\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\MekongSite\MekongSite\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\MekongSite\MekongSite\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\MekongSite\MekongSite\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\MekongSite\MekongSite\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\MekongSite\MekongSite\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\MekongSite\MekongSite\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\MekongSite\MekongSite\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\MekongSite\MekongSite\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\MekongSite\MekongSite\bin\roslyn\Microsoft.Managed.Core.targets
+E:\MekongSite\MekongSite\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\MekongSite\MekongSite\bin\roslyn\System.AppContext.dll
+E:\MekongSite\MekongSite\bin\roslyn\System.Collections.Immutable.dll
+E:\MekongSite\MekongSite\bin\roslyn\System.Console.dll
+E:\MekongSite\MekongSite\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\MekongSite\MekongSite\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\MekongSite\MekongSite\bin\roslyn\System.IO.Compression.dll
+E:\MekongSite\MekongSite\bin\roslyn\System.IO.FileSystem.dll
+E:\MekongSite\MekongSite\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\MekongSite\MekongSite\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\MekongSite\MekongSite\bin\roslyn\System.IO.Pipes.dll
+E:\MekongSite\MekongSite\bin\roslyn\System.Reflection.Metadata.dll
+E:\MekongSite\MekongSite\bin\roslyn\System.Security.AccessControl.dll
+E:\MekongSite\MekongSite\bin\roslyn\System.Security.Claims.dll
+E:\MekongSite\MekongSite\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\MekongSite\MekongSite\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\MekongSite\MekongSite\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\MekongSite\MekongSite\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\MekongSite\MekongSite\bin\roslyn\System.Security.Principal.Windows.dll
+E:\MekongSite\MekongSite\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\MekongSite\MekongSite\bin\roslyn\System.ValueTuple.dll
+E:\MekongSite\MekongSite\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\MekongSite\MekongSite\bin\roslyn\System.Xml.XmlDocument.dll
+E:\MekongSite\MekongSite\bin\roslyn\System.Xml.XPath.dll
+E:\MekongSite\MekongSite\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\MekongSite\MekongSite\bin\roslyn\vbc.exe
+E:\MekongSite\MekongSite\bin\roslyn\vbc.exe.config
+E:\MekongSite\MekongSite\bin\roslyn\vbc.rsp
+E:\MekongSite\MekongSite\bin\roslyn\VBCSCompiler.exe
+E:\MekongSite\MekongSite\bin\roslyn\VBCSCompiler.exe.config
+E:\MekongSite\MekongSite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\MekongSite\MekongSite\bin\Microsoft.Web.Infrastructure.dll
+E:\MekongSite\MekongSite\bin\System.Web.Helpers.dll
+E:\MekongSite\MekongSite\bin\System.Web.Mvc.dll
+E:\MekongSite\MekongSite\bin\System.Web.Razor.dll
+E:\MekongSite\MekongSite\bin\System.Web.Webpages.Deployment.dll
+E:\MekongSite\MekongSite\bin\System.Web.Webpages.dll
+E:\MekongSite\MekongSite\bin\System.Web.Webpages.Razor.dll
+E:\MekongSite\MekongSite\bin\System.Web.Razor.xml
+E:\MekongSite\MekongSite\bin\System.Web.Webpages.xml
+E:\MekongSite\MekongSite\bin\System.Web.Webpages.Deployment.xml
+E:\MekongSite\MekongSite\bin\System.Web.Webpages.Razor.xml
+E:\MekongSite\MekongSite\bin\System.Web.Helpers.xml
+E:\MekongSite\MekongSite\bin\System.Web.Mvc.xml
+E:\MekongSite\MekongSite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\MekongSite\MekongSite\obj\Debug\MekongSite.csprojResolveAssemblyReference.cache
+E:\MekongSite\MekongSite\obj\Debug\MekongSite.csproj.CoreCompileInputs.cache
+E:\MekongSite\MekongSite\obj\Debug\MekongSite.csproj.CopyComplete
+E:\MekongSite\MekongSite\obj\Debug\MekongSite.dll
+E:\MekongSite\MekongSite\obj\Debug\MekongSite.pdb
+D:\NhoTimProject\MekongSite\MekongSite\bin\MekongSite.dll.config
+D:\NhoTimProject\MekongSite\MekongSite\bin\MekongSite.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\MekongSite.pdb
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\csc.exe
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\csc.exe.config
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\csc.rsp
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\csi.exe
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\csi.exe.config
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\csi.rsp
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\Microsoft.Managed.Core.targets
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\System.AppContext.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\System.Collections.Immutable.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\System.Console.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\System.IO.Compression.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\System.IO.FileSystem.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\System.IO.Pipes.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\System.Reflection.Metadata.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\System.Security.AccessControl.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\System.Security.Claims.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\System.Security.Principal.Windows.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\System.ValueTuple.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\System.Xml.XmlDocument.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\System.Xml.XPath.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\vbc.exe
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\vbc.exe.config
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\vbc.rsp
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\VBCSCompiler.exe
+D:\NhoTimProject\MekongSite\MekongSite\bin\roslyn\VBCSCompiler.exe.config
+D:\NhoTimProject\MekongSite\MekongSite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\Microsoft.Web.Infrastructure.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\System.Web.Helpers.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\System.Web.Mvc.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\System.Web.Razor.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\System.Web.Webpages.Deployment.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\System.Web.Webpages.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\System.Web.Webpages.Razor.dll
+D:\NhoTimProject\MekongSite\MekongSite\bin\System.Web.Razor.xml
+D:\NhoTimProject\MekongSite\MekongSite\bin\System.Web.Webpages.xml
+D:\NhoTimProject\MekongSite\MekongSite\bin\System.Web.Webpages.Deployment.xml
+D:\NhoTimProject\MekongSite\MekongSite\bin\System.Web.Webpages.Razor.xml
+D:\NhoTimProject\MekongSite\MekongSite\bin\System.Web.Helpers.xml
+D:\NhoTimProject\MekongSite\MekongSite\bin\System.Web.Mvc.xml
+D:\NhoTimProject\MekongSite\MekongSite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\NhoTimProject\MekongSite\MekongSite\obj\Debug\MekongSite.csprojResolveAssemblyReference.cache
+D:\NhoTimProject\MekongSite\MekongSite\obj\Debug\MekongSite.csproj.CoreCompileInputs.cache
+D:\NhoTimProject\MekongSite\MekongSite\obj\Debug\MekongSite.csproj.CopyComplete
+D:\NhoTimProject\MekongSite\MekongSite\obj\Debug\MekongSite.dll
+D:\NhoTimProject\MekongSite\MekongSite\obj\Debug\MekongSite.pdb
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\MekongSite.dll.config
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\MekongSite.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\MekongSite.pdb
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\csc.exe
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\csc.exe.config
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\csc.rsp
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\csi.exe
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\csi.exe.config
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\csi.rsp
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\Microsoft.Managed.Core.targets
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.AppContext.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Collections.Immutable.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Console.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Diagnostics.StackTrace.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.IO.Compression.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.IO.FileSystem.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.IO.FileSystem.Primitives.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.IO.Pipes.AccessControl.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.IO.Pipes.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Reflection.Metadata.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Security.AccessControl.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Security.Claims.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Security.Cryptography.Encoding.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Security.Cryptography.Primitives.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Security.Principal.Windows.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Text.Encoding.CodePages.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.ValueTuple.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Xml.ReaderWriter.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Xml.XmlDocument.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Xml.XPath.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Xml.XPath.XDocument.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\vbc.exe
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\vbc.exe.config
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\vbc.rsp
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\VBCSCompiler.exe
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\VBCSCompiler.exe.config
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\Microsoft.Web.Infrastructure.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\System.Web.Helpers.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\System.Web.Mvc.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\System.Web.Razor.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\System.Web.Webpages.Deployment.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\System.Web.Webpages.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\System.Web.Webpages.Razor.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\System.Web.Razor.xml
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\System.Web.Webpages.xml
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\System.Web.Webpages.Deployment.xml
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\System.Web.Webpages.Razor.xml
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\System.Web.Helpers.xml
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\System.Web.Mvc.xml
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\obj\Debug\MekongSite.csprojAssemblyReference.cache
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\obj\Debug\MekongSite.csproj.CoreCompileInputs.cache
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\obj\Debug\MekongSite.csproj.CopyComplete
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\obj\Debug\MekongSite.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\obj\Debug\MekongSite.pdb
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\EntityFramework.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\EntityFramework.SqlServer.dll
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\EntityFramework.xml
+G:\c#asp\MekongsiteUpdate\MekongSite\MekongSite\bin\EntityFramework.SqlServer.xml
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\MekongSite.dll.config
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\MekongSite.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\MekongSite.pdb
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\csc.exe
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\csc.exe.config
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\csc.rsp
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\csi.exe
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\csi.exe.config
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\csi.rsp
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.AppContext.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Console.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.IO.Compression.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Security.Claims.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.ValueTuple.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\vbc.exe
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\vbc.exe.config
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\vbc.rsp
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\VBCSCompiler.exe
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\EntityFramework.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\EntityFramework.SqlServer.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\System.Web.Helpers.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\System.Web.Mvc.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\System.Web.Razor.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\System.Web.Webpages.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\System.Web.Webpages.Razor.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\EntityFramework.xml
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\EntityFramework.SqlServer.xml
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\System.Web.Razor.xml
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\System.Web.Webpages.xml
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\System.Web.Webpages.Razor.xml
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\System.Web.Helpers.xml
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\System.Web.Mvc.xml
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\obj\Debug\MekongSite.csprojAssemblyReference.cache
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\obj\Debug\MekongSite.csproj.CoreCompileInputs.cache
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\obj\Debug\MekongSite.csproj.CopyComplete
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\obj\Debug\MekongSite.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\obj\Debug\MekongSite.pdb
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\PagedList.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\PagedList.Mvc.dll
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\PagedList.xml
+C:\Users\Thuy Dao Xuan\Desktop\MekongsiteUpdate\MekongSite\MekongSite\bin\PagedList.Mvc.xml

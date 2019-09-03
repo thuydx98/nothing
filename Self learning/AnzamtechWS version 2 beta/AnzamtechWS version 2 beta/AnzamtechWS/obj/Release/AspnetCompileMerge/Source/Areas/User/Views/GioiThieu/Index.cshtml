@@ -1,0 +1,189 @@
+﻿@{
+    Layout = "/Areas/User/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Giới thiệu";
+}
+@section ScrollView{
+     sr.reveal('.box', { duration: 1000 });
+     sr.reveal('.timeline-content:nth-child(odd)', {
+                origin: 'left',
+                duration: 500
+            });
+     sr.reveal('.timeline-time:nth-child(odd)', {
+                origin: 'right',
+                duration: 500
+            });
+    sr.reveal('.timeline-content:nth-child(even)', {
+                origin: 'right',
+                duration: 500
+            });
+     sr.reveal('.timeline-time:nth-child(even)', {
+                origin: 'left',
+                duration: 500
+            });
+     sr.reveal('.work-process-box', { duration: 1000 });
+    }
+<div class="mt-5"></div>
+<div class="title-box text-center">
+    <!-- Heading -->
+    <h2 class="title">Mô tả về công ty ANZ AMTECH</h2>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="content col-sm-12 col-md-12">
+            <p class="text-center">
+                Chúng tôi là một công ty tư vấn và phát triển phần mềm, chuyên cung cấp những giải pháp công nghệ từ A đến Z cho khách hàng trong các lĩnh vực Web, Thương mại điện tử, Ứng dụng điện thoại và Quản lý doanh nghiệp.          </p>
+            <br>
+          
+            <div class="row">
+                <!-- Box 1 -->
+                <div data-appear-animation="fadeInUp" class="col-md-4 col-sm-6 text-center appear-animation fadeInUp appear-animation-visible">
+                    <div class="box">
+                        <!-- Icon -->
+                        <div class="big-icon border border-info d-flex justify-content-center">
+                            <i class="fa fa-code" ></i>
+                        </div>
+                        <!-- Title -->
+                        <h4>ANZ AMTECH làm những gì?</h4>
+                        <!-- Description -->
+                        <p>Chúng tôi là một công ty tư vấn và phát triển phần mềm, chuyên cung cấp những giải pháp công nghệ từ A đến Z cho khách hàng trong các lĩnh vực Web, Thương mại điện tử, Ứng dụng điện thoại và Quản lý doanh nghiệp.</p>
+                        <p>Chúng tôi cung cấp và lắp đặt các thiết bị gọi phục vụ.</p>
+                    </div>
+                </div>
+                <!-- Box 2 -->
+                <div data-appear-animation="fadeInUp" class="col-md-4 col-sm-6 text-center appear-animation fadeInUp appear-animation-visible">
+                    <div class="box">                        <!-- Icon -->
+                        <div class="big-icon border border-info d-flex justify-content-center">
+                            <i class="fa fa-quote-left"></i>
+                        </div>
+                        <!-- Title -->
+                        <h4>Triết Lý của Chúng tối</h4>
+                        <!-- Description -->
+                        <p>Mang đến giải pháp tối ưu nhất, đơn giản nhất và toàn diện (ANZ).</p>
+                    </div>
+                </div>
+                <!-- Box 3 -->
+                <div data-appear-animation="fadeInUp" class="col-md-4 col-sm-6 text-center appear-animation fadeInUp appear-animation-visible">
+                    <div class="box">
+                        <!-- Icon -->
+                        <div class="big-icon border border-info d-flex justify-content-center">
+                            <i class="fa fa-map-marker "></i>
+                        </div>
+                        <!-- Title -->
+                        <h4>Vị trí</h4>
+                        <!-- Description -->
+                        <p>Trung tâm phát triển đặt tại khu công nghệ phần mềm đại học quốc gia Tp.HCM.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mt-5 mb-5"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-12">
+            <div class="title-box text-center">
+                <!-- Heading -->
+                <h2 class="title">ANZ AMTECH làm việc với khách hàng như thế nào?</h2>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="timeline">
+                <article class="post">
+                    <div class="timeline-time">
+                        <div class="meta_details">Hãy nói với chúng tôi vấn đề của bạn</div>
+                    </div>
+                    <div class="timeline-icon">
+                        <div><i class="fa fa-comments-o"></i></div>
+                    </div>
+                    <div class="timeline-content appear-animation appear-animation-visible fadeInLeft" data-appear-animation="fadeInLeft">
+                        <h2 class="entry-title">
+                            <a href="javascript:void(0);">Thảo luận và đưa ra cách giải quyết</a>
+                        </h2>
+                        <div class="entry-content">
+                            Có thể cái bạn cần chỉ là trên ý tưởng hoặc nó đang được vận hành nhưng gặp phải một số vấn đề. Trước tiên, chúng tôi sẽ có 1 cuộc họp để nghiên cứu và tìm hiểu về ý tưởng bạn cung cấp để có thể đưa ra một giải pháp Đơn Giản Nhất, Tối Ưu Nhất và Toàn Diện Nhất.   
+                        </div>
+                    </div>
+                </article>
+                <!-- .post -->
+                <article class="post">
+                    <div class="timeline-time">
+                        <div class="meta_details">Chúng tôi sẽ vận hành như thế nào để mang lại giải pháp Siêu Việt đó</div>
+                    </div>
+                    <div class="timeline-icon">
+                        <div><i class="fa fa-pencil"></i></div>
+                    </div>
+                    <div class="timeline-content appear-animation appear-animation-visible fadeInLeft" data-appear-animation="fadeInLeft">
+                        <h2 class="entry-title">
+                            <a href="javascript:void(0);">Lập một kế hoạch</a>
+                        </h2>
+                        <div class="entry-content">
+                            Chúng tôi sẽ giúp bạn lập nên một kế hoạch, lộ trình cụ thể để xây dựng và biến ý tưởng của các bạn thành hiện thực. Bao gồm các giai đoạn: thiết lập các tính năng, xây dựng cơ sở dữ liệu, Thiết kế giao diện người dùng UI/UX, Tái kiểm duyệt và Phát triển quy trình. Kế hoạch đưa ra luôn tuân theo tiêu chuẩn để luôn đưa ra các mốc lịch trình, nhiệm vụ cần hoàn thành sản phẩm ở từng giai đoạn. </div>
+                    </div>
+                </article>
+                <!-- .post -->
+                <article class="post">
+                    <div class="timeline-time">
+                        <div class="meta_details">Giám sát trong quá trình hoàn thiện sản phẩm</div>
+                    </div>
+                    <div class="timeline-icon">
+                        <div><i class="fa fa-code"></i></div>
+                    </div>
+                    <div class="timeline-content appear-animation appear-animation-visible fadeInLeft" data-appear-animation="fadeInLeft">
+                        <h2 class="entry-title">
+                            <a href="javascript:void(0);">Xây dựng hệ thống và Kiểm tra các chức năng</a>
+                        </h2>
+                        <div class="entry-content">
+                            Giai đoạn này bao gồm xây dựng và phát triển giá trị cốt lõi của sản phẩm theo từng tính năng được giao, sử dụng công nghệ tiên tiến và phù hợp nhất với từng trường hợp. Và chúng tôi sẽ luôn tham khảo ý kiến của các bạn trong suốt giai đoạn này để chắc chắn rằng cả bạn và chúng tôi luôn theo sát từng bước hoàn thiện sản phẩm và chúng ta đang “định hình” ý tưởng  theo đúng hướng. Để bạn có thể giúp chúng tôi phản hồi về những phiên bản sản phẩm mới nhất mà không cần phải đợi đến khi hoàn tất.    
+                        </div>
+                    </div>
+                </article>
+                <!-- .post -->
+                <article class="post">
+                    <div class="timeline-time">
+                        <div class="meta_details">Hãy tận hưởng thành quả</div>
+                    </div>
+                    <div class="timeline-icon">
+                        <div><i class="fa fa-globe"></i></div>
+                    </div>
+                    <div class="timeline-content appear-animation appear-animation-visible fadeInLeft" data-appear-animation="fadeInLeft">
+                        <h2 class="entry-title">
+                            <a href="javascript:void(0);">Phát hành phần mêm cho bạn</a>
+                        </h2>
+                        <div class="entry-content">
+                            Chúng tôi không chỉ giúp bạn thực hiện những ý tưởng công nghệ đó, chúng tôi còn có đội ngũ chuyển giao công nghệ, kỹ thuật và giúp bạn vận hành nó cho công việc mà bạn đang kinh doanh. Vì thế hãy cứ tận hưởng dịch vụ mà chúng tôi mang đến từ A &rarr; Z.
+                        </div>
+                    </div>
+                </article>
+                <!-- .post -->
+                <!-- .post -->
+                <article class="post">
+                    <div class="timeline-time">
+                        <div class="meta_details">Bình tĩnh và thoải mái, chúng tôi luôn đang lắng nghe bạn</div>
+                    </div>
+                    <div class="timeline-icon">
+                        <div><i class="fa fa-thumbs-o-up"></i></div>
+                    </div>
+                    <div class="timeline-content appear-animation appear-animation-visible fadeInLeft" data-appear-animation="fadeInLeft">
+                        <h2 class="entry-title">
+                            <a href="javascript:void(0);">Hỗ trợ và khắc phục sự cố cho khách hàng</a>
+                        </h2>
+                        <div class="entry-content">
+                            Hỗ trợ từ A &rarr; Z tức khi nào bạn không cần chúng tôi nữa mới thôi. Cứ theo tháng hoặc theo quý, chúng tôi luôn có những đội ngũ kỹ thuật để hỗ trợ bảo trì cũng như nâng cao chất lượng sản phẩm cho bạn đến tận nơi. Điều này có thể khiến cho bạn yên tâm hơn, có nhiều thời gian hơn để phát triển công việc kinh doanh, xây dựng các tính năng mới, điều chỉnh các tính năng đang xử dụng cho sản phẩm của bạn hay những vấn đề về phục vụ và yêu cầu phát sinh từ khách hàng. 
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <!-- .timeline -->
+        </div>
+        <div class="work-process-box appear-animation appear-animation-visible fadeInRight" data-appear-animation="fadeInRight">
+            <div class="process-content">
+                <!-- Title -->
+                <h4 class="title">Bạn còn đợi gì nữa?</h4>
+                <!-- Description -->
+                <p><a href="/LienHe" class="btn btn-primary">Hãy gọi cho chúng tôi !</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- .process-box-two -->
+</div>

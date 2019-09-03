@@ -1,0 +1,104 @@
+﻿@using AnzamtechWS.Areas.Admin.Models 
+
+@model DangNhapModel
+
+
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Admin Page</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+    @Styles.Render("~/style/share")
+    @Styles.Render("~/style/admin")
+    @Scripts.Render("~/bundle/share")
+    @Scripts.Render("~/bundle/admin")
+</head>
+<body class="login-page">
+    <div class="login-box">
+        <div class="logo">
+            <a href="javascript:void(0);">Đăng nhập ANZ</a>
+            <small>Trang quản lý ANZAMTECH</small>
+        </div>
+        <div class="card">
+@using (Html.BeginForm("Login", "DangNhap"))
+{
+            <div class="body p-4">
+                <div class="msg mb-4">Đặng nhập bắt đầu phiên làm việc của bạn</div>
+
+
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupPrepend"><i class="material-icons">account_box</i></span>
+                    </div>
+
+                    
+
+                    @Html.TextBoxFor(u => u.TenDN, new { @class = "form-control", @id = "validationCustomUsername", @placeholder = "Username" })
+                    
+ 
+
+                        <div class="invalid-feedback">
+                            Please choose a username.
+                        </div>
+                    </div>
+                    <div class="input-group mt-2">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupPrepend"><i class="material-icons">vpn_key</i></span>
+                        </div>
+                         
+
+
+                        @Html.PasswordFor(u => u.MatKhau, new { @class = "form-control", @id = "validationCustomUsername", @placeholder = "Password" })
+
+                         
+                        <div class="invalid-feedback">
+                            Please choose a username.
+                        </div>
+
+
+
+
+                        @Html.ValidationMessage("Error", "", new { @class = "error-infor", @style="color: red" })
+
+                    
+
+
+                    </div>
+
+
+                    <div class="container-fluid mt-3">
+                        <div class="row">
+                            <div class="col-8 pl-0 pr-0">
+                                <div class=" custom-control custom-checkbox mt-2">
+                                    <div style="display:none">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">
+                                            Nhớ mật khẩu
+                                        </label>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="col-4 pl-0 pr-0">
+                                <button class="btn btn-block bg-login waves-effect" type="submit">SIGN IN</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+}
+            </div>
+        </div>
+
+    </body>
+</html>

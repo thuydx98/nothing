@@ -1,0 +1,120 @@
+﻿@using AnzamtechWS.Areas.Admin.Models
+@model SanPhamModel
+@{
+    ViewBag.Title = "Thêm sản phẩm";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@section Script 
+{
+    <script>
+   
+        function ChangeDM() {
+            $('#DMC').children().remove();
+            $.get("/Admin/DanhMuc/GetDanhMucCon?id=" + $("#danhmucsp").val(), function (data, status) {
+                if (data.length == 0) {
+                    $('#DMC').append($('<option>', {
+                        text: 'Chọn'
+                    }));
+                    return;
+                }
+                for (var i = 0; i < data.length; i++) {
+                    $('#DMC').append($('<option>', {
+                        value: data[i].MaDMC,
+                        text: data[i].TenDMC
+                    }));
+                }
+            });
+        }
+        $.get("/Admin/DanhMuc/GetDanhMuc", function (data, status) {
+            $("#danhmucsp").ready(function () {
+                if (data.length == 0) {
+                    $('#danhmucsp').append($('<option>', {
+                        text: 'Chọn'
+                    }));
+                    return;
+                }
+                for (var i = 0; i < data.length; i++) {
+                    $('#danhmucsp').append($('<option>', {
+                        value: data[i].MaDM,
+                        text: data[i].TenDM
+                    }));
+
+                }
+                ChangeDM();
+            });
+        });
+        $(document).ready(function () {
+            $("#danhmucsp").change(function () {
+                ChangeDM();
+            });
+        });
+    </script>
+}
+<div class="block-header">
+    <ol class="breadcrumb breadcrumb-arrow">
+        <li><a href="/Admin/Home">Trang chủ</a></li>
+        <li><a href="/Admin/SanPham">Sản phẩm</a></li>
+        <li class="active"><span>Thêm sản phẩm - Bước 1</span></li>
+    </ol>
+</div>
+
+<div class="form-content col-lg-12 col-md-12 col-sm-12 col-xs-12 pl-0 pr-0">
+    <div class="card">
+        <div class="header">
+            <h2>
+                Thêm sản phẩm (Bước 1)
+            </h2>
+        </div>
+        @using (Html.BeginForm(new { area = "Admin", controller="SanPham", action= "ThemSanPham" }))
+        {
+            <div class="body">
+                <h2 class="card-inside-title">Danh mục sản phẩm</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">     
+                            <select class="form-control" id="danhmucsp">
+                                
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Danh mục con</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @Html.DropDownListFor(m => m.MaDMC, new SelectList(new List<DanhMucCon>(), "MaDMC", "TenDMC"), new { @class= "form-control", @id="DMC"})
+                            
+                        </div>
+                    </div>
+                </div>
+                <h2 class="card-inside-title">Thông tin chi tiết</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+
+                        <div class="form-group">
+                            <div class="form-line">
+                               @Html.TextBoxFor(m=>m.TenSP, Model.TenSP, new { @class= "form-control", @placeholder = "Tên sản phẩm" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-line">
+                                @Html.TextBoxFor(m => m.Tag, Model.Tag, new { @class = "form-control", @placeholder = "Tag" })
+                               
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-line">
+                                @Html.TextAreaFor(m=>m.Mota, new { @class = "form-control", @placeholder = "Mô tả", @rows="20" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary m-t-15 waves-effect">Tiếp tục</button>
+            </div>
+        }
+        
+
+    </div>
+</div>

@@ -1,0 +1,113 @@
+﻿@using AnzamtechWS.Areas.Admin.Models
+@using PagedList
+@using PagedList.Mvc
+@model GiaiPhapModel
+@{
+    ViewBag.Title = "Danh sách giải pháp";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="block-header">
+    <ol class="breadcrumb breadcrumb-arrow">
+        <li><a href="/Admin/Home">Trang chủ</a></li>
+        <li><a href="/Admin/GiaiPhap">Giải pháp</a></li>
+        <li class="active"><span>Quản lý giải pháp</span></li>
+    </ol>
+</div>
+@Html.Raw(Model.GetHTMLMessage())
+<div class="form-content col-lg-12 col-md-12 col-sm-12 col-xs-12 pl-0 pr-0">
+    <div class="card">
+        <div class="header">
+            <h2>
+                Tìm bài viết
+            </h2>
+        </div>
+        <div class="body">
+            @using (Html.BeginForm(new { area = "Admin", controller = "GiaiPhap", action = "Index" }))
+            {
+
+                <h2 class="card-inside-title">Danh mục</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @{ DanhMucModel modelDM = new DanhMucModel();}
+
+                            @Html.DropDownListFor(u => u.MaDM, new SelectList(modelDM.GetDSDanhMucGP(), "MaDM", "TenDanhMuc"), new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            @Html.TextBoxFor(u => u.Keyword, Model.Keyword, new { @class = "form-control", @placeholder = "Từ khóa" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-primary m-t-15 waves-effect">Tìm kiếm</button>
+                    </div>
+                </div>
+
+            }
+            <h2 class="card-inside-title">Kết quả tìm kiếm</h2>
+            <div class="row clearfix table-responsive">
+                <div class="col-sm-12">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th width="40">ID</th>
+                                <th>Tên giải pháp</th>
+                                <th width="40">&nbsp;</th>
+                                <th width="40">&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{ IPagedList<GiaiPhap> ListGP = null;}
+
+                            @if (Session["GPPaging"] == null)
+                            {
+                                <tr>
+                                    <td colspan="9">Không có dữ liệu</td>
+                                </tr>
+                            }
+                            else
+                            {
+                                ListGP = Model.GetDSTimKiem();
+                                if (ListGP != null)
+                                {
+                                    foreach (var item in ListGP)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @item.MaGP
+                                            </td>
+                                            <td>
+                                                @item.TenGP
+                                            </td>
+                                            <td>
+                                                <a href="/Admin/GiaiPhap/ChinhSuaGP?MaGP=@item.MaGP" class="btn btn-info d-flex align align-self-center"><i class="material-icons">mode_edit</i></a>
+                                            </td>
+                                            <td>
+                                                <a href="/Admin/GiaiPhap/XoaGP?MaGP=@item.MaGP" class="btn btn-info d-flex align align-self-center"><i class="material-icons">delete</i></a>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-sm-12">
+                    @if (ListGP != null)
+                    {
+                        @Html.PagedListPager(ListGP, u => Url.Content("/Admin/GiaiPhap/Index?pageid=" + u), PagedListRenderOptions.ClassicPlusFirstAndLast)
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

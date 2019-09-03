@@ -1,0 +1,147 @@
+﻿
+<div class="imagedialog" style="display:none">
+    <nav class="navbar-expand-sm bg-image" id="menu-image">
+
+        <div class="d-flex">
+
+            <div class="dropdown d-block d-md-none">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Chức năng
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item file-manager" href="#"><i class="material-icons">create_new_folder</i>Quản lý file</a>
+                    <a class="dropdown-item upload" href="#"><i class="material-icons">file_upload</i>Tải lên</a>
+                </div>
+            </div>
+            <ul class="navbar-nav d-none d-md-flex">
+                <li class="nav-item">
+                    <a class="nav-link item-file file-manager" href="#"><i class="material-icons">create_new_folder</i>Quản lý file</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link item-file upload" href="#"><i class="material-icons">file_upload</i>Tải lên</a>
+                </li>
+            </ul>
+            <div class="ml-auto d-flex flex-row">
+                <a class="nav-link item-file bg-close " href="#"><i class="material-icons text-white">close</i></a>
+            </div>
+        </div>
+
+
+    </nav>
+
+    <div id="FileManager" class="row ml-0 mr-0">
+        <div class=" col-md-4 col-lg-3 pl-0 pr-0 d-none d-md-block">
+            <div id="jstree_div">
+
+            </div>
+        </div>
+        <div class="pl-0 pr-0 col-12 col-md-8 col-lg-9">
+            <div id="mrclick" class="dropdown right-click-menu flex-column " style="display:none">
+             
+                    <a class="item-menu-rigth waves-effect" href="javascript:void(0)">Tạo thư mục</a>
+                    <a class="item-menu-rigth waves-effect" href="javascript:void(0)" onclick="myImageDialog.XoaAnh()">Xóa ảnh</a>
+                    <a class="item-menu-rigth waves-effect" href="javascript:void(0)">Cập nhật thông tin ảnh</a>
+
+            </div>
+            <div id="ListView1" class="list-view">
+                <div class="d-flex flex-row flex-wrap">
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="UploadFile" class="row m-2 d-none">
+        <form id="FormUpload">
+            <input type="file" name="file[]" id="file" multiple class="d-none" />
+            <div class="d-flex flex-column">
+                <div class="header d-flex flex-row flex-wrap">
+                    <button type="button" class="btn btn-primary mr-1"><span>Thêm Ảnh</span></button>
+                    <button type="submit" class="btn btn-primary mr-1"><span>Bắt đầu tải ảnh</span></button>
+                    <div class="ml-auto  flex-row d-none d-sm-flex">
+                        <span class="mr-3 align-self-center server-path"></span>
+                    </div>
+                </div>
+                <div id="accordion" class="mt-2">
+
+
+                </div>
+                <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
+
+                <script id="filetemplate" type="text/x-jQuery-tmpl">
+                    <div class="card" data-id="${HinhAnh.STT}">
+                        <div class="card-header animation-upload">
+                            <div class="row">
+                                <div class="col-4 col-md-3 flex-row align-self-center pr-2"><h5 id="card-title" class="card-title limit-word mb-0">${HinhAnh.TenAnh}.${HinhAnh.FS}</h5></div>
+                                <div class="col-6 col-md-8  flex-row align-self-center">
+
+
+                                    <div class="progress" style="display:none">
+                                        <div class="progress-bar bg-infor" style="width:0">0%</div>
+                                    </div>
+
+
+                                </div>
+                                <div class="col-2 col-md-1 pr-1 pl-1">
+                                    <div class="d-flex">
+                                        <a class="card-link  ml-auto flex-row align-self-center" data-toggle="collapse" data-name="link-expand" data-parent="#accordion" href="#collapse${HinhAnh.STT}">
+                                            <i class="material-icons mt-1">keyboard_arrow_down</i>
+                                        </a>
+                                        <a href="javascript:void(0)" class="card-link  ml-auto flex-row align-self-center" style="display:none" data-name="link-close">
+                                            <i class="material-icons mt-1" style="color:red">close</i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="collapse${HinhAnh.STT}" class="collapse show">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12 col-md-3"><img class="card-img-top" src="${HinhAnh.Path}" alt="Card image"></div>
+                                    <div class="col-12 col-md-6">
+                                        <h6 class="card-title">Thông tin ảnh</h6>
+                                        <div class="form-group">
+                                            <label for="email">Tên ảnh:</label>
+                                            <input type="text" class="form-control" id="text" value="${HinhAnh.TenAnh}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="pwd">Tag:</label>
+                                            <input type="text" class="form-control" id="tag" value="${HinhAnh.Tag}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="sel1">Danh mục ảnh:</label>
+                                            <select class="form-control" id="sel1">
+                                                {{each LoaiAnh}}
+                                                <option value="${$value.MaLA}">${$value.TenLoai}</option>
+
+                                                {{/each}}
+                                            </select>
+                                        </div>
+                                        <button type="button" class="btn btn-primary mt-1">Lưu thông tin</button>
+                                        <button type="button" class="btn btn-danger mt-1">Xóa Ảnh</button>
+                                        <button type="button" class="btn btn-warning mt-1">Hủy</button>
+                                    </div>
+                                    <div class="col-12 col-md-3">
+
+                                        <dl class="row">
+                                            <dt class="col-sm-12"><span>Chiều dài</span></dt>
+                                            <dd class="col-sm-12">${HinhAnh.height}px</dd>
+
+                                            <dt class="col-sm-12"><span>Chiều rộng</span></dt>
+                                            <dd class="col-sm-12">${HinhAnh.width}px</dd>
+                                            <dt class="col-sm-12"><span>Kích thước ảnh</span></dt>
+                                            <dd class="col-sm-12">${HinhAnh.size}</dd>
+                                            <dt class="col-sm-12"><span>Đường dẫn</span></dt>
+                                            <dd class="col-sm-12">${HinhAnh.Path}</dd>
+                                        </dl>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </script>
+            </div>
+        </form>
+    </div>
+</div>

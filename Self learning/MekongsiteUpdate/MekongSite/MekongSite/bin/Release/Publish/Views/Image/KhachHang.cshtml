@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewBag.Title = "Hình Ảnh";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+    $(".idHinhanh").addClass("current-menu-parent");
+</script>
+
+<style>
+    .content_wrap {
+        float:;
+    }
+
+    .isotope_wrap .isotope_item {
+        opacity: 1 !important;
+        float: left;
+    }
+</style>
+<style>
+    ul {
+        list-style-type: none;
+    }
+</style>
+
+<div class="top_panel_title top_panel_style_2  title_present breadcrumbs_present scheme_original">
+    <div style="background-image: url(/Content/uploads/2016/08/bg_masagge1.jpg);" class="top_panel_title_inner top_panel_inner_style_2  title_present_inner breadcrumbs_present_inner">
+        <div class="content_wrap">
+            <h1 class="page_title">Hình Ảnh</h1>
+            <div class="breadcrumbs">
+                @Html.ActionLink("Trang chủ", "Index", "Home", null, htmlAttributes: new { @class = "breadcrumbs_item" })
+
+                <span class="breadcrumbs_delimiter"></span>
+                <span class="breadcrumbs_item current">Hình Ảnh</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="page_content_wrap page_paddings_yes">
+    <div class="content_wrap">
+        <div class="content">
+            <article class="itemscope post_item post_item_single post_featured_default post_format_standard post-61 page type-page status-publish hentry" itemscope itemtype="http://schema.org/Article">
+                <section class="post_content" itemprop="articleBody">
+                    <div class="vc_row wpb_row vc_row-fluid">
+                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                            <div class="vc_column-inner">
+                                <div class="wpb_wrapper">
+                                    <div>
+                                        <h3>KHÁCH HÀNG CỦA TÔI</h3>
+                                    </div>
+                                    <div id="sc_blogger_398392956" class="sc_blogger layout_masonry_3 template_masonry margin_bottom_large-  sc_blogger_horizontal no_description">
+                                        <div class="isotope_wrap" data-columns="3">
+                                            @for (var i = 3; i < 26; i++)
+                                            {
+                                                var temp = i + ".jpg";
+                                                <div class="isotope_item isotope_item_masonry isotope_item_masonry_3 isotope_column_3">
+                                                    <div class="post_item post_item_masonry post_item_masonry_3 post_format_standard odd">
+                                                        <div class="post_featured">
+
+                                                            <div class="post_thumb" data-image="~/Content/Picture/khach/@temp" data-title="mekong">
+                                                                <img style="height:300px;" class="wp-post-image" width="300" height="300" alt="mekong" src="../Content/Picture/khach/@temp">
+                                                            </div>
+                                                        </div>
+                                                        <div class="post_content isotope_item_content">
+                                                            <h5 class="post_title"></h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            }
+
+                                        </div>
+                                    </div>
+                                    <div style="clear:both;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </div>
+</div>
+

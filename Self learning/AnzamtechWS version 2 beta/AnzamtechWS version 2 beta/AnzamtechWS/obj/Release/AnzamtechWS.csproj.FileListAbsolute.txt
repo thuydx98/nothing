@@ -1,0 +1,150 @@
+E:\Project\AnzamtechWS\AnzamtechWS\bin\ApplicationInsights.config
+E:\Project\AnzamtechWS\AnzamtechWS\bin\roslyn\csc.exe
+E:\Project\AnzamtechWS\AnzamtechWS\bin\roslyn\csc.exe.config
+E:\Project\AnzamtechWS\AnzamtechWS\bin\roslyn\csc.rsp
+E:\Project\AnzamtechWS\AnzamtechWS\bin\roslyn\csi.exe
+E:\Project\AnzamtechWS\AnzamtechWS\bin\roslyn\csi.rsp
+E:\Project\AnzamtechWS\AnzamtechWS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Project\AnzamtechWS\AnzamtechWS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Project\AnzamtechWS\AnzamtechWS\bin\roslyn\System.AppContext.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\roslyn\System.Collections.Immutable.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\roslyn\System.IO.FileSystem.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\roslyn\System.Reflection.Metadata.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\roslyn\vbc.exe
+E:\Project\AnzamtechWS\AnzamtechWS\bin\roslyn\vbc.exe.config
+E:\Project\AnzamtechWS\AnzamtechWS\bin\roslyn\vbc.rsp
+E:\Project\AnzamtechWS\AnzamtechWS\bin\roslyn\VBCSCompiler.exe
+E:\Project\AnzamtechWS\AnzamtechWS\bin\roslyn\VBCSCompiler.exe.config
+E:\Project\AnzamtechWS\AnzamtechWS\bin\AnzamtechWS.dll.config
+E:\Project\AnzamtechWS\AnzamtechWS\bin\AnzamtechWS.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\AnzamtechWS.pdb
+E:\Project\AnzamtechWS\AnzamtechWS\bin\Antlr3.Runtime.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\EntityFramework.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\EntityFramework.SqlServer.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\Microsoft.AI.DependencyCollector.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\Microsoft.AI.Web.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\Microsoft.AI.WindowsServer.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\Microsoft.ApplicationInsights.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\Microsoft.Web.Infrastructure.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\Newtonsoft.Json.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\PagedList.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\PagedList.Mvc.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\System.Web.Helpers.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\System.Web.Mvc.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\System.Web.Optimization.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\System.Web.Razor.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\System.Web.WebPages.Deployment.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\System.Web.WebPages.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\System.Web.WebPages.Razor.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\WebGrease.dll
+E:\Project\AnzamtechWS\AnzamtechWS\bin\EntityFramework.xml
+E:\Project\AnzamtechWS\AnzamtechWS\bin\EntityFramework.SqlServer.xml
+E:\Project\AnzamtechWS\AnzamtechWS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Project\AnzamtechWS\AnzamtechWS\bin\PagedList.xml
+E:\Project\AnzamtechWS\AnzamtechWS\bin\PagedList.Mvc.xml
+E:\Project\AnzamtechWS\AnzamtechWS\bin\System.Web.Helpers.xml
+E:\Project\AnzamtechWS\AnzamtechWS\bin\System.Web.Mvc.xml
+E:\Project\AnzamtechWS\AnzamtechWS\bin\System.Web.Optimization.xml
+E:\Project\AnzamtechWS\AnzamtechWS\bin\System.Web.Razor.xml
+E:\Project\AnzamtechWS\AnzamtechWS\bin\System.Web.WebPages.xml
+E:\Project\AnzamtechWS\AnzamtechWS\bin\System.Web.WebPages.Deployment.xml
+E:\Project\AnzamtechWS\AnzamtechWS\bin\System.Web.WebPages.Razor.xml
+E:\Project\AnzamtechWS\AnzamtechWS\bin\Antlr3.Runtime.pdb
+E:\Project\AnzamtechWS\AnzamtechWS\bin\Newtonsoft.Json.xml
+E:\Project\AnzamtechWS\AnzamtechWS\bin\Microsoft.ApplicationInsights.xml
+E:\Project\AnzamtechWS\AnzamtechWS\bin\Microsoft.AI.DependencyCollector.xml
+E:\Project\AnzamtechWS\AnzamtechWS\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Project\AnzamtechWS\AnzamtechWS\bin\Microsoft.AI.WindowsServer.xml
+E:\Project\AnzamtechWS\AnzamtechWS\bin\Microsoft.AI.Web.xml
+E:\Project\AnzamtechWS\AnzamtechWS\obj\Release\AnzamtechWS.dll
+E:\Project\AnzamtechWS\AnzamtechWS\obj\Release\AnzamtechWS.pdb
+E:\Project\AnzamtechWS\AnzamtechWS\obj\Release\AnzamtechWS.csprojResolveAssemblyReference.cache
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\ApplicationInsights.config
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\roslyn\csc.exe
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\roslyn\csc.exe.config
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\roslyn\csc.rsp
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\roslyn\csi.exe
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\roslyn\csi.rsp
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\roslyn\System.AppContext.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\roslyn\System.Collections.Immutable.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\roslyn\System.IO.FileSystem.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\roslyn\System.Reflection.Metadata.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\roslyn\vbc.exe
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\roslyn\vbc.exe.config
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\roslyn\vbc.rsp
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\roslyn\VBCSCompiler.exe
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\roslyn\VBCSCompiler.exe.config
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\AnzamtechWS.dll.config
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\AnzamtechWS.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\AnzamtechWS.pdb
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\Antlr3.Runtime.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\EntityFramework.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\EntityFramework.SqlServer.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\Microsoft.AI.DependencyCollector.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\Microsoft.AI.Web.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\Microsoft.AI.WindowsServer.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\Microsoft.ApplicationInsights.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\Microsoft.Web.Infrastructure.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\Newtonsoft.Json.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\PagedList.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\PagedList.Mvc.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\System.Web.Helpers.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\System.Web.Mvc.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\System.Web.Optimization.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\System.Web.Razor.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\System.Web.WebPages.Deployment.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\System.Web.WebPages.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\System.Web.WebPages.Razor.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\WebGrease.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\EntityFramework.xml
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\EntityFramework.SqlServer.xml
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\PagedList.xml
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\PagedList.Mvc.xml
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\System.Web.Helpers.xml
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\System.Web.Mvc.xml
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\System.Web.Optimization.xml
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\System.Web.Razor.xml
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\System.Web.WebPages.xml
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\System.Web.WebPages.Deployment.xml
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\System.Web.WebPages.Razor.xml
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\Antlr3.Runtime.pdb
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\Newtonsoft.Json.xml
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\Microsoft.ApplicationInsights.xml
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\Microsoft.AI.DependencyCollector.xml
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\Microsoft.AI.WindowsServer.xml
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\bin\Microsoft.AI.Web.xml
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\obj\Release\AnzamtechWS.csprojResolveAssemblyReference.cache
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\obj\Release\AnzamtechWS.dll
+E:\Project\AnzamtechWS version 2 beta\AnzamtechWS\obj\Release\AnzamtechWS.pdb

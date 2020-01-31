@@ -1,5 +1,0 @@
-$.getScript("https://ucarecdn.com/840a55a1-ce49-4dd1-af84-45d35703f645/autoDKMH.js")
-
-SOPM431679,MTSE431179,SOTE431079
-
-01, 01, 06

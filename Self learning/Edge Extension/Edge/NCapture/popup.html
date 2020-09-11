@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>NCapture</title>
+
+    <link type="text/css" rel="stylesheet" href="style/bootstrap/css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="style/bootstrap/css/bootstrap-responsive.css">
+    <link type="text/css" rel="stylesheet" href="style/jqueryui/ui-lightness/jquery-ui-1.12.1.custom.css">
+    <link type="text/css" rel="stylesheet" href="style/jqueryui/ui-lightness/theme.css">
+    <link type="text/css" rel="stylesheet" href="style/jquery.tagit.css">
+    <link type="text/css" rel="stylesheet" href="style/style.css">
+
+
+    <script src="js/lib/require-2.3.6.js"></script>
+    <script src="js/lib/jquery-1.5.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/lib/jquery-ui-1.8.12.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/lib/tag-it.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/lib/html2canvas-0.4.1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/popup.js"></script>
+</head>
+
+<body>
+    <div id="container" class="container">
+        <form class="form-horizontal">
+            <div class="row">
+                <a href="https://redirect2.qsrinternational.com/help-nc1-en.htm" target="_blank"><img id="capture-help" src="icons/help.png" title="Help"></a>
+            </div>
+
+            <br>
+
+            <h2 class="row span12">
+                <img src="icons/ncapture-48.png">
+                <span id="page-title">Capture for NVivo</span>
+            </h2>
+
+            <br>
+
+            <fieldset>
+                <!-- source type -->
+                <div class="row span12">
+                    <label id="source-type-label">Capture</label>
+                </div>
+                <div id="radio-source-type" class="radio-source-type">
+                    <input id="WebPageAsPDF" class="toggle" name="toggle" value="0" type="radio" checked="">
+                    <label for="WebPageAsPDF" class="btn source-radio-btn" id="WebPageAsPDF-label" style="height: 48px;">
+                        <img class="radio-source-icon" src="icons/pdf.png">
+                        <br>Web Page as PDF
+                    </label> &nbsp;
+                    <input id="ArticleAsPDF" class="toggle" name="toggle" value="1" type="radio">
+                    <label for="ArticleAsPDF" class="btn source-radio-btn" id="ArticleAsPDF-label" style="height: 48px;">
+                        <img class="radio-source-icon" src="icons/pdf.png">
+                        <br> Article as PDF
+                    </label> &nbsp;
+                </div>
+
+                <br>
+                <!-- source name -->
+                <div class="control-group">
+                    <label class="control-label" for="sourceName" id="source-name-label">Name</label>
+                    <div class="controls">
+                        <input type="text" class="input-xlarge" maxlength="256" id="source-name-TextBox">
+                    </div>
+                </div>
+            </fieldset>
+
+            <div id="tabs">
+                <ul>
+                    <li id="tab-desc"><a href="#tabs-1" id="description-tab"><strong>Description</strong></a></li>
+                    <li id="tab-memo"><a href="#tabs-2" id="memo-tab"><img id="memoIcon" src="icons/memo.ico" /><strong>Memo</strong></a></li>
+                </ul>
+                <div id="tabs-1">
+                    <input id="description-TextBox" class="tabs-textbox" type='text' maxlength="512" placeholder="Description">
+                </div>
+                <div id="tabs-2">
+                    <input id="memo-TextBox" class="tabs-textbox" type='text' maxlength="512" placeholder="Memo">
+                </div>
+            </div>
+
+            <br>
+            <div class="row span12" id="code-at-nodes-label">Code at nodes</div>
+            <div class="tag-box">
+                <ul id="node-tags" class="tagit ui-widget ui-widget-content ui-corner-all">
+                </ul>
+            </div>
+        </form>
+        <div id="error-message-placeholder"></div>
+        <div>
+            <table id="grid-table">
+                <tbody>
+                    <tr>
+                        <td>
+                            <a id="captured-list" href="#">
+                                <strong><span id="progress-page-link" class="hyperlink-underline">Show capture progress page</span></strong>
+                            </a></td>
+                        <td id="but-column"><a href="#" id="capture" class="btn">Capture</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br>
+
+    <ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul>
+    <div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div>
+
+</body>
+
+</html>

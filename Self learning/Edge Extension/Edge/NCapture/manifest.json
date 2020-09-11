@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "Capture for NVivo",
+  "description": "",
+  "version": "1.0",
+  "author": "KMS Cop.",
+  "icons": {
+    "16": "icons/ncapture-16.png",
+    "48": "icons/ncapture-48.png",
+    "128": "icons/ncapture-128.png"
+  },
+  "browser_action": {
+    "default_icon": "icons/ncapture-16.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [
+      "js/event-page.js"
+    ],
+    "persistent": false
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "notifications",
+    "contextMenus",
+    "tabs",
+    "<all_urls>"
+  ]
+}

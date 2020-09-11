@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>NCapture progress page</title>
+  <link  id="favicon" href="icons/ncapture-16.png" rel="shortcut icon" type="image/x-icon"  />
+
+  <link type="text/css" rel="stylesheet" href="style/bootstrap/css/bootstrap.css" />
+  <link type="text/css" rel="stylesheet" href="style/bootstrap/css/bootstrap-responsive.css" />
+  <link type="text/css" rel="stylesheet" href="style/style-notification.css" />
+
+  <script src="js/lib/jquery-1.5.2.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/notifications.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div>
+      <h1>
+        <img src="icons/ncapture-48.png" />
+        <span id="table-title">Captures</span>
+      </h1>
+    </div>
+
+    <br />
+    <div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th><strong id="source-name-column">Name</strong></th>
+            <th><strong id="type-column">Type</strong></th>
+            <th><strong id="message-column">Message</strong></th>
+            <th><strong id="status-column">Status</strong></th>
+          </tr>
+        </thead>
+        <tbody id="notification-table-body">
+          <tr id="capture-0">
+            <td><img class="row-image" src="icons/pdf.png">&nbsp;Bootstrap Snippet Creative Animated Loading
+              using HTML CSS</td>
+            <td><img class="source-type-image" src="icons/web.png"> </td>
+            <td>Complete</td>
+            <td><img src="icons/complete.png" title="Capture Completed."></td>
+          </tr>
+          <tr id="capture-1">
+            <td><img class="row-image" src="icons/pdf.png">&nbsp;Bootstrap Snippet Creative Animated Loading
+              using HTML CSS</td>
+            <td><img class="source-type-image" src="icons/web.png"> </td>
+            <td>Complete</td>
+            <td><img src="icons/complete.png" title="Capture Completed."></td>
+          </tr>
+          <tr id="capture-2">
+            <td><img class="row-image" src="icons/pdf.png">&nbsp;KMS Technology - Calendar - 2019 year</td>
+            <td><img class="source-type-image" src="icons/web.png"> </td>
+            <td>Complete</td>
+            <td><img src="icons/complete.png" title="Capture Completed."></td>
+          </tr>
+          <tr id="capture-2">
+            <td><img class="row-image" src="icons/dataset.png">&nbsp;(4) Hội KMSers thích bóng đá</td>
+            <td><img class="source-type-image" src="icons/facebook.png"> </td>
+            <!-- <td>To capture the contents as a dataset a group admin must add the ‘NCapture for NVivo’ app in group
+              settings.</td> -->
+            <td>Complete</td>
+            <td><img src="icons/fail.png" title="Capture failed."></td>
+          </tr>
+          <tr id="capture-3">
+            <td><img class="row-image" src="icons/pdf.png">&nbsp;Bootstrap Snippet Creative Animated Loading
+              using HTML CSS</td>
+            <td><img class="source-type-image" src="icons/pdf.png"> </td>
+            <td>In progress</td>
+            <td><img src="icons/ajax-loader-green-32.gif" title="Capturing...">&nbsp;<a href="#" id="3"
+                class="stop-button btn">Stop</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+.status-in-progress {
+    color: darkorange;
+  }
+
+  .status-completed {
+    color: green;
+  }
+
+  .status-failed {
+    color: red;
+  }
+
+  .status-stopping {
+    color: lightsalmon;
+  }
+
+  .status-stopped {
+    color: lightgreen;
+  }
+
+  td {
+    text-align: center;
+    height: 40px;
+  }
+
+  .span1,
+  .span3,
+  .span4 {
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .row-image {
+    height: 20px;
+    width: 20px;
+  }
+
+  .in-progress-image {
+    height: 40px;
+    width: 40px;
+  }
+
+  .source-type-image {
+    height: 20px;
+    width: 20px;
+  }

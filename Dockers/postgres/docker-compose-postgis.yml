@@ -1,0 +1,20 @@
+version: '2'
+services:
+  database:
+    container_name: postgres-postgis
+    image: "mdillon/postgis"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    restart: always
+    # volumes:
+    #   - D:/postgresql:/var/lib/postgresql/data
+# volumes:
+#   database-data: 
+
+# docker run --name redis --restart=always -p 6379:6379 -d redis
+# docker run -p 10000:80 --name pgAdmin --restart=always -e PGADMIN_DEFAULT_EMAIL=thuydao@kms-technology.com -e PGADMIN_DEFAULT_PASSWORD=123456 -d  dpage/pgadmin4
+# docker-compose -f .\docker-compose-postgis.yml up

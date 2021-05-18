@@ -1,14 +1,17 @@
-version: '3'
+version: '2'
 services:
   database:
-    image: "postgres"
+    image: "postgres:13.2-alpine"
     environment:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: root
       POSTGRES_DB: postgres
     ports:
       - "5432:5432"
-    volumes:
-      - database-data:/var/lib/postgresql/data/
-volumes:
-  database-data: 
+    # volumes:
+    #   - db:/var/lib/database
+# volumes:
+#   database-data: 
+
+
+# docker run  -e POSTGRES_USER=root POSTGRES_PASSWORD=root --name my_database -v /Users/champ/postgres:/var/lib/postgresql/data -p 5432:5432 postgres
